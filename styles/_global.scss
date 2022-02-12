@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "mainFont";
+  src: url("../fonts/NauSea-yeMm.ttf") format("woff");
+}
+
+$black-color: black;
+$white-color: white;
+$navigation-hoover-color: gray;
+
+$font-main: "mainFont", sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-main;
+}
+
+body {
+  background: $black-color;
+  color: $white-color;
+  min-width: 1230px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.title-container {
+  padding-top: 20px;
+  padding-left: 30px;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+}
