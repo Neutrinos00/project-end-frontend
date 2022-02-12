@@ -1,9 +1,9 @@
 .navigation {
-  height: 600px;
+  height: 700px;
   width: 100%;
   background: url("../img/bg1.png") center/cover;
   display: grid;
-  grid-template-rows: 80px 1fr;
+  //   grid-template-rows: 80px 1fr;
 
   li {
     display: inline;
@@ -11,28 +11,37 @@
 
   nav {
     width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    font-size: 2.5rem;
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+    font-size: 2.8rem;
     background: linear-gradient(
       360deg,
-      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.075) 0%,
       rgba(0, 0, 0, 1) 100%
     );
 
-    ul {
-      position: absolute;
-      left: 15%;
+    .nav-container {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
 
-      li {
-        margin-left: 30px;
+      ul {
+        position: absolute;
+        left: 10%;
 
-        a {
-          transition: color 0.3s ease-in-out;
+        li {
+          margin-left: 30px;
+          display: inline;
 
-          &:hover {
-            color: $navigation-hoover-color;
+          a {
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: $navigation-hoover-color;
+            }
           }
         }
       }
@@ -49,7 +58,7 @@
       position: relative;
 
       img {
-        height: 450px;
+        height: 530px;
         position: absolute;
         margin-left: -30px;
         bottom: 0;
@@ -91,7 +100,7 @@
       position: relative;
 
       img {
-        height: 400px;
+        height: 550px;
         width: auto;
         position: absolute;
         top: 50%;

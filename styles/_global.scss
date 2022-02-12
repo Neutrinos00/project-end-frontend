@@ -18,10 +18,14 @@ $font-main: "mainFont", sans-serif;
   font-family: $font-main;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $black-color;
   color: $white-color;
-  min-width: 1230px;
+  min-width: 1300px;
 }
 
 a {
@@ -34,8 +38,9 @@ li {
 }
 
 .title-container {
-  padding-top: 20px;
-  padding-left: 30px;
+  padding-top: 60px;
+  padding-right: 50px;
+  float: right;
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
 }

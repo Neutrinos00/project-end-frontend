@@ -11,10 +11,14 @@
   font-family: "mainFont", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: black;
   color: white;
-  min-width: 1230px;
+  min-width: 1300px;
 }
 
 a {
@@ -27,41 +31,49 @@ li {
 }
 
 .title-container {
-  padding-top: 20px;
-  padding-left: 30px;
+  padding-top: 60px;
+  padding-right: 50px;
+  float: right;
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
 }
 
 .navigation {
-  height: 600px;
+  height: 700px;
   width: 100%;
   background: url("../img/bg1.png") center/cover;
   display: grid;
-  grid-template-rows: 80px 1fr;
 }
 .navigation li {
   display: inline;
 }
 .navigation nav {
   width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 100;
+  font-size: 2.8rem;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.075) 0%, black 100%);
+}
+.navigation nav .nav-container {
   position: relative;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
-  font-size: 2.5rem;
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 0%, black 100%);
 }
-.navigation nav ul {
+.navigation nav .nav-container ul {
   position: absolute;
-  left: 15%;
+  left: 10%;
 }
-.navigation nav ul li {
+.navigation nav .nav-container ul li {
   margin-left: 30px;
+  display: inline;
 }
-.navigation nav ul li a {
+.navigation nav .nav-container ul li a {
   transition: color 0.3s ease-in-out;
 }
-.navigation nav ul li a:hover {
+.navigation nav .nav-container ul li a:hover {
   color: gray;
 }
 .navigation .navigation-container {
@@ -74,7 +86,7 @@ li {
   position: relative;
 }
 .navigation .navigation-container .navigation-img-container img {
-  height: 450px;
+  height: 530px;
   position: absolute;
   margin-left: -30px;
   bottom: 0;
@@ -111,7 +123,7 @@ li {
   position: relative;
 }
 .navigation .navigation-container .navigation-logo-container img {
-  height: 400px;
+  height: 550px;
   width: auto;
   position: absolute;
   top: 50%;
