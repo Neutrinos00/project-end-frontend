@@ -1,12 +1,16 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css");
+
 @font-face {
+  // voir si dispo avec une vraie url
   font-family: "mainFont";
   src: url("../fonts/NauSea-yeMm.ttf") format("woff");
 }
 
+// variable à redefinir avec evan
 $black-color: black;
 $white-color: white;
 $navigation-hoover-color: gray;
-
 $font-main: "mainFont", sans-serif;
 
 *,
@@ -18,6 +22,7 @@ $font-main: "mainFont", sans-serif;
   font-family: $font-main;
 }
 
+// potentiellement inutile via locomotive.
 html {
   scroll-behavior: smooth;
 }
@@ -25,7 +30,12 @@ html {
 body {
   background: $black-color;
   color: $white-color;
-  min-width: 1300px;
+  // min-width: 1300px;
+  scroll-snap-type: y mandatory; // doesn't work
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 a {
@@ -37,10 +47,12 @@ li {
   list-style: none;
 }
 
+section {
+  scroll-snap-align: start; // doesn't work
+}
+
 .title-container {
-  padding-top: 60px;
-  padding-right: 50px;
-  float: right;
-  font-size: 2.5rem;
-  letter-spacing: 0.2rem;
+  padding-top: 80px;
+  font-size: 4rem;
+  // letter-spacing: 0.2rem;
 }

@@ -3,7 +3,6 @@
   width: 100%;
   background: url("../img/bg1.png") center/cover;
   display: grid;
-  //   grid-template-rows: 80px 1fr;
 
   li {
     display: inline;
@@ -20,6 +19,12 @@
       rgba(0, 0, 0, 0.075) 0%,
       rgba(0, 0, 0, 1) 100%
     );
+    transition: 1s ease;
+
+    &.hidden_ {
+      // needed to hide navbar when scroll down (with js)
+      transform: translateY(-100%);
+    }
 
     .nav-container {
       position: relative;
@@ -52,7 +57,6 @@
     display: flex;
 
     .navigation-img-container {
-      margin-left: -30px;
       height: 100%;
       width: 50%;
       position: relative;
@@ -118,3 +122,36 @@
     }
   }
 }
+
+@media only screen and (max-width: 1599px) {
+  #cqt {
+    opacity: 0;
+  }
+  .navigation-logo-container {
+    transform: scale(90%);
+  }
+}
+
+@media only screen and (max-width: 1225px) {
+  #rusko {
+    opacity: 0;
+  }
+  .navigation-logo-container {
+    transform: scale(80%) translateX(-80px);
+  }
+}
+
+@media only screen and (max-width: 995px) {
+  #qkirq {
+    opacity: 0;
+  }
+  .navigation-logo-container {
+    transform: scale(80%) translateX(-100px);
+  }
+}
+
+// @media only screen and (min-width: 768) and (max-width: 959px) {
+//   .navigation-img-container {
+//     display: none;
+//   }
+// }

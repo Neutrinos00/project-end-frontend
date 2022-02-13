@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" href="./img/icon.ico">
     <title>Project END</title>
 </head>
 <body>
-    <div class="navigation">
+    <section class="navigation">
         <nav>
             <div class="nav-container">
                 <ul>
                     <li><a href="#a-showcase">showcase</a></li>
-                    <li><a href="#">about</a></li>
+                    <li><a href="#a-about">about</a></li>
                     <li><a href="#">rarity</a></li>
                     <li><a href="#">team</a></li>
                 </ul>
@@ -23,23 +23,48 @@
         </nav>
         <div class="navigation-container">
             <div class="navigation-img-container">
-                <img src="./img/cyborg.png" alt="cyborg"/>
-                <img src="./img/qkirq.png" alt="qkirq"/>
-                <img src="./img/rusko.png" alt="rusko"/>
-                <img src="./img/cqt.png" alt="cqt"/>
+                <img id="cyborg" src="./img/cyborg.png" alt="cyborg"/>
+                <img id="qkirq" src="./img/qkirq.png" alt="qkirq"/>
+                <img id="rusko" src="./img/rusko.png" alt="rusko"/>
+                <img id="cqt" src="./img/cqt.png" alt="cqt"/>
             </div>
             <div class="navigation-logo-container">
                 <img src="./img/logo-text.png" alt="logo-text">
                 <img id="logo-light" src="./img/logo-light.png" alt="logo-light">
             </div>
         </div>
-    </div>
-    <div class="showcase" id="a-showcase">
+    </section>
+    <section class="showcase" id="a-showcase">
         <div class="neon"></div>
         <div class="title-container">
-            <h2 id="showcase">showcase</h2>
+            <a id="showcase" href="#showcase">showcase</a>
         </div>
-    </div>
+        <div class="showcase-glide-container">
+            <div class="glide multi">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide"><img src="./img/1.png" alt=""></li>
+                        <li class="glide__slide"><img src="./img/2.jpg" alt=""></li>
+                        <li class="glide__slide"><img src="./img/3.jpg" alt=""></li>
+                        <li class="glide__slide"><img src="./img/4.jpg" alt=""></li>
+                        <li class="glide__slide"><img src="./img/5.jpg" alt=""></li>
+                        <li class="glide__slide"><img src="./img/6.jpg" alt=""></li>
+                        <li class="glide__slide"><img src="./img/7.jpg" alt=""></li>
+                        <li class="glide__slide"><img src="./img/8.jpg" alt=""></li>
+                        <li class="glide__slide"><img src="./img/9.jpg" alt=""></li>
+                        <li class="glide__slide"><img src="./img/10.jpg" alt=""></li>
+                        <li class="glide__slide"><img src="./img/11.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="a-about">
+        <div class="title-container">
+            <a id="showcase" href="#about">about</a>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
     <script src="./scripts/index.js"></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 .showcase {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   position: relative;
 
   .neon {
@@ -8,12 +10,54 @@
     height: 60px;
     width: 100%;
     z-index: 2;
+    opacity: 1;
     background: linear-gradient(
       180deg,
       rgba(57, 38, 255, 1) 0%,
       rgba(148, 148, 148, 0) 100%
     );
     animation: 8s infinite neon;
+
+    &.stop_ {
+      // needed to stop neon when showcase display (with js)
+      display: none;
+      opacity: 0;
+      transition: 1s;
+    }
+  }
+
+  .title-container {
+    text-align: right;
+    padding-right: 30px;
+  }
+
+  .showcase-glide-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    .glide {
+      height: 80%;
+      width: 100%;
+
+      .glide__track {
+        height: 100%;
+
+        .glide__slide {
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+
+          img {
+            height: 600px;
+          }
+        }
+      }
+    }
+  }
+  img: {
+    height: 400px;
   }
 }
 
