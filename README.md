@@ -1,6 +1,6 @@
 END project website art prototype (vanilla version)
 
-to test:
+To test:
 
 1. clone the code : code -> Download ZIP
    or if you have git installed on your computer : open a terminal -> git clone https://github.com/Neutrinos00/END_frontend_proto.git
@@ -16,4 +16,7 @@ To update a cloned version:
 
 1. open a terminal in the folder END_frontend_proto/
 2. git pull
-3. enjoy
+3. paste path of index.html file in the URL field (eg: C:/path/to/the/file/index.html) (you can put it in your browser favorites but never move the folder)
+4. enjoy
+
+In latter version, you probably will need node js on your computer

@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "endfrontendproto",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch ./styles/_style.scss ./styles/style.css"
   },
-  "author": "",
+  "author": "neutrinos.particle@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "locomotive-scroll": "^4.1.4",
     "sass": "^1.49.7"
   }
 }

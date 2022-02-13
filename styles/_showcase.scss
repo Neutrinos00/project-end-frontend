@@ -36,26 +36,8 @@
     align-items: center;
     height: 100%;
     width: 100%;
-
-    .glide {
-      height: 80%;
-      width: 100%;
-
-      .glide__track {
-        height: 100%;
-
-        .glide__slide {
-          display: flex;
-          justify-content: center;
-          overflow: hidden;
-
-          img {
-            height: 600px;
-          }
-        }
-      }
-    }
   }
+
   img: {
     height: 400px;
   }

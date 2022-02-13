@@ -1,5 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css");
+@import url("../node_modules/locomotive-scroll/dist/locomotive-scroll.css");
 @font-face {
   font-family: "mainFont";
   src: url("../fonts/NauSea-yeMm.ttf") format("woff");
@@ -206,21 +207,6 @@ section {
   height: 100%;
   width: 100%;
 }
-.showcase .showcase-glide-container .glide {
-  height: 80%;
-  width: 100%;
-}
-.showcase .showcase-glide-container .glide .glide__track {
-  height: 100%;
-}
-.showcase .showcase-glide-container .glide .glide__track .glide__slide {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-.showcase .showcase-glide-container .glide .glide__track .glide__slide img {
-  height: 600px;
-}
 
 @keyframes neon {
   0% {
@@ -251,6 +237,23 @@ section {
 .about .title-container {
   text-align: right;
   padding-right: 30px;
+}
+
+.glide {
+  height: 80%;
+  width: 100%;
+}
+.glide .glide__track {
+  height: 100%;
+}
+.glide .glide__track .glide__slide {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.glide .glide__track .glide__slide img {
+  height: 600px;
+  border-radius: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */
