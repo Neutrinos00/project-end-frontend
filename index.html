@@ -6,36 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./img/icon.ico">
+    <link rel="shortcut icon" href="./img/icon/favicon.ico">
+    <!-- <script defer src="./node_modules/locomotive-scroll/dist/locomotive-scroll.min.js"></script> -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+    <script defer src="./scripts/index.js"></script>
     <title>Project END</title>
 </head>
 <body>
-    <div data-scroll-container>
-        <section data-scroll-section class="navigation">
+    <div>
+        <section class="navigation">
             <nav>
                 <div class="nav-container">
                     <ul>
                         <li><a href="#a-showcase">showcase</a></li>
                         <li><a href="#a-about">about</a></li>
-                        <li><a href="#">rarity</a></li>
                         <li><a href="#">team</a></li>
                     </ul>
+                </div>
+                <div class="logos-container">
+                    <a href="https://discord.gg/HvHu6RqS">
+                        <img src="./img/icon/discord.svg" alt="discord-icon" loading="lazy"/>
+                    </a>
+                    <a href="https://twitter.com/Project__End">
+                        <img src="https://svgshare.com/i/6w3.svg" alt="twitter-icon" loading="lazy"/>
+                    </a>
                 </div>
             </nav>
             <div class="navigation-container">
                 <div class="navigation-img-container">
-                    <img id="cyborg" src="./img/cyborg.png" alt="cyborg"/>
-                    <img id="qkirq" src="./img/qkirq.png" alt="qkirq"/>
-                    <img id="rusko" src="./img/rusko.png" alt="rusko"/>
-                    <img id="cqt" src="./img/cqt.png" alt="cqt"/>
+                    <div class="navigation-perso cyborg">
+                        <img src="./img/assets/cyborg.png" alt="cyborg" loading="lazy"/>
+                        <img class="shadow" src="./img/assets/cyborg-shadow.png" alt="cyborg-shadow" loading="lazy"/>
+                    </div>
+                    <div class="navigation-perso djinn">
+                        <img src="./img/assets/djinn.png" alt="djinn" loading="lazy"/>
+                        <img class="shadow" src="./img/assets/djinn-shadow.png" alt="djinn" loading="lazy"/>
+                    </div>
+                    <div class="navigation-perso hunter">
+                        <img src="./img/assets/hunter.png" alt="hunter" loading="lazy"/>
+                        <img class="shadow" src="./img/assets/hunter-shadow.png" alt="hunter" loading="lazy"/>
+                    </div>
+                    <div class="navigation-perso cat">
+                        <img src="./img/assets/cat.png" alt="cat" loading="lazy"/>
+                        <img class="shadow" src="./img/assets/cat-shadow.png" alt="cat" loading="lazy"/>
+                    </div>
                 </div>
                 <div class="navigation-logo-container">
-                    <img src="./img/logo-text.png" alt="logo-text">
-                    <img id="logo-light" src="./img/logo-light.png" alt="logo-light">
+                    <img src="./img/assets/title.png" alt="logo-text" loading="lazy"/>
+                    <img id="logo-light" src="./img/assets/title-glimmer.png" alt="logo-light" loading="lazy"/>
                 </div>
             </div>
         </section>
-        <section data-scroll-section class="showcase" id="a-showcase">
+        <section class="showcase" id="a-showcase">
             <div class="neon"></div>
             <div class="title-container">
                 <a id="showcase" href="#showcase">showcase</a>
@@ -48,14 +70,12 @@
                 </div>
             </div>
         </section>
-        <section data-scroll-section class="about" id="a-about">
+        <section class="about" id="a-about">
             <div class="title-container">
                 <a id="showcase" href="#about">about</a>
             </div>
+            <div class="about-container"></div>
         </section>
     </div>
-    <script src="./node_modules/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
-    <script src="./scripts/index.js"></script>
 </body>
 </html>

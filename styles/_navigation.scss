@@ -1,7 +1,7 @@
 .navigation {
-  height: 700px;
+  height: 80vh;
   width: 100%;
-  background: url("../img/bg1.png") center/cover;
+  background: url("../img/assets/bg1.png") center/cover;
   display: grid;
 
   li {
@@ -20,11 +20,8 @@
       rgba(0, 0, 0, 1) 100%
     );
     transition: 1s ease;
-
-    &.hidden_ {
-      // needed to hide navbar when scroll down (with js)
-      transform: translateY(-100%);
-    }
+    display: flex;
+    transform: translateY(0%);
 
     .nav-container {
       position: relative;
@@ -51,6 +48,25 @@
         }
       }
     }
+
+    .logos-container {
+      width: 10%;
+      margin-right: 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      a {
+        display: flex;
+        img {
+          height: 50px;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
   }
 
   .navigation-container {
@@ -61,39 +77,36 @@
       width: 50%;
       position: relative;
 
-      img {
-        height: 530px;
+      .navigation-perso {
         position: absolute;
         margin-left: -30px;
         bottom: 0;
         transform: translateY(5px);
-        transition: transform 2s;
 
-        &:nth-child(1) {
+        &.cyborg {
           left: 0%;
         }
-        &:nth-child(2) {
-          left: 15%;
-        }
-        &:nth-child(3) {
-          left: 30%;
-        }
-        &:nth-child(4) {
-          left: 45%;
+
+        &.djinn {
+          left: 17%;
         }
 
-        &:nth-child(1) {
-          transform: translateX(5%);
+        &.hunter {
+          left: 34%;
         }
-        &:nth-child(2) {
-          transform: translateX(10%);
+
+        &.cat {
+          left: 51%;
         }
-        &:nth-child(3) {
-          transform: translateX(15%);
+
+        .shadow {
+          opacity: 0;
         }
-        &:nth-child(4) {
-          transform: translateX(20%);
-        }
+      }
+
+      img {
+        height: 70vh;
+        transition: transform 2s;
       }
     }
 
@@ -104,7 +117,7 @@
       position: relative;
 
       img {
-        height: 550px;
+        height: 60vh;
         width: auto;
         position: absolute;
         top: 50%;
@@ -124,7 +137,7 @@
 }
 
 @media only screen and (max-width: 1599px) {
-  #cqt {
+  .cat {
     opacity: 0;
   }
   .navigation-logo-container {
@@ -133,7 +146,7 @@
 }
 
 @media only screen and (max-width: 1225px) {
-  #rusko {
+  .hunter {
     opacity: 0;
   }
   .navigation-logo-container {
@@ -142,7 +155,7 @@
 }
 
 @media only screen and (max-width: 995px) {
-  #qkirq {
+  .djinn {
     opacity: 0;
   }
   .navigation-logo-container {

@@ -1,6 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css");
-@import url("../node_modules/locomotive-scroll/dist/locomotive-scroll.css");
+// @import url("../node_modules/locomotive-scroll/dist/locomotive-scroll.css");
 
 @font-face {
   // voir si dispo avec une vraie url
@@ -23,9 +23,12 @@ $font-main: "mainFont", sans-serif;
   font-family: $font-main;
 }
 
-// potentiellement inutile via locomotive.
 html {
   scroll-behavior: smooth;
+}
+
+html[data-direction="down"] nav {
+  transform: translateY(-100%);
 }
 
 body {
@@ -53,7 +56,7 @@ section {
 }
 
 .title-container {
-  padding-top: 80px;
+  padding-top: 10vh;
   font-size: 4rem;
   // letter-spacing: 0.2rem;
 }

@@ -1,6 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css");
-@import url("../node_modules/locomotive-scroll/dist/locomotive-scroll.css");
 @font-face {
   font-family: "mainFont";
   src: url("../fonts/NauSea-yeMm.ttf") format("woff");
@@ -16,6 +15,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+html[data-direction=down] nav {
+  transform: translateY(-100%);
 }
 
 body {
@@ -41,14 +44,14 @@ section {
 }
 
 .title-container {
-  padding-top: 80px;
+  padding-top: 10vh;
   font-size: 4rem;
 }
 
 .navigation {
-  height: 700px;
+  height: 80vh;
   width: 100%;
-  background: url("../img/bg1.png") center/cover;
+  background: url("../img/assets/bg1.png") center/cover;
   display: grid;
 }
 .navigation li {
@@ -62,9 +65,8 @@ section {
   font-size: 2.8rem;
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.075) 0%, black 100%);
   transition: 1s ease;
-}
-.navigation nav.hidden_ {
-  transform: translateY(-100%);
+  display: flex;
+  transform: translateY(0%);
 }
 .navigation nav .nav-container {
   position: relative;
@@ -87,6 +89,22 @@ section {
 .navigation nav .nav-container ul li a:hover {
   color: gray;
 }
+.navigation nav .logos-container {
+  width: 10%;
+  margin-right: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation nav .logos-container a {
+  display: flex;
+}
+.navigation nav .logos-container a img {
+  height: 50px;
+}
+.navigation nav .logos-container a img:hover {
+  opacity: 0.7;
+}
 .navigation .navigation-container {
   display: flex;
 }
@@ -95,37 +113,30 @@ section {
   width: 50%;
   position: relative;
 }
-.navigation .navigation-container .navigation-img-container img {
-  height: 530px;
+.navigation .navigation-container .navigation-img-container .navigation-perso {
   position: absolute;
   margin-left: -30px;
   bottom: 0;
   transform: translateY(5px);
-  transition: transform 2s;
 }
-.navigation .navigation-container .navigation-img-container img:nth-child(1) {
+.navigation .navigation-container .navigation-img-container .navigation-perso.cyborg {
   left: 0%;
 }
-.navigation .navigation-container .navigation-img-container img:nth-child(2) {
-  left: 15%;
+.navigation .navigation-container .navigation-img-container .navigation-perso.djinn {
+  left: 17%;
 }
-.navigation .navigation-container .navigation-img-container img:nth-child(3) {
-  left: 30%;
+.navigation .navigation-container .navigation-img-container .navigation-perso.hunter {
+  left: 34%;
 }
-.navigation .navigation-container .navigation-img-container img:nth-child(4) {
-  left: 45%;
+.navigation .navigation-container .navigation-img-container .navigation-perso.cat {
+  left: 51%;
 }
-.navigation .navigation-container .navigation-img-container img:nth-child(1) {
-  transform: translateX(5%);
+.navigation .navigation-container .navigation-img-container .navigation-perso .shadow {
+  opacity: 0;
 }
-.navigation .navigation-container .navigation-img-container img:nth-child(2) {
-  transform: translateX(10%);
-}
-.navigation .navigation-container .navigation-img-container img:nth-child(3) {
-  transform: translateX(15%);
-}
-.navigation .navigation-container .navigation-img-container img:nth-child(4) {
-  transform: translateX(20%);
+.navigation .navigation-container .navigation-img-container img {
+  height: 70vh;
+  transition: transform 2s;
 }
 .navigation .navigation-container .navigation-logo-container {
   height: 100%;
@@ -133,7 +144,7 @@ section {
   position: relative;
 }
 .navigation .navigation-container .navigation-logo-container img {
-  height: 550px;
+  height: 60vh;
   width: auto;
   position: absolute;
   top: 50%;
@@ -149,7 +160,7 @@ section {
 }
 
 @media only screen and (max-width: 1599px) {
-  #cqt {
+  .cat {
     opacity: 0;
   }
 
@@ -158,7 +169,7 @@ section {
   }
 }
 @media only screen and (max-width: 1225px) {
-  #rusko {
+  .hunter {
     opacity: 0;
   }
 
@@ -167,7 +178,7 @@ section {
   }
 }
 @media only screen and (max-width: 995px) {
-  #qkirq {
+  .djinn {
     opacity: 0;
   }
 
@@ -180,7 +191,8 @@ section {
   display: flex;
   flex-direction: column;
   position: relative;
-  img-height: 400px;
+  background: url("./../img/assets/bg2.jpg") center/cover;
+  background-position: 90% 10%;
 }
 .showcase .neon {
   position: absolute;
@@ -199,13 +211,12 @@ section {
 }
 .showcase .title-container {
   text-align: right;
-  padding-right: 30px;
+  padding-right: 3%;
 }
 .showcase .showcase-glide-container {
   display: flex;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  justify-content: center;
 }
 
 @keyframes neon {
@@ -241,19 +252,28 @@ section {
 
 .glide {
   height: 80%;
-  width: 100%;
-}
-.glide .glide__track {
-  height: 100%;
+  width: 40%;
 }
 .glide .glide__track .glide__slide {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+}
+.glide .glide__track .glide__slide .nft-title-container {
+  position: absolute;
+  margin-top: 5px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .glide .glide__track .glide__slide img {
-  height: 600px;
+  height: 70vh;
   border-radius: 3px;
+  transition: 1s ease;
+}
+.glide .glide__track .glide__slide img:hover {
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,34 +3,35 @@
 
 const init = () => {
     buildGlide();
-    locomotiveScroll();
+    // locomotiveScroll();
 };
 
 const buildGlide = () => {
     const glideSlides = document.querySelector(".glide__slides");
     const paths = [
-        "./img/1.png",
-        "./img/2.jpg",
-        "./img/3.jpg",
-        "./img/4.jpg",
-        "./img/5.jpg",
-        "./img/6.jpg",
-        "./img/7.jpg",
-        "./img/8.jpg",
-        "./img/9.jpg",,
-        "./img/10.jpg",
-        "./img/11.jpg",
-        "./img/12.jpg",
-        "./img/13.jpg",
-        "./img/14.jpg",
-        "./img/15.jpg",
-        "./img/16.jpg",
+        "./img/nft/1.png",
+        "./img/nft/2.jpg",
+        "./img/nft/3.jpg",
+        "./img/nft/4.jpg",
+        "./img/nft/5.jpg",
+        "./img/nft/6.jpg",
+        "./img/nft/7.jpg",
+        "./img/nft/8.jpg",
+        "./img/nft/9.jpg",,
+        "./img/nft/10.jpg",
+        "./img/nft/11.jpg",
+        "./img/nft/12.jpg",
+        "./img/nft/13.jpg",
+        "./img/nft/14.jpg",
+        "./img/nft/15.jpg",
+        "./img/nft/16.jpg",
     ];
 
     paths.map((path) => {
         glideSlides.innerHTML += `
             <li class="glide__slide">
-                <img src="${path}" alt="">
+                <h2 class="nft-title-container"># 1000</h2>
+                <img src="${path}" alt="" loading="lazy">
             </li>
         `;
     });
@@ -38,17 +39,17 @@ const buildGlide = () => {
     let glideMulti = new Glide('.multi', {
         type: 'carousel',
         autoplay: 3500,
-        perView: 3 
+        perView: 1
     });
     glideMulti.mount();
 };
 
-const locomotiveScroll = () => {
+// const locomotiveScroll = () => {
     // let scroll = new LocomotiveScroll({
     //     el: document.querySelector('[data-scroll-container]'),
     //     smooth: true
     // });
-};
+// };
 
 
 window.onload = init();

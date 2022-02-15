@@ -1,26 +1,30 @@
 .glide {
   height: 80%;
-  width: 100%;
+  width: 40%;
 
   .glide__track {
-    height: 100%;
-
     .glide__slide {
       display: flex;
-      // flex-direction: row;
       justify-content: center;
       overflow: hidden;
-      // position: relative;
+      position: relative;
 
-      // .nft-title-container {
-      //   position: absolute;
-      //   top: 0;
-      //   z-index: 10;
-      // }
+      .nft-title-container {
+        position: absolute;
+        margin-top: 5px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
       img {
-        height: 600px;
+        height: 70vh;
         border-radius: 3px;
+        transition: 1s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
