@@ -1,7 +1,8 @@
 .navigation {
   height: 80vh;
+  // height: 100vh;
   width: 100%;
-  background: url("../img/assets/bg1.png") center/cover;
+  background: url("../img/assets/bg1_low.jpg") center/cover;
   display: grid;
 
   li {
@@ -76,37 +77,44 @@
       height: 100%;
       width: 50%;
       position: relative;
+      margin-top: 5px;
+      // display: flex;
 
-      .navigation-perso {
+      .cyborg {
         position: absolute;
-        margin-left: -30px;
         bottom: 0;
-        transform: translateY(5px);
+        left: 0%;
+      }
+      .djinn {
+        position: absolute;
+        bottom: 0;
+        left: 17%;
+      }
+      .hunter {
+        position: absolute;
+        bottom: 0;
+        left: 34%;
+      }
+      .cat {
+        position: absolute;
+        bottom: 0;
+        left: 51%;
+      }
 
-        &.cyborg {
-          left: 0%;
-        }
-
-        &.djinn {
-          left: 17%;
-        }
-
-        &.hunter {
-          left: 34%;
-        }
-
-        &.cat {
-          left: 51%;
-        }
-
-        .shadow {
-          opacity: 0;
-        }
+      .shadow {
+        opacity: 0;
       }
 
       img {
         height: 70vh;
+        position: absolute;
+        bottom: 0;
         transition: transform 2s;
+
+        &:hover,
+        .shadow {
+          opacity: 1;
+        }
       }
     }
 
@@ -120,7 +128,7 @@
         height: 60vh;
         width: auto;
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
@@ -137,27 +145,27 @@
 }
 
 @media only screen and (max-width: 1599px) {
-  .cat {
-    opacity: 0;
-  }
+  // .cat {
+  //   opacity: 0;
+  // }
   .navigation-logo-container {
     transform: scale(90%);
   }
 }
 
 @media only screen and (max-width: 1225px) {
-  .hunter {
-    opacity: 0;
-  }
+  // .hunter {
+  //   opacity: 0;
+  // }
   .navigation-logo-container {
     transform: scale(80%) translateX(-80px);
   }
 }
 
 @media only screen and (max-width: 995px) {
-  .djinn {
-    opacity: 0;
-  }
+  // .djinn {
+  //   opacity: 0;
+  // }
   .navigation-logo-container {
     transform: scale(80%) translateX(-100px);
   }

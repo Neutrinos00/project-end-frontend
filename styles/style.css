@@ -51,7 +51,7 @@ section {
 .navigation {
   height: 80vh;
   width: 100%;
-  background: url("../img/assets/bg1.png") center/cover;
+  background: url("../img/assets/bg1_low.jpg") center/cover;
   display: grid;
 }
 .navigation li {
@@ -112,31 +112,40 @@ section {
   height: 100%;
   width: 50%;
   position: relative;
+  margin-top: 5px;
 }
-.navigation .navigation-container .navigation-img-container .navigation-perso {
+.navigation .navigation-container .navigation-img-container .cyborg {
   position: absolute;
-  margin-left: -30px;
   bottom: 0;
-  transform: translateY(5px);
-}
-.navigation .navigation-container .navigation-img-container .navigation-perso.cyborg {
   left: 0%;
 }
-.navigation .navigation-container .navigation-img-container .navigation-perso.djinn {
+.navigation .navigation-container .navigation-img-container .djinn {
+  position: absolute;
+  bottom: 0;
   left: 17%;
 }
-.navigation .navigation-container .navigation-img-container .navigation-perso.hunter {
+.navigation .navigation-container .navigation-img-container .hunter {
+  position: absolute;
+  bottom: 0;
   left: 34%;
 }
-.navigation .navigation-container .navigation-img-container .navigation-perso.cat {
+.navigation .navigation-container .navigation-img-container .cat {
+  position: absolute;
+  bottom: 0;
   left: 51%;
 }
-.navigation .navigation-container .navigation-img-container .navigation-perso .shadow {
+.navigation .navigation-container .navigation-img-container .shadow {
   opacity: 0;
 }
 .navigation .navigation-container .navigation-img-container img {
   height: 70vh;
+  position: absolute;
+  bottom: 0;
   transition: transform 2s;
+}
+.navigation .navigation-container .navigation-img-container img:hover,
+.navigation .navigation-container .navigation-img-container img .shadow {
+  opacity: 1;
 }
 .navigation .navigation-container .navigation-logo-container {
   height: 100%;
@@ -147,7 +156,7 @@ section {
   height: 60vh;
   width: auto;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -160,28 +169,16 @@ section {
 }
 
 @media only screen and (max-width: 1599px) {
-  .cat {
-    opacity: 0;
-  }
-
   .navigation-logo-container {
     transform: scale(90%);
   }
 }
 @media only screen and (max-width: 1225px) {
-  .hunter {
-    opacity: 0;
-  }
-
   .navigation-logo-container {
     transform: scale(80%) translateX(-80px);
   }
 }
 @media only screen and (max-width: 995px) {
-  .djinn {
-    opacity: 0;
-  }
-
   .navigation-logo-container {
     transform: scale(80%) translateX(-100px);
   }
@@ -191,8 +188,8 @@ section {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: url("./../img/assets/bg2.jpg") center/cover;
-  background-position: 90% 10%;
+  background: linear-gradient(180deg, black 0%, rgba(148, 148, 148, 0) 20%), url("./../img/assets/bg2_low.jpg") center/cover;
+  background-position: 95% 5%;
 }
 .showcase .neon {
   position: absolute;
@@ -274,6 +271,14 @@ section {
 }
 .glide .glide__track .glide__slide img:hover {
   transform: scale(1.2);
+}
+
+.team {
+  height: 100vh;
+}
+.team .title-container {
+  text-align: right;
+  padding-right: 3%;
 }
 
 /*# sourceMappingURL=style.css.map */
