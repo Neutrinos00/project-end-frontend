@@ -2,7 +2,7 @@
   height: 80vh;
   // height: 100vh;
   width: 100%;
-  background: url("../img/assets/bg1_low.jpg") center/cover;
+  background: url("../img/assets/BG2.jpg") center/cover;
   display: grid;
 
   li {
@@ -82,22 +82,22 @@
 
       .cyborg {
         position: absolute;
-        bottom: 0;
+        bottom: 4vh;
         left: 0%;
       }
       .djinn {
         position: absolute;
-        bottom: 0;
+        bottom: 4vh;
         left: 17%;
       }
       .hunter {
         position: absolute;
-        bottom: 0;
+        bottom: 4vh;
         left: 34%;
       }
       .cat {
         position: absolute;
-        bottom: 0;
+        bottom: 4vh;
         left: 51%;
       }
 

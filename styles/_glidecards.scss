@@ -6,7 +6,6 @@
     .glide__slide {
       display: flex;
       justify-content: center;
-      overflow: hidden;
       position: relative;
 
       .nft-title-container {
@@ -20,10 +19,12 @@
       img {
         height: 70vh;
         border-radius: 3px;
+        padding: 3%;
         transition: 1s ease;
+        background: black;
 
         &:hover {
-          transform: scale(1.2);
+          transform: scale(1.1);
         }
       }
     }

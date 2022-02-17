@@ -1,7 +1,40 @@
 .team {
   height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0.01) 80%
+  );
+  position: relative;
+
   .title-container {
     text-align: right;
     padding-right: 3%;
+  }
+
+  .team-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .team-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        padding: 2%;
+        height: 40vh;
+        background: black;
+        border-radius: 3px;
+      }
+
+      p {
+        padding: 4%;
+      }
+    }
   }
 }

@@ -11,27 +11,27 @@
     url("./../img/assets/bg2_low.jpg") center/cover;
   background-position: 95% 5%;
 
-  .neon {
-    position: absolute;
-    top: 0;
-    height: 60px;
-    width: 100%;
-    z-index: 2;
-    opacity: 1;
-    background: linear-gradient(
-      180deg,
-      rgba(57, 38, 255, 1) 0%,
-      rgba(148, 148, 148, 0) 100%
-    );
-    animation: 8s infinite neon;
+  // .neon {
+  //   position: absolute;
+  //   top: 0;
+  //   height: 60px;
+  //   width: 100%;
+  //   z-index: 2;
+  //   opacity: 1;
+  //   background: linear-gradient(
+  //     180deg,
+  //     rgba(57, 38, 255, 1) 0%,
+  //     rgba(148, 148, 148, 0) 100%
+  //   );
+  //   animation: 8s infinite neon;
 
-    &.stop_ {
-      // needed to stop neon when showcase display (with js)
-      display: none;
-      opacity: 0;
-      transition: 1s;
-    }
-  }
+  //   &.stop_ {
+  //     // needed to stop neon when showcase display (with js)
+  //     display: none;
+  //     opacity: 0;
+  //     transition: 1s;
+  //   }
+  // }
 
   .title-container {
     text-align: right;
@@ -42,6 +42,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .crowd {
+    background: url("./../img/assets/crowd.png") center/cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    height: 60vh;
+    width: 100%;
+    pointer-events: none;
   }
 }
 
