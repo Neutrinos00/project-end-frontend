@@ -11,33 +11,6 @@
     url("./../img/assets/bg2_low.jpg") center/cover;
   background-position: 95% 5%;
 
-  // .neon {
-  //   position: absolute;
-  //   top: 0;
-  //   height: 60px;
-  //   width: 100%;
-  //   z-index: 2;
-  //   opacity: 1;
-  //   background: linear-gradient(
-  //     180deg,
-  //     rgba(57, 38, 255, 1) 0%,
-  //     rgba(148, 148, 148, 0) 100%
-  //   );
-  //   animation: 8s infinite neon;
-
-  //   &.stop_ {
-  //     // needed to stop neon when showcase display (with js)
-  //     display: none;
-  //     opacity: 0;
-  //     transition: 1s;
-  //   }
-  // }
-
-  .title-container {
-    text-align: right;
-    padding-right: 3%;
-  }
-
   .showcase-glide-container {
     display: flex;
     align-items: center;
@@ -52,29 +25,5 @@
     height: 60vh;
     width: 100%;
     pointer-events: none;
-  }
-}
-
-@keyframes neon {
-  0% {
-    opacity: 1;
-  }
-  1% {
-    opacity: 0;
-  }
-  8% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
   }
 }

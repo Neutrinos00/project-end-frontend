@@ -7,14 +7,10 @@
   );
   position: relative;
 
-  .title-container {
-    text-align: right;
-    padding-right: 3%;
-  }
-
   .team-container {
     position: absolute;
-    bottom: 0;
+    bottom: 40%;
+    transform: translateY(50%);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -34,6 +30,7 @@
 
       p {
         padding: 4%;
+        width: 80%;
       }
     }
   }

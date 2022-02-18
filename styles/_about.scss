@@ -1,12 +1,25 @@
 .about {
   height: 100vh;
-
-  .title-container {
-    text-align: right;
-    padding-right: 30px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .about-container {
+    height: 50vh;
+    width: 60%;
     background: red;
+    position: relative;
+
+    .p {
+      background: green;
+    }
+
+    .text-navigation-container {
+      position: absolute;
+      bottom: 0;
+      height: 10%;
+      width: 100%;
+      background: blue;
+    }
   }
 }

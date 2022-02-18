@@ -27,10 +27,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html[data-direction="down"] nav {
-  transform: translateY(-100%);
-}
-
 body {
   background: $black-color;
   color: $white-color;
@@ -53,10 +49,13 @@ li {
 
 section {
   scroll-snap-align: start; // doesn't work
+  position: relative;
 }
 
 .title-container {
   padding-top: 10vh;
   font-size: 4rem;
-  // letter-spacing: 0.2rem;
+  position: absolute;
+  top: 0;
+  right: 3%;
 }

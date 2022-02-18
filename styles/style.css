@@ -17,10 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html[data-direction=down] nav {
-  transform: translateY(-100%);
-}
-
 body {
   background: black;
   color: white;
@@ -41,11 +37,15 @@ li {
 
 section {
   scroll-snap-align: start;
+  position: relative;
 }
 
 .title-container {
   padding-top: 10vh;
   font-size: 4rem;
+  position: absolute;
+  top: 0;
+  right: 3%;
 }
 
 .navigation {
@@ -162,12 +162,20 @@ section {
 }
 .navigation .navigation-container .navigation-logo-container #logo-light {
   opacity: 0;
-  transition: opacity 1s ease;
-}
-.navigation .navigation-container .navigation-logo-container #logo-light:hover {
-  opacity: 1;
+  animation: 5s linear glimmer infinite;
 }
 
+@keyframes glimmer {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media only screen and (max-width: 1599px) {
   .navigation-logo-container {
     transform: scale(90%);
@@ -191,10 +199,6 @@ section {
   background: linear-gradient(180deg, black 0%, rgba(148, 148, 148, 0) 20%), url("./../img/assets/bg2_low.jpg") center/cover;
   background-position: 95% 5%;
 }
-.showcase .title-container {
-  text-align: right;
-  padding-right: 3%;
-}
 .showcase .showcase-glide-container {
   display: flex;
   align-items: center;
@@ -210,38 +214,27 @@ section {
   pointer-events: none;
 }
 
-@keyframes neon {
-  0% {
-    opacity: 1;
-  }
-  1% {
-    opacity: 0;
-  }
-  8% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .about {
   height: 100vh;
-}
-.about .title-container {
-  text-align: right;
-  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .about .about-container {
+  height: 50vh;
+  width: 60%;
   background: red;
+  position: relative;
+}
+.about .about-container .p {
+  background: green;
+}
+.about .about-container .text-navigation-container {
+  position: absolute;
+  bottom: 0;
+  height: 10%;
+  width: 100%;
+  background: blue;
 }
 
 .glide {
@@ -276,13 +269,10 @@ section {
   background: linear-gradient(0deg, red 0%, rgba(255, 255, 255, 0.01) 80%);
   position: relative;
 }
-.team .title-container {
-  text-align: right;
-  padding-right: 3%;
-}
 .team .team-container {
   position: absolute;
-  bottom: 0;
+  bottom: 40%;
+  transform: translateY(50%);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -301,6 +291,15 @@ section {
 }
 .team .team-container .team-unit p {
   padding: 4%;
+  width: 80%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  background: gray;
 }
 
 /*# sourceMappingURL=style.css.map */
