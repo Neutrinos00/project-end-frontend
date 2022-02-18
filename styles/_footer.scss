@@ -1,7 +1,21 @@
 footer {
   position: absolute;
   bottom: 0;
-  height: 80px;
+  height: 5%;
   width: 100%;
-  background: gray;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .cardano-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: black;
+    img {
+      height: 40px;
+      filter: grayscale(100%);
+    }
+  }
 }

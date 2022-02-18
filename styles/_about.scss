@@ -7,19 +7,30 @@
   .about-container {
     height: 50vh;
     width: 60%;
-    background: red;
     position: relative;
-
-    .p {
-      background: green;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .text-navigation-container {
       position: absolute;
       bottom: 0;
       height: 10%;
       width: 100%;
-      background: blue;
+      background: url("./../img/assets/frise1.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      justify-content: space-around;
+
+      img {
+        height: 100%;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
     }
   }
 }

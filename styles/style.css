@@ -1,5 +1,4 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css");
 @font-face {
   font-family: "mainFont";
   src: url("../fonts/NauSea-yeMm.ttf") format("woff");
@@ -33,14 +32,13 @@ a {
 
 li {
   list-style: none;
+  display: inline;
 }
 
 section {
-  scroll-snap-align: start;
   position: relative;
 }
-
-.title-container {
+section .title-container {
   padding-top: 10vh;
   font-size: 4rem;
   position: absolute;
@@ -48,119 +46,109 @@ section {
   right: 3%;
 }
 
-.navigation {
+header {
   height: 80vh;
   width: 100%;
   background: url("../img/assets/BG2.jpg") center/cover;
   display: grid;
 }
-.navigation li {
-  display: inline;
-}
-.navigation nav {
+header nav {
   width: 100%;
-  height: 80px;
+  padding-top: 5px;
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   font-size: 2.8rem;
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.075) 0%, black 100%);
-  transition: 1s ease;
-  display: flex;
+  transition: transform 0.5s ease;
   transform: translateY(0%);
-}
-.navigation nav .nav-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
   display: flex;
-  align-items: center;
-}
-.navigation nav .nav-container ul {
-  position: absolute;
-  left: 10%;
-}
-.navigation nav .nav-container ul li {
-  margin-left: 30px;
-  display: inline;
-}
-.navigation nav .nav-container ul li a {
-  transition: color 0.3s ease-in-out;
-}
-.navigation nav .nav-container ul li a:hover {
-  color: gray;
-}
-.navigation nav .logos-container {
-  width: 10%;
-  margin-right: 3%;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 }
-.navigation nav .logos-container a {
-  display: flex;
+header nav.hidden {
+  transform: translateY(-100%);
 }
-.navigation nav .logos-container a img {
+header nav ul {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  padding: 0 5% 0 5%;
+}
+header nav ul li {
+  padding: 0 3% 0 3%;
+}
+header nav ul li a {
+  transition: color 0.3s ease-in-out;
+}
+header nav ul li a:hover {
+  color: gray;
+}
+header nav .logos-container {
+  padding: 0 5% 0 5%;
+  display: flex;
+  align-items: center;
+}
+header nav .logos-container a {
+  display: flex;
+  float: right;
+}
+header nav .logos-container a img {
   height: 50px;
 }
-.navigation nav .logos-container a img:hover {
+header nav .logos-container a img:hover {
   opacity: 0.7;
 }
-.navigation .navigation-container {
+header .navigation-container {
   display: flex;
+  justify-content: center;
 }
-.navigation .navigation-container .navigation-img-container {
+header .navigation-container .navigation-img-container {
   height: 100%;
   width: 50%;
   position: relative;
   margin-top: 5px;
 }
-.navigation .navigation-container .navigation-img-container .cyborg {
+header .navigation-container .navigation-img-container .perso {
   position: absolute;
   bottom: 4vh;
-  left: 0%;
 }
-.navigation .navigation-container .navigation-img-container .djinn {
-  position: absolute;
-  bottom: 4vh;
-  left: 17%;
-}
-.navigation .navigation-container .navigation-img-container .hunter {
-  position: absolute;
-  bottom: 4vh;
-  left: 34%;
-}
-.navigation .navigation-container .navigation-img-container .cat {
-  position: absolute;
-  bottom: 4vh;
-  left: 51%;
-}
-.navigation .navigation-container .navigation-img-container .shadow {
-  opacity: 0;
-}
-.navigation .navigation-container .navigation-img-container img {
+header .navigation-container .navigation-img-container .perso img {
   height: 70vh;
   position: absolute;
   bottom: 0;
   transition: transform 2s;
 }
-.navigation .navigation-container .navigation-img-container img:hover,
-.navigation .navigation-container .navigation-img-container img .shadow {
-  opacity: 1;
+header .navigation-container .navigation-img-container .perso img .shadow {
+  opacity: 0;
 }
-.navigation .navigation-container .navigation-logo-container {
+header .navigation-container .navigation-img-container div:nth-child(1) {
+  left: 0%;
+}
+header .navigation-container .navigation-img-container div:nth-child(2) {
+  left: 17%;
+}
+header .navigation-container .navigation-img-container div:nth-child(3) {
+  left: 34%;
+}
+header .navigation-container .navigation-img-container div:nth-child(4) {
+  left: 51%;
+}
+header .navigation-container .navigation-img-container .shadow {
+  opacity: 0;
+}
+header .navigation-container .navigation-logo-container {
   height: 100%;
   width: 50%;
   position: relative;
 }
-.navigation .navigation-container .navigation-logo-container img {
-  height: 60vh;
+header .navigation-container .navigation-logo-container img {
+  height: 58vh;
   width: auto;
   position: absolute;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.navigation .navigation-container .navigation-logo-container #logo-light {
+header .navigation-container .navigation-logo-container #logo-light {
   opacity: 0;
   animation: 5s linear glimmer infinite;
 }
@@ -176,19 +164,48 @@ section {
     opacity: 0;
   }
 }
-@media only screen and (max-width: 1599px) {
-  .navigation-logo-container {
+@keyframes shadows {}
+@media only screen and (max-width: 1800px) {
+  .navigation-logo-container,
+.perso {
     transform: scale(90%);
   }
 }
+@media only screen and (max-width: 1600px) {
+  .cat {
+    display: none;
+  }
+
+  .navigation-logo-container,
+.perso {
+    transform: scale(80%);
+  }
+}
 @media only screen and (max-width: 1225px) {
-  .navigation-logo-container {
-    transform: scale(80%) translateX(-80px);
+  .hunter {
+    display: none;
+  }
+
+  .navigation-logo-container,
+.perso {
+    transform: scale(70%);
   }
 }
 @media only screen and (max-width: 995px) {
-  .navigation-logo-container {
-    transform: scale(80%) translateX(-100px);
+  .navigation-img-container {
+    display: none;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .showcase {
@@ -223,23 +240,39 @@ section {
 .about .about-container {
   height: 50vh;
   width: 60%;
-  background: red;
   position: relative;
-}
-.about .about-container .p {
-  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about .about-container .text-navigation-container {
   position: absolute;
   bottom: 0;
   height: 10%;
   width: 100%;
-  background: blue;
+  background: url("./../img/assets/frise1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+}
+.about .about-container .text-navigation-container img {
+  height: 100%;
+}
+.about .about-container .text-navigation-container img:hover {
+  opacity: 0.5;
 }
 
 .glide {
   height: 80%;
   width: 40%;
+}
+.glide .glide__track {
+  transition: 1s ease;
+}
+.glide .glide__track:hover {
+  transform: scale(1.1);
 }
 .glide .glide__track .glide__slide {
   display: flex;
@@ -248,7 +281,8 @@ section {
 }
 .glide .glide__track .glide__slide .nft-title-container {
   position: absolute;
-  margin-top: 5px;
+  margin-top: 5%;
+  font-size: 2rem;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -257,11 +291,7 @@ section {
   height: 70vh;
   border-radius: 3px;
   padding: 3%;
-  transition: 1s ease;
   background: black;
-}
-.glide .glide__track .glide__slide img:hover {
-  transform: scale(1.1);
 }
 
 .team {
@@ -297,9 +327,22 @@ section {
 footer {
   position: absolute;
   bottom: 0;
-  height: 80px;
+  height: 5%;
   width: 100%;
-  background: gray;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .cardano-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: black;
+}
+footer .cardano-container img {
+  height: 40px;
+  filter: grayscale(100%);
 }
 
 /*# sourceMappingURL=style.css.map */

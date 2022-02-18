@@ -3,7 +3,7 @@
 
 const init = () => {
     buildGlide();
-    // locomotiveScroll();
+    test()
 };
 
 const buildGlide = () => {
@@ -17,14 +17,14 @@ const buildGlide = () => {
         "./img/nft/6.jpg",
         "./img/nft/7.jpg",
         "./img/nft/8.jpg",
-        "./img/nft/9.jpg",,
-        "./img/nft/10.jpg",
-        "./img/nft/11.jpg",
-        "./img/nft/12.jpg",
-        "./img/nft/13.jpg",
-        "./img/nft/14.jpg",
-        "./img/nft/15.jpg",
-        "./img/nft/16.jpg",
+        // "./img/nft/9.jpg",,
+        // "./img/nft/10.jpg",
+        // "./img/nft/11.jpg",
+        // "./img/nft/12.jpg",
+        // "./img/nft/13.jpg",
+        // "./img/nft/14.jpg",
+        // "./img/nft/15.jpg",
+        // "./img/nft/16.jpg",
     ];
 
     paths.map((path) => {
@@ -44,12 +44,22 @@ const buildGlide = () => {
     glideMulti.mount();
 };
 
-// const locomotiveScroll = () => {
-    // let scroll = new LocomotiveScroll({
-    //     el: document.querySelector('[data-scroll-container]'),
-    //     smooth: true
-    // });
-// };
+const navBar = document.querySelector("nav");
+// const shadow1 = document.querySelector(".cyborg > img")
+// console.log(shadow1)
+const test = () => {
+    let prevPos = window.pageYOffset;
+    window.addEventListener("scroll", () => {
+        let curPos = window.pageYOffset
+        if (prevPos < curPos) {
+            navBar.classList.add("hidden");
+        } else {
+            navBar.classList.remove("hidden");
+        }
+        prevPos = curPos;
+    });
+};
+
 
 
 window.onload = init();

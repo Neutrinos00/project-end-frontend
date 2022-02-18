@@ -3,6 +3,11 @@
   width: 40%;
 
   .glide__track {
+    transition: 1s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+
     .glide__slide {
       display: flex;
       justify-content: center;
@@ -10,7 +15,8 @@
 
       .nft-title-container {
         position: absolute;
-        margin-top: 5px;
+        margin-top: 5%;
+        font-size: 2rem;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -20,12 +26,7 @@
         height: 70vh;
         border-radius: 3px;
         padding: 3%;
-        transition: 1s ease;
         background: black;
-
-        &:hover {
-          transform: scale(1.1);
-        }
       }
     }
   }

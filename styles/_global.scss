@@ -1,16 +1,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css");
+// @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css");
 // @import url("../node_modules/locomotive-scroll/dist/locomotive-scroll.css");
 
 @font-face {
-  // voir si dispo avec une vraie url
   font-family: "mainFont";
   src: url("../fonts/NauSea-yeMm.ttf") format("woff");
 }
 
-// variable à redefinir avec evan
-$black-color: black;
-$white-color: white;
+$font-color: white;
+$background-color: black;
 $navigation-hoover-color: gray;
 $font-main: "mainFont", sans-serif;
 
@@ -28,9 +26,8 @@ html {
 }
 
 body {
-  background: $black-color;
-  color: $white-color;
-  // min-width: 1300px;
+  background: $background-color;
+  color: $font-color;
   scroll-snap-type: y mandatory; // doesn't work
 
   &::-webkit-scrollbar {
@@ -45,17 +42,18 @@ a {
 
 li {
   list-style: none;
+  display: inline;
 }
 
 section {
-  scroll-snap-align: start; // doesn't work
+  // doesn't work
   position: relative;
-}
 
-.title-container {
-  padding-top: 10vh;
-  font-size: 4rem;
-  position: absolute;
-  top: 0;
-  right: 3%;
+  .title-container {
+    padding-top: 10vh;
+    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    right: 3%;
+  }
 }
