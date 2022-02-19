@@ -3,40 +3,40 @@
 
 const init = () => {
     buildGlide();
-    test()
+    scrollAnimations()
 };
 
 const buildGlide = () => {
-    const glideSlides = document.querySelector(".glide__slides");
-    const paths = [
-        "./img/nft/1.png",
-        "./img/nft/2.jpg",
-        "./img/nft/3.jpg",
-        "./img/nft/4.jpg",
-        "./img/nft/5.jpg",
-        "./img/nft/6.jpg",
-        "./img/nft/7.jpg",
-        "./img/nft/8.jpg",
-        // "./img/nft/9.jpg",,
-        // "./img/nft/10.jpg",
-        // "./img/nft/11.jpg",
-        // "./img/nft/12.jpg",
-        // "./img/nft/13.jpg",
-        // "./img/nft/14.jpg",
-        // "./img/nft/15.jpg",
-        // "./img/nft/16.jpg",
+    const assets = [
+        { path: "./img/nft/1.jpg", name: "cat"},
+        { path: "./img/nft/2.jpg", name: "djinn"},
+        { path: "./img/nft/3.jpg", name: "cyborg"},
+        { path: "./img/nft/4.jpg", name: "robot"},
+        { path: "./img/nft/5.jpg", name: "ruskov"},
+        { path: "./img/nft/6.jpg", name: "akira"},
+        { path: "./img/nft/7.jpg", name: "hunter"},
+        { path: "./img/nft/8.jpg", name: "punk"},
+        { path: "./img/nft/9.jpg", name: "a"},
+        { path: "./img/nft/10.jpg", name: "a"},
+        { path: "./img/nft/11.jpg", name: "a"},
+        { path: "./img/nft/12.jpg", name: "a"},
+        { path: "./img/nft/13.jpg", name: "a"},
+        { path: "./img/nft/14.jpg", name: "a"},
+        { path: "./img/nft/15.jpg", name: "a"},
+        { path: "./img/nft/16.jpg", name: "a"},
     ];
+    const glideSlides = document.querySelector(".glide__slides");
 
-    paths.map((path) => {
+    assets.map((asset) => { 
         glideSlides.innerHTML += `
             <li class="glide__slide">
-                <h2 class="nft-title-container"># 1000</h2>
-                <img src="${path}" alt="" loading="lazy">
+                <h2 class="nft-title-container">${asset.name}</h2>
+                <img src="${asset.path}" alt="${asset.name}">
             </li>
         `;
     });
 
-    let glideMulti = new Glide('.multi', {
+    const glideMulti = new Glide('.multi', {
         type: 'carousel',
         autoplay: 3500,
         perView: 1
@@ -44,22 +44,31 @@ const buildGlide = () => {
     glideMulti.mount();
 };
 
-const navBar = document.querySelector("nav");
-// const shadow1 = document.querySelector(".cyborg > img")
-// console.log(shadow1)
-const test = () => {
+const scrollAnimations = () => {
+    const navBar = document.querySelector("nav");
+    const shadow1 = document.querySelector(".cyborg > .shadow");
+    const shadow2 = document.querySelector(".djinn > .shadow");
+    const shadow3 = document.querySelector(".hunter > .shadow");
+    const shadow4 = document.querySelector(".cat > .shadow");
+    
     let prevPos = window.pageYOffset;
     window.addEventListener("scroll", () => {
         let curPos = window.pageYOffset
         if (prevPos < curPos) {
             navBar.classList.add("hidden");
+            shadow1.classList.add("disp");
+            shadow2.classList.add("disp");
+            shadow3.classList.add("disp");
+            shadow4.classList.add("disp");
         } else {
             navBar.classList.remove("hidden");
+            shadow1.classList.remove("disp");
+            shadow2.classList.remove("disp");
+            shadow3.classList.remove("disp");
+            shadow4.classList.remove("disp");
         }
         prevPos = curPos;
     });
 };
-
-
 
 window.onload = init();

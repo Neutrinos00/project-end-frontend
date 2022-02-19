@@ -83,9 +83,11 @@ header nav ul li a:hover {
   color: gray;
 }
 header nav .logos-container {
+  width: 20%;
   padding: 0 5% 0 5%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 header nav .logos-container a {
   display: flex;
@@ -105,11 +107,11 @@ header .navigation-container .navigation-img-container {
   height: 100%;
   width: 50%;
   position: relative;
-  margin-top: 5px;
 }
 header .navigation-container .navigation-img-container .perso {
   position: absolute;
   bottom: 4vh;
+  transform: translateY(5px);
 }
 header .navigation-container .navigation-img-container .perso img {
   height: 70vh;
@@ -117,8 +119,12 @@ header .navigation-container .navigation-img-container .perso img {
   bottom: 0;
   transition: transform 2s;
 }
-header .navigation-container .navigation-img-container .perso img .shadow {
+header .navigation-container .navigation-img-container .perso img.shadow {
   opacity: 0;
+  transition: opacity 1s ease;
+}
+header .navigation-container .navigation-img-container .perso img.shadow.disp {
+  opacity: 1;
 }
 header .navigation-container .navigation-img-container div:nth-child(1) {
   left: 0%;
@@ -131,9 +137,6 @@ header .navigation-container .navigation-img-container div:nth-child(3) {
 }
 header .navigation-container .navigation-img-container div:nth-child(4) {
   left: 51%;
-}
-header .navigation-container .navigation-img-container .shadow {
-  opacity: 0;
 }
 header .navigation-container .navigation-logo-container {
   height: 100%;
@@ -244,6 +247,7 @@ header .navigation-container .navigation-logo-container #logo-light {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .about .about-container .text-navigation-container {
   position: absolute;
@@ -313,11 +317,20 @@ header .navigation-container .navigation-logo-container #logo-light {
   align-items: center;
   justify-content: center;
 }
-.team .team-container .team-unit img {
+.team .team-container .team-unit .team-card {
+  position: relative;
+}
+.team .team-container .team-unit .team-card img {
   padding: 2%;
   height: 40vh;
   background: black;
   border-radius: 3px;
+}
+.team .team-container .team-unit .team-card h3 {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-40%);
 }
 .team .team-container .team-unit p {
   padding: 4%;
