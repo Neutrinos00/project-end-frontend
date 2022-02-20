@@ -19,7 +19,7 @@ html {
 body {
   background: black;
   color: white;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -30,6 +30,20 @@ a {
   color: inherit;
 }
 
+.anchor-text-effect {
+  color: white;
+  background: linear-gradient(to right, gray, gray 50%, white 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 100ms ease;
+}
+.anchor-text-effect:hover {
+  background-position: 0 100%;
+}
+
 li {
   list-style: none;
   display: inline;
@@ -37,6 +51,7 @@ li {
 
 section {
   position: relative;
+  scroll-snap-align: start;
 }
 section .title-container {
   padding-top: 10vh;
@@ -44,6 +59,10 @@ section .title-container {
   position: absolute;
   top: 0;
   right: 3%;
+}
+
+header {
+  scroll-snap-align: start;
 }
 
 header {
@@ -76,12 +95,6 @@ header nav ul {
 header nav ul li {
   padding: 0 3% 0 3%;
 }
-header nav ul li a {
-  transition: color 0.3s ease-in-out;
-}
-header nav ul li a:hover {
-  color: gray;
-}
 header nav .logos-container {
   width: 20%;
   padding: 0 5% 0 5%;
@@ -95,6 +108,7 @@ header nav .logos-container a {
 }
 header nav .logos-container a img {
   height: 50px;
+  transition: opacity 0.3s ease-in-out;
 }
 header nav .logos-container a img:hover {
   opacity: 0.7;
@@ -167,7 +181,6 @@ header .navigation-container .navigation-logo-container #logo-light {
     opacity: 0;
   }
 }
-@keyframes shadows {}
 @media only screen and (max-width: 1800px) {
   .navigation-logo-container,
 .perso {
@@ -233,7 +246,7 @@ header .navigation-container .navigation-logo-container #logo-light {
   transition: 1s ease;
 }
 .showcase .showcase-glide-container .glide .glide__track:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .showcase .showcase-glide-container .glide .glide__track .glide__slide {
   display: flex;

@@ -27,7 +27,7 @@ html {
 body {
   background: $background-color;
   color: $font-color;
-  scroll-snap-type: y mandatory; // doesn't work
+  scroll-snap-type: y proximity; // doesn't work
 
   &::-webkit-scrollbar {
     display: none;
@@ -39,6 +39,21 @@ a {
   color: inherit;
 }
 
+.anchor-text-effect {
+  color: white;
+  background: linear-gradient(to right, gray, gray 50%, white 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 100ms ease;
+
+  &:hover {
+    background-position: 0 100%;
+  }
+}
+
 li {
   list-style: none;
   display: inline;
@@ -47,6 +62,7 @@ li {
 section {
   // doesn't work
   position: relative;
+  scroll-snap-align: start;
 
   .title-container {
     padding-top: 10vh;
@@ -55,4 +71,8 @@ section {
     top: 0;
     right: 3%;
   }
+}
+
+header {
+  scroll-snap-align: start;
 }
