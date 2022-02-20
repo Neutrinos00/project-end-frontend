@@ -9,9 +9,14 @@ footer {
   justify-content: center;
   gap: 30px;
 
+  h3 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.8rem;
+  }
+
   img {
     height: 30px;
-    filter: grayscale(100%);
+    filter: grayscale(0%);
   }
 
   // .cardano-container {

@@ -399,9 +399,13 @@ footer {
   justify-content: center;
   gap: 30px;
 }
+footer h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8rem;
+}
 footer img {
   height: 30px;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
 }
 
 /*# sourceMappingURL=style.css.map */
