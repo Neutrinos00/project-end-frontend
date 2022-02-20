@@ -15,6 +15,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10vh;
+
+    .glide {
+      height: 100%;
+      width: 40%;
+
+      .glide__track {
+        transition: 1s ease;
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        .glide__slide {
+          display: flex;
+          justify-content: center;
+          position: relative;
+
+          .nft-title-container {
+            position: absolute;
+            margin-top: 5%;
+            font-size: 2rem;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          img {
+            height: 70vh;
+            border-radius: 3px;
+            padding: 3%;
+            background: black;
+          }
+        }
+      }
+    }
   }
 
   .crowd {

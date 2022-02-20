@@ -1,12 +1,12 @@
 'use strict';
 
-
 const init = () => {
-    buildGlide();
-    scrollAnimations()
+    buildNFTGlide();
+    buildAboutGlide();
+    scrollAnimations();
 };
 
-const buildGlide = () => {
+const buildNFTGlide = () => {
     const assets = [
         { path: "./img/nft/1.jpg", name: "cat"},
         { path: "./img/nft/2.jpg", name: "djinn"},
@@ -16,16 +16,16 @@ const buildGlide = () => {
         { path: "./img/nft/6.jpg", name: "akira"},
         { path: "./img/nft/7.jpg", name: "hunter"},
         { path: "./img/nft/8.jpg", name: "punk"},
-        { path: "./img/nft/9.jpg", name: "a"},
-        { path: "./img/nft/10.jpg", name: "a"},
-        { path: "./img/nft/11.jpg", name: "a"},
-        { path: "./img/nft/12.jpg", name: "a"},
-        { path: "./img/nft/13.jpg", name: "a"},
-        { path: "./img/nft/14.jpg", name: "a"},
-        { path: "./img/nft/15.jpg", name: "a"},
-        { path: "./img/nft/16.jpg", name: "a"},
+        { path: "./img/nft/9.jpg", name: "cat"},
+        { path: "./img/nft/10.jpg", name: "djinn"},
+        { path: "./img/nft/11.jpg", name: "cyborg"},
+        { path: "./img/nft/12.jpg", name: "arobot"},
+        { path: "./img/nft/13.jpg", name: "akira"},
+        { path: "./img/nft/14.jpg", name: "hunter"},
+        { path: "./img/nft/15.jpg", name: "cyborg"},
+        { path: "./img/nft/16.jpg", name: "akira"},
     ];
-    const glideSlides = document.querySelector(".glide__slides");
+    const glideSlides = document.querySelector(".showcase-glide-container .glide__slides");
 
     assets.map((asset) => { 
         glideSlides.innerHTML += `
@@ -35,14 +35,23 @@ const buildGlide = () => {
             </li>
         `;
     });
-
-    const glideMulti = new Glide('.multi', {
+    const glideMulti = new Glide('.nft', {
         type: 'carousel',
         autoplay: 3500,
-        perView: 1
+        perView: 1,
     });
     glideMulti.mount();
 };
+
+
+const buildAboutGlide = () => {
+    const glideMulti = new Glide('.chapter', {
+        type: 'carousel',
+        perView: 1,
+    });
+    glideMulti.mount();
+};
+
 
 const scrollAnimations = () => {
     const navBar = document.querySelector("nav");
@@ -52,8 +61,10 @@ const scrollAnimations = () => {
     const shadow4 = document.querySelector(".cat > .shadow");
     
     let prevPos = window.pageYOffset;
+
+    let isScrolling;
     window.addEventListener("scroll", () => {
-        let curPos = window.pageYOffset
+        let curPos = window.pageYOffset;
         if (prevPos < curPos) {
             navBar.classList.add("hidden");
             shadow1.classList.add("disp");
@@ -68,7 +79,15 @@ const scrollAnimations = () => {
             shadow4.classList.remove("disp");
         }
         prevPos = curPos;
+
+        window.clearTimeout( isScrolling );
+
+        isScrolling = setTimeout(() => {
+            navBar.classList.remove("hidden");    
+        }, 1000);
     });
+
+    
 };
 
 window.onload = init();

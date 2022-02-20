@@ -4,32 +4,51 @@
   align-items: center;
   justify-content: center;
 
-  .about-container {
-    height: 50vh;
-    width: 60%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  .about-glide-container {
+    width: 80%;
+    margin-top: 20vh;
 
-    .text-navigation-container {
-      position: absolute;
-      bottom: 0;
-      height: 10%;
-      width: 100%;
-      background: url("./../img/assets/frise1.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+    .chapter {
       display: flex;
-      justify-content: space-around;
+      align-items: center;
+      justify-content: center;
+      display: block;
 
-      img {
-        height: 100%;
+      .chapter-container {
+        img {
+          height: 10%;
+        }
 
-        &:hover {
-          opacity: 0.5;
+        p {
+          height: 20%;
+          padding: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .text-navigation-container {
+        background: url("./../img/assets/frise1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        height: 10vh;
+
+        button {
+          background: none;
+          border: none;
+
+          &:hover {
+            opacity: 0.5;
+          }
+
+          img {
+            height: 100%;
+          }
         }
       }
     }
