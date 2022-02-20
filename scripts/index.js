@@ -55,7 +55,7 @@ const buildAboutGlide = () => {
 
 const scrollAnimations = () => {
     const navBar = document.querySelector("nav");
-    const shadows = document.querySelectorAll(".shadow")
+    const shadows = document.querySelectorAll(".shadow");
     
     let prevPos = window.pageYOffset;
     let isScrolling;

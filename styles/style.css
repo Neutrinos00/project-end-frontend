@@ -397,15 +397,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 }
-footer .cardano-container {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  color: black;
-}
-footer .cardano-container img {
-  height: 40px;
+footer img {
+  height: 30px;
   filter: grayscale(100%);
 }
 

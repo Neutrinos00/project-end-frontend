@@ -7,15 +7,17 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 
-  .cardano-container {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    color: black;
-    img {
-      height: 40px;
-      filter: grayscale(100%);
-    }
+  img {
+    height: 30px;
+    filter: grayscale(100%);
   }
+
+  // .cardano-container {
+  //   display: flex;
+  //   gap: 20px;
+  //   align-items: center;
+  //   color: black;
+  // }
 }
