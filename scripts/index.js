@@ -77,9 +77,6 @@ const scrollAnimations = () => {
             }); 
         } else {
             navBar.classList.remove("hidden");
-            shadows.forEach((ele) => {
-                ele.classList.add("hidden");
-            });
         };
 
         if (curPos == 0) hideShadows();
