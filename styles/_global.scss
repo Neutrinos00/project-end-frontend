@@ -27,11 +27,15 @@ html {
 body {
   background: $background-color;
   color: $font-color;
-  scroll-snap-type: y proximity; // doesn't work
 
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.scroll-container {
+  // overflow: scroll;
+  scroll-snap-type: y proximity;
 }
 
 a {
@@ -60,9 +64,7 @@ li {
 }
 
 section {
-  // doesn't work
   position: relative;
-  scroll-snap-align: start;
 
   .title-container {
     padding-top: 10vh;
@@ -71,8 +73,4 @@ section {
     top: 0;
     right: 3%;
   }
-}
-
-header {
-  scroll-snap-align: start;
 }

@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch ./styles/_style.scss ./styles/style.css"
   },
   "author": "neutrinos.particle@gmail.com",

@@ -76,14 +76,13 @@ header {
           position: absolute;
           bottom: 0;
           transition: transform 2s;
-          // ajouter transition delay entre les ombres
 
           &.shadow {
-            opacity: 0;
+            opacity: 1;
             transition: opacity 1.5s ease;
 
-            &.disp {
-              opacity: 1;
+            &.hidden {
+              opacity: 0;
             }
 
             &.cyborg-shadow {

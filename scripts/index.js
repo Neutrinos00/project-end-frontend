@@ -55,41 +55,43 @@ const buildAboutGlide = () => {
 
 const scrollAnimations = () => {
     const navBar = document.querySelector("nav");
-    const shadow1 = document.querySelector(".cyborg > .shadow");
-    const shadow2 = document.querySelector(".djinn > .shadow");
-    const shadow3 = document.querySelector(".hunter > .shadow");
-    const shadow4 = document.querySelector(".cat > .shadow");
+    const shadows = document.querySelectorAll(".shadow")
     
     let prevPos = window.pageYOffset;
     let isScrolling;
+
+    const hideShadows = () => {
+        setTimeout(() => {
+            shadows.forEach((ele) => {
+                ele.classList.add("hidden");
+            });
+        }, 500);
+    };
 
     window.addEventListener("scroll", () => {
         let curPos = window.pageYOffset;
         if (prevPos < curPos) {
             navBar.classList.add("hidden");
-            shadow1.classList.add("disp");
-            shadow2.classList.add("disp");
-            shadow3.classList.add("disp");
-            shadow4.classList.add("disp");
+            shadows.forEach((ele) => {
+                ele.classList.remove("hidden");
+            }); 
         } else {
             navBar.classList.remove("hidden");
+            shadows.forEach((ele) => {
+                ele.classList.add("hidden");
+            });
         };
 
-        if (curPos == 0) {
-            setTimeout(() => {
-                shadow1.classList.remove("disp");
-                shadow2.classList.remove("disp");
-                shadow3.classList.remove("disp");
-                shadow4.classList.remove("disp");
-            }, 500); 
-        };
+        if (curPos == 0) hideShadows();
         prevPos = curPos;
 
-        window.clearTimeout( isScrolling );
+        window.clearTimeout(isScrolling);
         isScrolling = setTimeout(() => {
             navBar.classList.remove("hidden");    
         }, 1000);
     });
+
+    hideShadows();
 };
 
 window.onload = init();

@@ -19,10 +19,13 @@ html {
 body {
   background: black;
   color: white;
-  scroll-snap-type: y proximity;
 }
 body::-webkit-scrollbar {
   display: none;
+}
+
+.scroll-container {
+  scroll-snap-type: y proximity;
 }
 
 a {
@@ -51,7 +54,6 @@ li {
 
 section {
   position: relative;
-  scroll-snap-align: start;
 }
 section .title-container {
   padding-top: 10vh;
@@ -59,10 +61,6 @@ section .title-container {
   position: absolute;
   top: 0;
   right: 3%;
-}
-
-header {
-  scroll-snap-align: start;
 }
 
 header {
@@ -134,11 +132,11 @@ header .navigation-container .navigation-img-container .perso img {
   transition: transform 2s;
 }
 header .navigation-container .navigation-img-container .perso img.shadow {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1.5s ease;
 }
-header .navigation-container .navigation-img-container .perso img.shadow.disp {
-  opacity: 1;
+header .navigation-container .navigation-img-container .perso img.shadow.hidden {
+  opacity: 0;
 }
 header .navigation-container .navigation-img-container .perso img.shadow.cyborg-shadow {
   transition-delay: 100ms;
