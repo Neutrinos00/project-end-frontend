@@ -314,6 +314,8 @@ header .navigation-container .navigation-logo-container #logo-light {
 .about .about-glide-container .chapter .chapter-container h3 {
   grid-area: title;
   text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
 }
 .about .about-glide-container .chapter .chapter-container img {
   grid-area: img;
@@ -322,6 +324,7 @@ header .navigation-container .navigation-logo-container #logo-light {
 .about .about-glide-container .chapter .chapter-container p {
   grid-area: text;
   padding: 30px;
+  text-align: justify;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -380,6 +383,7 @@ header .navigation-container .navigation-logo-container #logo-light {
   bottom: 5%;
   left: 50%;
   transform: translate(-40%);
+  letter-spacing: 2px;
 }
 .team .team-container .team-unit p {
   padding: 4%;

@@ -10,7 +10,6 @@
 
     .chapter {
       display: flex;
-
       justify-content: center;
       display: block;
 
@@ -28,6 +27,8 @@
         h3 {
           grid-area: title;
           text-align: center;
+          font-size: 1.5rem;
+          letter-spacing: 2px;
         }
 
         img {
@@ -38,6 +39,7 @@
         p {
           grid-area: text;
           padding: 30px;
+          text-align: justify;
           display: flex;
           align-items: center;
           justify-content: center;
