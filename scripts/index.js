@@ -50,7 +50,22 @@ const buildAboutGlide = () => {
         perView: 1,
     });
     glideMulti.mount();
+
+    const buildAboutGlideToggleButton = () => {
+        const buttons = document.querySelectorAll(".text-navigation-container > button");
+        let currentActive = buttons[0];
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                currentActive.classList.remove("active");
+                currentActive = button;
+                currentActive.classList.add("active");
+            });
+        })
+    };
+    buildAboutGlideToggleButton();
 };
+
+
 
 
 const scrollAnimations = () => {

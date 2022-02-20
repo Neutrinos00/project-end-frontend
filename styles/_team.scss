@@ -37,12 +37,14 @@
           left: 50%;
           transform: translate(-40%);
           letter-spacing: 2px;
+          font-family: $font-main;
         }
       }
 
       p {
         padding: 4%;
         width: 80%;
+        font-family: $font-second;
       }
     }
   }

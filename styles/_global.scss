@@ -1,5 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css");
-// @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css");
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Poiret+One&family=Roboto+Mono:wght@200&display=swap");
 
 @font-face {
   font-family: "mainFont";
@@ -10,6 +10,7 @@ $font-color: white;
 $background-color: black;
 $navigation-hoover-color: gray;
 $font-main: "mainFont", sans-serif;
+$font-second: "Roboto Mono", monospace;
 
 *,
 *::after,
@@ -27,15 +28,12 @@ html {
 body {
   background: $background-color;
   color: $font-color;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
 
   &::-webkit-scrollbar {
     display: none;
   }
-}
-
-.scroll-container {
-  // overflow: scroll;
-  scroll-snap-type: y proximity;
 }
 
 a {

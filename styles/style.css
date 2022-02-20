@@ -1,4 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css");
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Poiret+One&family=Roboto+Mono:wght@200&display=swap");
 @font-face {
   font-family: "mainFont";
   src: url("../fonts/NauSea-yeMm.ttf") format("woff");
@@ -19,13 +20,11 @@ html {
 body {
   background: black;
   color: white;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
 }
 body::-webkit-scrollbar {
   display: none;
-}
-
-.scroll-container {
-  scroll-snap-type: y proximity;
 }
 
 a {
@@ -270,6 +269,7 @@ header .navigation-container .navigation-logo-container #logo-light {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  font-family: "mainFont", sans-serif;
 }
 .showcase .showcase-glide-container .glide .glide__track .glide__slide img {
   height: 70vh;
@@ -314,6 +314,7 @@ header .navigation-container .navigation-logo-container #logo-light {
   text-align: center;
   font-size: 1.5rem;
   letter-spacing: 2px;
+  font-family: "Roboto Mono", monospace;
 }
 .about .about-glide-container .chapter .chapter-container img {
   grid-area: img;
@@ -326,6 +327,7 @@ header .navigation-container .navigation-logo-container #logo-light {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Roboto Mono", monospace;
 }
 .about .about-glide-container .chapter .text-navigation-container {
   background: url("./../img/assets/frise1.png");
@@ -340,6 +342,11 @@ header .navigation-container .navigation-logo-container #logo-light {
 .about .about-glide-container .chapter .text-navigation-container button {
   background: none;
   border: none;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+.about .about-glide-container .chapter .text-navigation-container button.active {
+  opacity: 0.2;
 }
 .about .about-glide-container .chapter .text-navigation-container button:hover {
   opacity: 0.5;
@@ -382,10 +389,12 @@ header .navigation-container .navigation-logo-container #logo-light {
   left: 50%;
   transform: translate(-40%);
   letter-spacing: 2px;
+  font-family: "mainFont", sans-serif;
 }
 .team .team-container .team-unit p {
   padding: 4%;
   width: 80%;
+  font-family: "Roboto Mono", monospace;
 }
 
 footer {
@@ -400,11 +409,11 @@ footer {
   gap: 30px;
 }
 footer h3 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 0.8rem;
 }
 footer img {
-  height: 30px;
+  height: 40px;
   filter: grayscale(0%);
 }
 

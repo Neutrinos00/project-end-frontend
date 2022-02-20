@@ -29,6 +29,7 @@
           text-align: center;
           font-size: 1.5rem;
           letter-spacing: 2px;
+          font-family: $font-second;
         }
 
         img {
@@ -43,6 +44,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          font-family: $font-second;
         }
       }
 
@@ -59,6 +61,12 @@
         button {
           background: none;
           border: none;
+          transition: opacity 0.4s ease;
+          cursor: pointer;
+
+          &.active {
+            opacity: 0.2;
+          }
 
           &:hover {
             opacity: 0.5;

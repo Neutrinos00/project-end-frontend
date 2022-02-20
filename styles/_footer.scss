@@ -10,19 +10,12 @@ footer {
   gap: 30px;
 
   h3 {
-    font-family: "Courier New", Courier, monospace;
+    font-family: $font-second;
     font-size: 0.8rem;
   }
 
   img {
-    height: 30px;
+    height: 40px;
     filter: grayscale(0%);
   }
-
-  // .cardano-container {
-  //   display: flex;
-  //   gap: 20px;
-  //   align-items: center;
-  //   color: black;
-  // }
 }
