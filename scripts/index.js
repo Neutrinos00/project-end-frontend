@@ -61,8 +61,8 @@ const scrollAnimations = () => {
     const shadow4 = document.querySelector(".cat > .shadow");
     
     let prevPos = window.pageYOffset;
-
     let isScrolling;
+
     window.addEventListener("scroll", () => {
         let curPos = window.pageYOffset;
         if (prevPos < curPos) {
@@ -73,21 +73,23 @@ const scrollAnimations = () => {
             shadow4.classList.add("disp");
         } else {
             navBar.classList.remove("hidden");
-            shadow1.classList.remove("disp");
-            shadow2.classList.remove("disp");
-            shadow3.classList.remove("disp");
-            shadow4.classList.remove("disp");
-        }
+        };
+
+        if (curPos == 0) {
+            setTimeout(() => {
+                shadow1.classList.remove("disp");
+                shadow2.classList.remove("disp");
+                shadow3.classList.remove("disp");
+                shadow4.classList.remove("disp");
+            }, 500); 
+        };
         prevPos = curPos;
 
         window.clearTimeout( isScrolling );
-
         isScrolling = setTimeout(() => {
             navBar.classList.remove("hidden");    
         }, 1000);
     });
-
-    
 };
 
 window.onload = init();

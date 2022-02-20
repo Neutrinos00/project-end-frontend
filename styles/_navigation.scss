@@ -80,10 +80,23 @@ header {
 
           &.shadow {
             opacity: 0;
-            transition: opacity 1s ease;
+            transition: opacity 1.5s ease;
 
             &.disp {
               opacity: 1;
+            }
+
+            &.cyborg-shadow {
+              transition-delay: 100ms;
+            }
+            &.djinn-shadow {
+              transition-delay: 300ms;
+            }
+            &.hunter-shadow {
+              transition-delay: 500ms;
+            }
+            &.cat-shadow {
+              transition-delay: 700ms;
             }
           }
         }
