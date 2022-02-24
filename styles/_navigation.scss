@@ -4,59 +4,6 @@ header {
   background: url("../img/assets/BG2.jpg") center/cover;
   display: grid;
 
-  nav {
-    width: 100%;
-    padding-top: 5px;
-    position: fixed;
-    z-index: 10;
-    font-size: 2.8rem;
-    background: linear-gradient(
-      360deg,
-      rgba(0, 0, 0, 0.075) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
-    transition: transform 1s ease;
-    transform: translateY(0%);
-    display: flex;
-    justify-content: space-between;
-
-    &.hidden {
-      transform: translateY(-100%);
-    }
-
-    ul {
-      width: 80%;
-      display: flex;
-      align-items: center;
-      padding: 0 5% 0 5%;
-
-      li {
-        padding: 0 3% 0 3%;
-      }
-    }
-
-    .logos-container {
-      width: 20%;
-      padding: 0 5% 0 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      a {
-        display: flex;
-        float: right;
-        img {
-          height: 50px;
-          transition: opacity 0.3s ease-in-out;
-
-          &:hover {
-            opacity: 0.7;
-          }
-        }
-      }
-    }
-  }
-
   .navigation-container {
     display: flex;
     justify-content: center;
@@ -70,9 +17,11 @@ header {
         position: absolute;
         bottom: 4vh;
         transform: translateY(5px);
+        height: 80%;
 
         img {
-          height: 70vh;
+          height: 100%;
+          width: auto;
           position: absolute;
           bottom: 0;
           transition: transform 2s;
@@ -121,10 +70,10 @@ header {
       position: relative;
 
       img {
-        height: 58vh;
-        width: auto;
+        width: 95%;
+        height: auto;
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
@@ -149,53 +98,17 @@ header {
   }
 }
 
-@media only screen and (max-width: 1800px) {
-  .navigation-logo-container,
-  .perso {
-    transform: scale(90%);
-  }
-}
-
-@media only screen and (max-width: 1600px) {
-  .cat {
-    display: none;
-  }
-  .navigation-logo-container,
-  .perso {
-    transform: scale(80%);
-  }
-}
-
-@media only screen and (max-width: 1225px) {
-  .hunter {
-    display: none;
-  }
-  .navigation-logo-container,
-  .perso {
-    transform: scale(70%);
-  }
-}
-
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 1760px) {
   .navigation-img-container {
     display: none;
   }
-  nav {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  .navigation-logo-container {
+    width: 80% !important;
   }
 }
 
-// @media only screen and (min-width: 768) and (max-width: 959px) {
-//   .navigation-img-container {
-//     display: none;
-//   }
-// }
+@media only screen and (max-width: 940px) {
+  // .navigation-logo-container {
+  //   width: 90% !important;
+  // }
+}

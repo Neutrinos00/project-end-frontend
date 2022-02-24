@@ -42,23 +42,31 @@ a {
 }
 
 .anchor-text-effect {
-  color: white;
-  background: linear-gradient(to right, gray, gray 50%, white 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 275ms ease;
+  // color: white;
+  // background: linear-gradient(to right, gray, gray 50%, white 50%);
+  // background-clip: text;
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // background-size: 200% 100%;
+  // background-position: 100%;
+  // transition: background-position 275ms ease;
 
+  // &:hover {
+  //   background-position: 0 100%;
+  // }
   &:hover {
-    background-position: 0 100%;
+    color: gray;
   }
 }
 
 li {
   list-style: none;
   display: inline;
+}
+
+button {
+  background: transparent;
+  border: none;
 }
 
 section {

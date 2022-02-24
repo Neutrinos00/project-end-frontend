@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project End is a series of 10000 4K NFT art on the #cardano blockchain.">
+    <meta name="description" content="Project End is a series of 10.000 4K NFT art on the Cardano blockchain.">
     <meta name="author" content="Neutrinos00, mail: neutrinos.particle@gmail.com">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./img/icon/favicon.ico">
@@ -14,40 +14,51 @@
 </head>
 <body>
     <div class="scroll-container">
-        <header style="scroll-snap-align: start;">
-            <nav>
+        <nav>
+            <button onclick="toggleLinks()" class="toggle-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Hamburger_icon_white.svg" 
+                alt="menu-button">
+            </button>
+            <div class="links">
                 <ul>
-                    <li><a href="#" class="anchor-text-effect">end</a></li>
-                    <li><a href="#a-showcase" class="anchor-text-effect">showcase</a></li>
-                    <li><a href="#a-about" class="anchor-text-effect">about</a></li>
-                    <li><a href="#a-team" class="anchor-text-effect">team</a></li>
+                    <li><a href="#" class="anchor-text-effect" onclick="toggleLinks()">end</a></li>
+                    <li><a href="#a-showcase" class="anchor-text-effect" onclick="toggleLinks()">showcase</a></li>
+                    <li><a href="#a-about" class="anchor-text-effect" onclick="toggleLinks()">about</a></li>
+                    <li><a href="#a-team" class="anchor-text-effect" onclick="toggleLinks()">team</a></li>
                 </ul>
-                <div class="logos-container">
-                    <a href="https://discord.gg/HvHu6RqS" target="_blank">
-                        <img src="./img/icon/discord.svg" alt="discord-icon" loading="lazy"/>
-                    </a>
-                    <a href="https://twitter.com/Project__End" target="_blank">
-                        <img src="https://svgshare.com/i/6w3.svg" alt="twitter-icon" loading="lazy"/>
-                    </a>
-                </div>
-            </nav>
+            </div>
+            <div class="logos-container">
+                <a href="https://discord.gg/HvHu6RqS" target="_blank">
+                    <img src="./img/icon/discord.svg" alt="discord-icon" loading="lazy"/>
+                </a>
+                <a href="https://twitter.com/Project__End" target="_blank">
+                    <img src="https://svgshare.com/i/6w3.svg" alt="twitter-icon" loading="lazy"/>
+                </a>
+            </div>
+        </nav>
+        <header style="scroll-snap-align: start;">
+            <!-- <button onclick="openPaymentWindow()">mint</button> -->
             <div class="navigation-container">
                 <div class="navigation-img-container">
                     <div class="perso cyborg">
                         <img src="./img/assets/cyborg.png" alt="cyborg" loading="lazy"/>
-                        <img class="shadow cyborg-shadow" src="./img/assets/cyborg-shadow.png" alt="cyborg-shadow" loading="lazy"/>
+                        <img class="shadow cyborg-shadow" src="./img/assets/cyborg-shadow.png" 
+                        alt="cyborg-shadow" loading="lazy"/>
                     </div>
                     <div class="perso djinn">
                         <img src="./img/assets/djinn.png" alt="djinn" loading="lazy"/>
-                        <img class="shadow djinn-shadow" src="./img/assets/djinn-shadow.png" alt="djinn" loading="lazy"/>
+                        <img class="shadow djinn-shadow" src="./img/assets/djinn-shadow.png" 
+                        alt="djinn" loading="lazy"/>
                     </div>
                     <div class="perso hunter">
                         <img src="./img/assets/hunter.png" alt="hunter" loading="lazy"/>
-                        <img class="shadow hunter-shadow" src="./img/assets/hunter-shadow.png" alt="hunter" loading="lazy"/>
+                        <img class="shadow hunter-shadow" src="./img/assets/hunter-shadow.png" 
+                        alt="hunter" loading="lazy"/>
                     </div>
                     <div class="perso cat">
                         <img src="./img/assets/cat.png" alt="cat" loading="lazy"/>
-                        <img class="shadow cat-shadow" src="./img/assets/cat-shadow.png" alt="cat" loading="lazy"/>
+                        <img class="shadow cat-shadow" src="./img/assets/cat-shadow.png" 
+                        alt="cat" loading="lazy"/>
                     </div>
                 </div>
                 <div class="navigation-logo-container">
@@ -79,8 +90,7 @@
                         <ul class="glide__slides">
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>introduction</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Introduction</h3>
                                     <p>
                                         In spite of the high stakes faced by humanity in the 21st 
                                         century, life went on peacefully. Technological 
@@ -98,8 +108,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>eugenism, clonig technologies</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Eugenism, Clonig Technologies</h3>
                                     <p>
                                         The rise of the medical tech field greatly extended and 
                                         improved the lives of human beings.
@@ -134,8 +143,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>energy</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Energy</h3>
                                     <p>
                                         In the year 2051, when the last drop of oil was extracted, came 
                                         3 years of energy blackout and violence.
@@ -181,8 +189,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>war</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>War</h3>
                                     <p>
                                         The end of the 21st century is characterized by great wars of 
                                         religion and great World War
@@ -206,8 +213,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>consequence / peace</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Consequence / Peace</h3>
                                     <p>
                                         Humanity returned to relative tranquility following the 
                                         peace treaty of 2088 Humanity at that point was in trouble, 
@@ -229,8 +235,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>rebellion</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Rebellion</h3>
                                     <p>
                                         This could not last any longer, a real revolution was needed 
                                         and the peoples organized themselves in 2092, indeed the futile 
@@ -260,8 +265,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>dark age</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Dark age</h3>
                                     <p>
                                         Then came what was called the dark age of humanity.
                                         A large part of the economic elites having been atomized, scientific 
@@ -281,8 +285,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>cardano institute</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Cardano institute</h3>
                                     <p>
                                         But from the ashes emerged a true jewel of technology. 
                                         A city spared by environmental nuclear disasters.
@@ -308,14 +311,12 @@
                                         modified humans resistant to radiation than to find a 
                                         cure for an already sick humanity.
                                         This is how the E.N.D. Project was created in 2102.
-    
                                     </p>
                                 </div>
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>success of the project</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Success of the project</h3>
                                     <p>
                                         The project was a great success, in a few months the 
                                         scientists were able to create a veritable army of clones 
@@ -334,8 +335,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>black market</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Black market</h3>
                                     <p>
                                         But the Cardano faction was not the only one to have retained
                                         rudimentary technological knowledge.
@@ -371,8 +371,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>cardano army</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Cardano army</h3>
                                     <p>
                                         Initially unknown to the Cardano Institute, these facts went 
                                         unnoticed for a very long time.
@@ -417,8 +416,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="chapter-container">
-                                    <h3>present</h3>
-                                    <img src="./img/assets/1.jpg" alt="img-chapter1" loading="lazy">
+                                    <h3>Present</h3>
                                     <p>
                                         Our story takes place in the year 2166.
                                         War has been raging again on earth for years.
@@ -430,18 +428,18 @@
                         </ul>
                     </div>
                     <div class="text-navigation-container" data-glide-el="controls[nav]">
-                        <button class="active" data-glide-dir="=0"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=1"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=2"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=3"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=4"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=5"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=6"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=7"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=8"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=9"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=10"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
-                        <button data-glide-dir="=11"><img src="./img/assets/rond.png" alt="circle-chapter" loading="lazy"></button>
+                        <button class="active" data-glide-dir="=0"><div class="img"></div></button>
+                        <button data-glide-dir="=1"><div class="img"></div></button>
+                        <button data-glide-dir="=2"><div class="img"></div></button>
+                        <button data-glide-dir="=3"><div class="img"></div></button>
+                        <button data-glide-dir="=4"><div class="img"></div></button>
+                        <button data-glide-dir="=5"><div class="img"></div></button>
+                        <button data-glide-dir="=6"><div class="img"></div></button>
+                        <button data-glide-dir="=7"><div class="img"></div></button>
+                        <button data-glide-dir="=8"><div class="img"></div></button>
+                        <button data-glide-dir="=9"><div class="img"></div></button>
+                        <button data-glide-dir="=10"><div class="img"></div></button>
+                        <button data-glide-dir="=11"><div class="img"></div></button>
                     </div>
                 </div>
             </div>
@@ -454,42 +452,45 @@
                 <div class="team-unit">
                     <div class="team-card">
                         <img src="./img/assets/team1.jpg" alt="team1" loading="lazy">
-                        <h3>evan</h3>
+                        <h3>Zgbcr</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolor temporibus voluptate, eveniet voluptatem deserunt sapiente 
-                        mollitia esse dicta aut atque harum provident, fugiat eos sint 
-                        praesentium non? Sequi, magni aut?</p>
+                    <p>
+                        Genetic Artist and Designer from the Cardano institute.
+                        I use my last functional arm to hold a pencil.
+                        The other ones can merely hold big guns.
+                    </p>
                 </div>
                 <div class="team-unit">
                     <div class="team-card">
                         <img src="./img/assets/team2.jpg" alt="team2" loading="lazy">
-                        <h3>stephan</h3>
+                        <h3>Destructor PX-65B</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolor temporibus voluptate, eveniet voluptatem deserunt sapiente 
-                        mollitia esse dicta aut atque harum provident, fugiat eos sint 
-                        praesentium non? Sequi, magni aut?</p>
+                    <p>
+                        Rebel Dev Full Stack built at year 2104.
+                        Destruction in Progress...
+                    </p>
                 </div>
                 <div class="team-unit">
                     <div class="team-card">
                         <img src="./img/assets/team3.jpg" alt="team3" loading="lazy">
-                        <h3>eric</h3>
+                        <h3>Punkcox</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolor temporibus voluptate, eveniet voluptatem deserunt sapiente 
-                        mollitia esse dicta aut atque harum provident, fugiat eos sint 
-                        praesentium non? Sequi, magni aut?</p>
+                    <p>
+                        Rebel and dissident in charge of the communication
+                        on the different networks still existing. 
+                        I had the chance to feel a real flower growing in the ground.
+                    </p>
                 </div>
                 <div class="team-unit">
                     <div class="team-card">
                         <img src="./img/assets/team4.jpg" alt="team4" loading="lazy">
-                        <h3>lucas</h3>
+                        <h3>Neutrinos</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolor temporibus voluptate, eveniet voluptatem deserunt sapiente 
-                        mollitia esse dicta aut atque harum provident, fugiat eos sint 
-                        praesentium non? Sequi, magni aut?</p>
+                    <p>
+                        Clone genetically modified to resist radiation. 
+                        I have advanced neural cybernetic enhancements allowing me to integrate 
+                        the network to develop web and blockchain applications.
+                    </p>
                 </div>
             </div>
         <footer>

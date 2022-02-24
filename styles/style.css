@@ -32,23 +32,18 @@ a {
   color: inherit;
 }
 
-.anchor-text-effect {
-  color: white;
-  background: linear-gradient(to right, gray, gray 50%, white 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 275ms ease;
-}
 .anchor-text-effect:hover {
-  background-position: 0 100%;
+  color: gray;
 }
 
 li {
   list-style: none;
   display: inline;
+}
+
+button {
+  background: transparent;
+  border: none;
 }
 
 section {
@@ -62,15 +57,9 @@ section .title-container {
   right: 3%;
 }
 
-header {
-  height: 80vh;
+nav {
   width: 100%;
-  background: url("../img/assets/BG2.jpg") center/cover;
-  display: grid;
-}
-header nav {
-  width: 100%;
-  padding-top: 5px;
+  padding: 5px;
   position: fixed;
   z-index: 10;
   font-size: 2.8rem;
@@ -79,36 +68,71 @@ header nav {
   transform: translateY(0%);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-header nav.hidden {
+nav.hidden {
   transform: translateY(-100%);
 }
-header nav ul {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  padding: 0 5% 0 5%;
-}
-header nav ul li {
-  padding: 0 3% 0 3%;
-}
-header nav .logos-container {
-  width: 20%;
-  padding: 0 5% 0 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header nav .logos-container a {
-  display: flex;
-  float: right;
-}
-header nav .logos-container a img {
+nav img {
   height: 50px;
   transition: opacity 0.3s ease-in-out;
 }
-header nav .logos-container a img:hover {
+nav img:hover {
   opacity: 0.7;
+}
+nav .links ul {
+  display: flex;
+  align-items: center;
+  padding: 0 5% 0 5%;
+}
+nav .links ul li {
+  padding: 0 3% 0 3%;
+}
+nav .toggle-button {
+  padding-left: 5%;
+  display: none;
+}
+nav .toggle-button img {
+  height: 40px;
+}
+nav .logos-container {
+  position: absolute;
+  right: 0px;
+  padding: 0 5% 0 5%;
+  display: flex;
+  justify-content: space-between;
+}
+nav .logos-container a {
+  display: flex;
+}
+
+@media only screen and (max-width: 995px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav .toggle-button {
+    display: flex !important;
+  }
+  nav .links {
+    width: 100%;
+    height: 100vh;
+    display: none;
+  }
+  nav .links ul {
+    padding-top: 30px;
+    width: 100%;
+    flex-direction: column;
+  }
+  nav .links.active {
+    display: flex;
+  }
+}
+header {
+  height: 80vh;
+  width: 100%;
+  background: url("../img/assets/BG2.jpg") center/cover;
+  display: grid;
 }
 header .navigation-container {
   display: flex;
@@ -123,9 +147,11 @@ header .navigation-container .navigation-img-container .perso {
   position: absolute;
   bottom: 4vh;
   transform: translateY(5px);
+  height: 80%;
 }
 header .navigation-container .navigation-img-container .perso img {
-  height: 70vh;
+  height: 100%;
+  width: auto;
   position: absolute;
   bottom: 0;
   transition: transform 2s;
@@ -167,10 +193,10 @@ header .navigation-container .navigation-logo-container {
   position: relative;
 }
 header .navigation-container .navigation-logo-container img {
-  height: 58vh;
-  width: auto;
+  width: 95%;
+  height: auto;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -190,47 +216,13 @@ header .navigation-container .navigation-logo-container #logo-light {
     opacity: 0;
   }
 }
-@media only screen and (max-width: 1800px) {
-  .navigation-logo-container,
-.perso {
-    transform: scale(90%);
-  }
-}
-@media only screen and (max-width: 1600px) {
-  .cat {
-    display: none;
-  }
-
-  .navigation-logo-container,
-.perso {
-    transform: scale(80%);
-  }
-}
-@media only screen and (max-width: 1225px) {
-  .hunter {
-    display: none;
-  }
-
-  .navigation-logo-container,
-.perso {
-    transform: scale(70%);
-  }
-}
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 1760px) {
   .navigation-img-container {
     display: none;
   }
 
-  nav {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .navigation-logo-container {
+    width: 80% !important;
   }
 }
 .showcase {
@@ -249,7 +241,7 @@ header .navigation-container .navigation-logo-container #logo-light {
 }
 .showcase .showcase-glide-container .glide {
   height: 100%;
-  width: 40%;
+  min-width: 40%;
 }
 .showcase .showcase-glide-container .glide .glide__track {
   transition: 1s ease;
@@ -274,7 +266,7 @@ header .navigation-container .navigation-logo-container #logo-light {
 .showcase .showcase-glide-container .glide .glide__track .glide__slide img {
   height: 70vh;
   border-radius: 3px;
-  padding: 3%;
+  padding: 10px;
   background: black;
 }
 .showcase .crowd {
@@ -303,25 +295,18 @@ header .navigation-container .navigation-logo-container #logo-light {
   display: block;
 }
 .about .about-glide-container .chapter .chapter-container {
-  display: grid;
-  grid-template-areas: "title title" "img text" "img text";
-  grid-template-rows: 5% 50% 50%;
-  grid-template-columns: 30% 1fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .about .about-glide-container .chapter .chapter-container h3 {
-  grid-area: title;
   text-align: center;
   font-size: 1.5rem;
   letter-spacing: 2px;
   font-family: "Roboto Mono", monospace;
 }
-.about .about-glide-container .chapter .chapter-container img {
-  grid-area: img;
-  height: 100%;
-}
 .about .about-glide-container .chapter .chapter-container p {
-  grid-area: text;
   padding: 30px;
   text-align: justify;
   display: flex;
@@ -344,19 +329,20 @@ header .navigation-container .navigation-logo-container #logo-light {
   border: none;
   transition: opacity 0.4s ease;
   cursor: pointer;
+  width: 100%;
 }
-.about .about-glide-container .chapter .text-navigation-container button.active {
-  opacity: 0.2;
-}
-.about .about-glide-container .chapter .text-navigation-container button:hover {
-  opacity: 0.5;
-}
-.about .about-glide-container .chapter .text-navigation-container button img {
+.about .about-glide-container .chapter .text-navigation-container button .img {
+  width: 100%;
   height: 100%;
+  background: center/contain no-repeat url("./../img/assets/button.png");
+  transition: 0.2s linear;
+}
+.about .about-glide-container .chapter .text-navigation-container button .img.active {
+  background: center/contain no-repeat url("./../img/assets/button_clicked.png");
 }
 
 .team {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(0deg, red 0%, rgba(255, 255, 255, 0.01) 80%);
   position: relative;
 }
@@ -365,8 +351,7 @@ header .navigation-container .navigation-logo-container #logo-light {
   bottom: 40%;
   transform: translateY(50%);
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
 }
 .team .team-container .team-unit {
   display: flex;
@@ -379,7 +364,6 @@ header .navigation-container .navigation-logo-container #logo-light {
 }
 .team .team-container .team-unit .team-card img {
   padding: 2%;
-  height: 40vh;
   background: black;
   border-radius: 3px;
 }

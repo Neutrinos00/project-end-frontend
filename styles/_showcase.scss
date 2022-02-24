@@ -19,7 +19,7 @@
 
     .glide {
       height: 100%;
-      width: 40%;
+      min-width: 40%;
 
       .glide__track {
         transition: 1s ease;
@@ -44,8 +44,9 @@
 
           img {
             height: 70vh;
+            // width: auto;
             border-radius: 3px;
-            padding: 3%;
+            padding: 10px;
             background: black;
           }
         }

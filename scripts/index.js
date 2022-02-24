@@ -3,8 +3,10 @@
 const init = () => {
     buildNFTGlide();
     buildAboutGlide();
-    scrollAnimations();
+    buildScrollAnimations();
 };
+
+const toggleLinks = () => document.querySelector(".links").classList.toggle("active");
 
 const buildNFTGlide = () => {
     const assets = [
@@ -43,7 +45,6 @@ const buildNFTGlide = () => {
     glideMulti.mount();
 };
 
-
 const buildAboutGlide = () => {
     const glideMulti = new Glide('.chapter', {
         type: 'carousel',
@@ -56,19 +57,22 @@ const buildAboutGlide = () => {
         let currentActive = buttons[0];
         buttons.forEach((button) => {
             button.addEventListener("click", () => {
-                currentActive.classList.remove("active");
-                currentActive = button;
-                currentActive.classList.add("active");
+                if (currentActive != button) {
+                    const img = button.querySelector(".img");
+                    const currentImg = currentActive.querySelector(".img");
+
+                    img.classList.add("active");
+                    currentImg.classList.remove("active");
+
+                    currentActive = button;
+                };
             });
-        })
+        });
     };
     buildAboutGlideToggleButton();
 };
 
-
-
-
-const scrollAnimations = () => {
+const buildScrollAnimations = () => {
     const navBar = document.querySelector("nav");
     const shadows = document.querySelectorAll(".shadow");
     
@@ -104,6 +108,27 @@ const scrollAnimations = () => {
     });
 
     hideShadows();
+};
+
+const openPaymentWindow = () => {
+    const paymentUrl = "https://payment-testnet.nft-maker.io/?p=e164718a34ae48f196626d49a76adfd1&c=1";
+
+    const popupWidth = 500;
+    const popupHeight = 700;
+
+    const left = window.top.outerWidth / 2 + window.top.screenX - ( popupWidth / 2);
+    const top = window.top.outerHeight / 2 + window.top.screenY - ( popupHeight / 2);
+
+    const popup =  window.open(paymentUrl, "your-window-title",  `popup=1, location=1, width=${popupWidth}, height=${popupHeight}, left=${left}, top=${top}`);
+
+    document.body.style = "background: rgba(0, 0, 0, 0.5)";
+
+    const backgroundCheck = setInterval(() => {
+        if(popup.closed) {
+            clearInterval(backgroundCheck);
+            document.body.style = "";
+        }
+    }, 1000);
 };
 
 window.onload = init();

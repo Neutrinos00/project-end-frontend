@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: center;
 
+  // display: none;
+
   .about-glide-container {
     width: 80%;
     margin-top: 20vh;
@@ -14,31 +16,19 @@
       display: block;
 
       .chapter-container {
-        display: grid;
-        grid-template-areas:
-          "title title"
-          "img text"
-          "img text";
-        grid-template-rows: 5% 50% 50%;
-        grid-template-columns: 30% 1fr;
-        // justify-content: center;
+        display: flex;
+        justify-content: center;
         align-items: center;
+        flex-direction: column;
 
         h3 {
-          grid-area: title;
           text-align: center;
           font-size: 1.5rem;
           letter-spacing: 2px;
           font-family: $font-second;
         }
 
-        img {
-          grid-area: img;
-          height: 100%;
-        }
-
         p {
-          grid-area: text;
           padding: 30px;
           text-align: justify;
           display: flex;
@@ -63,17 +53,19 @@
           border: none;
           transition: opacity 0.4s ease;
           cursor: pointer;
+          width: 100%;
 
-          &.active {
-            opacity: 0.2;
-          }
-
-          &:hover {
-            opacity: 0.5;
-          }
-
-          img {
+          .img {
+            width: 100%;
             height: 100%;
+            background: center / contain no-repeat
+              url("./../img/assets/button.png");
+            transition: 0.2s linear;
+
+            &.active {
+              background: center / contain no-repeat
+                url("./../img/assets/button_clicked.png");
+            }
           }
         }
       }
