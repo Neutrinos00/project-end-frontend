@@ -1,19 +1,20 @@
 nav {
   width: 100%;
-  padding: 5px;
+  padding: 8px;
+  padding-inline: 5%;
   position: fixed;
   z-index: 10;
-  font-size: 2.8rem;
   background: linear-gradient(
     360deg,
     rgba(0, 0, 0, 0.075) 0%,
     rgba(0, 0, 0, 1) 100%
   );
-  transition: transform 1s ease;
-  transform: translateY(0%);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: transform 1s ease;
+  transform: translateY(0%);
+  font-size: 2.8rem;
 
   &.hidden {
     transform: translateY(-100%);
@@ -28,34 +29,56 @@ nav {
     }
   }
 
-  .links ul {
-    display: flex;
-    align-items: center;
-    padding: 0 5% 0 5%;
+  .nav-links {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 3vw;
 
-    li {
-      padding: 0 3% 0 3%;
+      li {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 
-  .toggle-button {
-    padding-left: 5%;
+  .nav-toggle-button {
+    padding: inherit;
     display: none;
+  }
 
-    img {
-      height: 40px;
+  .nav-mint-button {
+    height: 50px;
+    width: 90px;
+
+    // display: none;
+
+    .img {
+      width: 100%;
+      height: 100%;
+      background: center/cover url("./../img/assets/mint-button.png");
+
+      &.active {
+        background: center/cover url("./../img/assets/mint-button-clicked.png");
+      }
     }
   }
 
-  .logos-container {
+  .nav-logos-container {
     position: absolute;
     right: 0px;
-    padding: 0 5% 0 5%;
+    padding: inherit;
     display: flex;
+
     justify-content: space-between;
+    align-items: center;
 
     a {
       display: flex;
+    }
+
+    #logo-twitter {
+      height: 45px;
     }
   }
 }
@@ -65,19 +88,20 @@ nav {
     flex-direction: column;
     align-items: flex-start;
 
-    .toggle-button {
+    .nav-toggle-button {
       display: flex !important;
     }
 
-    .links {
+    .nav-links {
       width: 100%;
       height: 100vh;
       display: none;
 
       ul {
-        padding-top: 30px;
+        padding-top: 6vh;
         width: 100%;
         flex-direction: column;
+        gap: 6vh;
       }
 
       &.active {
@@ -85,4 +109,7 @@ nav {
       }
     }
   }
+}
+
+@media only screen and (max-width: 425px) {
 }

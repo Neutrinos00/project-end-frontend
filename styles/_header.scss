@@ -1,14 +1,14 @@
 header {
   height: 80vh;
   width: 100%;
-  background: url("../img/assets/BG2.jpg") center/cover;
+  background: url("../img/assets/header-background.jpg") center/cover;
   display: grid;
 
-  .navigation-container {
+  .header-container {
     display: flex;
     justify-content: center;
 
-    .navigation-img-container {
+    .header-img-container {
       height: 100%;
       width: 50%;
       position: relative;
@@ -64,7 +64,7 @@ header {
       }
     }
 
-    .navigation-logo-container {
+    .header-title-container {
       height: 100%;
       width: 50%;
       position: relative;
@@ -99,16 +99,26 @@ header {
 }
 
 @media only screen and (max-width: 1760px) {
-  .navigation-img-container {
-    display: none;
-  }
-  .navigation-logo-container {
-    width: 80% !important;
+  header {
+    height: 60vw;
+
+    .header-img-container {
+      display: none;
+    }
+    .header-title-container {
+      margin-top: 3%;
+      width: 70% !important;
+
+      img {
+        max-height: 70%;
+        min-width: 80%;
+      }
+    }
   }
 }
 
-@media only screen and (max-width: 940px) {
-  // .navigation-logo-container {
-  //   width: 90% !important;
-  // }
+@media only screen and (max-width: 768px) {
+  header {
+    height: 50vh;
+  }
 }

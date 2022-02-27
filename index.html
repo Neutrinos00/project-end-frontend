@@ -8,38 +8,41 @@
     <meta name="author" content="Neutrinos00, mail: neutrinos.particle@gmail.com">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./img/icon/favicon.ico">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
-    <script defer src="./scripts/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
     <title>Project END</title>
 </head>
 <body>
     <div class="scroll-container">
         <nav>
-            <button onclick="toggleLinks()" class="toggle-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Hamburger_icon_white.svg" 
-                alt="menu-button">
+            <button onclick="toggleLinks()" class="nav-toggle-button">
+                <img src="./img/icon/hamberger.svg" alt="menu-button" loading="lazy">
             </button>
-            <div class="links">
+            <div class="nav-links">
                 <ul>
+                    <li>
+                        <button onclick="openPaymentWindow()" class="nav-mint-button">
+                            <div class="img"></div>
+                        </button>
+                    </li>
                     <li><a href="#" class="anchor-text-effect" onclick="toggleLinks()">end</a></li>
                     <li><a href="#a-showcase" class="anchor-text-effect" onclick="toggleLinks()">showcase</a></li>
                     <li><a href="#a-about" class="anchor-text-effect" onclick="toggleLinks()">about</a></li>
                     <li><a href="#a-team" class="anchor-text-effect" onclick="toggleLinks()">team</a></li>
                 </ul>
             </div>
-            <div class="logos-container">
+            <div class="nav-logos-container">
                 <a href="https://discord.gg/HvHu6RqS" target="_blank">
                     <img src="./img/icon/discord.svg" alt="discord-icon" loading="lazy"/>
                 </a>
                 <a href="https://twitter.com/Project__End" target="_blank">
-                    <img src="https://svgshare.com/i/6w3.svg" alt="twitter-icon" loading="lazy"/>
+                    <img id="logo-twitter" src="./img/icon/twitter.svg" alt="twitter-icon" loading="lazy"/>
                 </a>
             </div>
         </nav>
         <header style="scroll-snap-align: start;">
-            <!-- <button onclick="openPaymentWindow()">mint</button> -->
-            <div class="navigation-container">
-                <div class="navigation-img-container">
+            <div class="header-container">
+                <div class="header-img-container mint">
                     <div class="perso cyborg">
                         <img src="./img/assets/cyborg.png" alt="cyborg" loading="lazy"/>
                         <img class="shadow cyborg-shadow" src="./img/assets/cyborg-shadow.png" 
@@ -61,7 +64,7 @@
                         alt="cat" loading="lazy"/>
                     </div>
                 </div>
-                <div class="navigation-logo-container">
+                <div class="header-title-container">
                     <img src="./img/assets/title.png" alt="logo-text" loading="lazy"/>
                     <img id="logo-light" src="./img/assets/title-glimmer.png" alt="logo-light" loading="lazy"/>
                 </div>

@@ -32,6 +32,9 @@ a {
   color: inherit;
 }
 
+.anchor-text-effect {
+  transition: color 0.5s ease;
+}
 .anchor-text-effect:hover {
   color: gray;
 }
@@ -44,31 +47,39 @@ li {
 button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 section {
-  position: relative;
+  display: block;
 }
 section .title-container {
-  padding-top: 10vh;
-  font-size: 4rem;
-  position: absolute;
-  top: 0;
+  padding-top: 7vh;
+  padding-inline: 5%;
+  font-size: 3.4rem;
+  width: 100%;
   right: 3%;
+  text-align: right;
 }
 
+@media only screen and (max-width: 995px) {
+  .title-container {
+    text-align: center !important;
+  }
+}
 nav {
   width: 100%;
-  padding: 5px;
+  padding: 8px;
+  padding-inline: 5%;
   position: fixed;
   z-index: 10;
-  font-size: 2.8rem;
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.075) 0%, black 100%);
-  transition: transform 1s ease;
-  transform: translateY(0%);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: transform 1s ease;
+  transform: translateY(0%);
+  font-size: 2.8rem;
 }
 nav.hidden {
   transform: translateY(-100%);
@@ -80,30 +91,44 @@ nav img {
 nav img:hover {
   opacity: 0.7;
 }
-nav .links ul {
+nav .nav-links ul {
   display: flex;
   align-items: center;
-  padding: 0 5% 0 5%;
+  gap: 3vw;
 }
-nav .links ul li {
-  padding: 0 3% 0 3%;
+nav .nav-links ul li {
+  display: flex;
+  align-items: center;
 }
-nav .toggle-button {
-  padding-left: 5%;
+nav .nav-toggle-button {
+  padding: inherit;
   display: none;
 }
-nav .toggle-button img {
-  height: 40px;
+nav .nav-mint-button {
+  height: 50px;
+  width: 90px;
 }
-nav .logos-container {
+nav .nav-mint-button .img {
+  width: 100%;
+  height: 100%;
+  background: center/cover url("./../img/assets/mint-button.png");
+}
+nav .nav-mint-button .img.active {
+  background: center/cover url("./../img/assets/mint-button-clicked.png");
+}
+nav .nav-logos-container {
   position: absolute;
   right: 0px;
-  padding: 0 5% 0 5%;
+  padding: inherit;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-nav .logos-container a {
+nav .nav-logos-container a {
   display: flex;
+}
+nav .nav-logos-container #logo-twitter {
+  height: 45px;
 }
 
 @media only screen and (max-width: 995px) {
@@ -111,88 +136,89 @@ nav .logos-container a {
     flex-direction: column;
     align-items: flex-start;
   }
-  nav .toggle-button {
+  nav .nav-toggle-button {
     display: flex !important;
   }
-  nav .links {
+  nav .nav-links {
     width: 100%;
     height: 100vh;
     display: none;
   }
-  nav .links ul {
-    padding-top: 30px;
+  nav .nav-links ul {
+    padding-top: 6vh;
     width: 100%;
     flex-direction: column;
+    gap: 6vh;
   }
-  nav .links.active {
+  nav .nav-links.active {
     display: flex;
   }
 }
 header {
   height: 80vh;
   width: 100%;
-  background: url("../img/assets/BG2.jpg") center/cover;
+  background: url("../img/assets/header-background.jpg") center/cover;
   display: grid;
 }
-header .navigation-container {
+header .header-container {
   display: flex;
   justify-content: center;
 }
-header .navigation-container .navigation-img-container {
+header .header-container .header-img-container {
   height: 100%;
   width: 50%;
   position: relative;
 }
-header .navigation-container .navigation-img-container .perso {
+header .header-container .header-img-container .perso {
   position: absolute;
   bottom: 4vh;
   transform: translateY(5px);
   height: 80%;
 }
-header .navigation-container .navigation-img-container .perso img {
+header .header-container .header-img-container .perso img {
   height: 100%;
   width: auto;
   position: absolute;
   bottom: 0;
   transition: transform 2s;
 }
-header .navigation-container .navigation-img-container .perso img.shadow {
+header .header-container .header-img-container .perso img.shadow {
   opacity: 1;
   transition: opacity 1.5s ease;
 }
-header .navigation-container .navigation-img-container .perso img.shadow.hidden {
+header .header-container .header-img-container .perso img.shadow.hidden {
   opacity: 0;
 }
-header .navigation-container .navigation-img-container .perso img.shadow.cyborg-shadow {
+header .header-container .header-img-container .perso img.shadow.cyborg-shadow {
   transition-delay: 100ms;
 }
-header .navigation-container .navigation-img-container .perso img.shadow.djinn-shadow {
+header .header-container .header-img-container .perso img.shadow.djinn-shadow {
   transition-delay: 300ms;
 }
-header .navigation-container .navigation-img-container .perso img.shadow.hunter-shadow {
+header .header-container .header-img-container .perso img.shadow.hunter-shadow {
   transition-delay: 500ms;
 }
-header .navigation-container .navigation-img-container .perso img.shadow.cat-shadow {
+header .header-container .header-img-container .perso img.shadow.cat-shadow {
   transition-delay: 700ms;
 }
-header .navigation-container .navigation-img-container div:nth-child(1) {
+header .header-container .header-img-container div:nth-child(1) {
   left: 0%;
 }
-header .navigation-container .navigation-img-container div:nth-child(2) {
+header .header-container .header-img-container div:nth-child(2) {
   left: 17%;
 }
-header .navigation-container .navigation-img-container div:nth-child(3) {
+header .header-container .header-img-container div:nth-child(3) {
   left: 34%;
 }
-header .navigation-container .navigation-img-container div:nth-child(4) {
+header .header-container .header-img-container div:nth-child(4) {
   left: 51%;
 }
-header .navigation-container .navigation-logo-container {
+header .header-container .header-title-container {
   height: 100%;
   width: 50%;
   position: relative;
 }
-header .navigation-container .navigation-logo-container img {
+header .header-container .header-title-container img {
   width: 95%;
   height: auto;
   position: absolute;
@@ -200,7 +226,7 @@ header .navigation-container .navigation-logo-container img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-header .navigation-container .navigation-logo-container #logo-light {
+header .header-container .header-title-container #logo-light {
   opacity: 0;
   animation: 5s linear glimmer infinite;
 }
@@ -217,12 +243,24 @@ header .navigation-container .navigation-logo-container #logo-light {
   }
 }
 @media only screen and (max-width: 1760px) {
-  .navigation-img-container {
+  header {
+    height: 60vw;
+  }
+  header .header-img-container {
     display: none;
   }
-
-  .navigation-logo-container {
-    width: 80% !important;
+  header .header-title-container {
+    margin-top: 3%;
+    width: 70% !important;
+  }
+  header .header-title-container img {
+    max-height: 70%;
+    min-width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header {
+    height: 50vh;
   }
 }
 .showcase {
@@ -230,14 +268,14 @@ header .navigation-container .navigation-logo-container #logo-light {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: linear-gradient(180deg, black 0%, rgba(148, 148, 148, 0) 20%), url("./../img/assets/bg2_low.jpg") center/cover;
+  background: linear-gradient(180deg, black 0%, rgba(148, 148, 148, 0) 20%), url("./../img/assets/showcase-background.jpg") center/cover;
   background-position: 95% 5%;
 }
 .showcase .showcase-glide-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 .showcase .showcase-glide-container .glide {
   height: 100%;
@@ -256,18 +294,20 @@ header .navigation-container .navigation-logo-container #logo-light {
 }
 .showcase .showcase-glide-container .glide .glide__track .glide__slide .nft-title-container {
   position: absolute;
-  margin-top: 5%;
-  font-size: 2rem;
+  margin-top: 1%;
+  font-size: 1.2em;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  font-family: "mainFont", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
 .showcase .showcase-glide-container .glide .glide__track .glide__slide img {
-  height: 70vh;
+  max-height: 90%;
+  max-width: 90%;
   border-radius: 3px;
   padding: 10px;
   background: black;
+  display: block;
 }
 .showcase .crowd {
   background: url("./../img/assets/crowd.png") center/cover;
@@ -315,7 +355,7 @@ header .navigation-container .navigation-logo-container #logo-light {
   font-family: "Roboto Mono", monospace;
 }
 .about .about-glide-container .chapter .text-navigation-container {
-  background: url("./../img/assets/frise1.png");
+  background: url("./../img/assets/frise.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -334,15 +374,15 @@ header .navigation-container .navigation-logo-container #logo-light {
 .about .about-glide-container .chapter .text-navigation-container button .img {
   width: 100%;
   height: 100%;
-  background: center/contain no-repeat url("./../img/assets/button.png");
+  background: center/contain no-repeat url("./../img/assets/about-button.png");
   transition: 0.2s linear;
 }
 .about .about-glide-container .chapter .text-navigation-container button .img.active {
-  background: center/contain no-repeat url("./../img/assets/button_clicked.png");
+  background: center/contain no-repeat url("./../img/assets/about-button-clicked.png");
 }
 
 .team {
-  min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(0deg, red 0%, rgba(255, 255, 255, 0.01) 80%);
   position: relative;
 }
@@ -351,7 +391,8 @@ header .navigation-container .navigation-logo-container #logo-light {
   bottom: 40%;
   transform: translateY(50%);
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .team .team-container .team-unit {
   display: flex;
@@ -374,11 +415,13 @@ header .navigation-container .navigation-logo-container #logo-light {
   transform: translate(-40%);
   letter-spacing: 2px;
   font-family: "mainFont", sans-serif;
+  text-align: center;
 }
 .team .team-container .team-unit p {
   padding: 4%;
   width: 80%;
   font-family: "Roboto Mono", monospace;
+  text-align: justify;
 }
 
 footer {

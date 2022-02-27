@@ -8,14 +8,14 @@
       rgb(0, 0, 0) 0%,
       rgba(148, 148, 148, 0) 20%
     ),
-    url("./../img/assets/bg2_low.jpg") center/cover;
+    url("./../img/assets/showcase-background.jpg") center/cover;
   background-position: 95% 5%;
 
   .showcase-glide-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
 
     .glide {
       height: 100%;
@@ -34,20 +34,21 @@
 
           .nft-title-container {
             position: absolute;
-            margin-top: 5%;
-            font-size: 2rem;
+            margin-top: 1%;
+            font-size: 1.2em;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            font-family: $font-main;
+            font-family: $font-second;
           }
 
           img {
-            height: 70vh;
-            // width: auto;
+            max-height: 90%;
+            max-width: 90%;
             border-radius: 3px;
             padding: 10px;
             background: black;
+            display: block;
           }
         }
       }

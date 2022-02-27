@@ -1,5 +1,5 @@
 .team {
-  min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(
     0deg,
     rgba(255, 0, 0, 1) 0%,
@@ -14,9 +14,8 @@
     bottom: 40%;
     transform: translateY(50%);
     width: 100%;
-    display: flex;
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
     .team-unit {
       display: flex;
@@ -41,6 +40,7 @@
           transform: translate(-40%);
           letter-spacing: 2px;
           font-family: $font-main;
+          text-align: center;
         }
       }
 
@@ -48,6 +48,7 @@
         padding: 4%;
         width: 80%;
         font-family: $font-second;
+        text-align: justify;
       }
     }
   }

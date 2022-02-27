@@ -6,33 +6,33 @@ const init = () => {
     buildScrollAnimations();
 };
 
-const toggleLinks = () => document.querySelector(".links").classList.toggle("active");
+const toggleLinks = () => document.querySelector(".nav-links").classList.toggle("active");
 
 const buildNFTGlide = () => {
     const assets = [
-        { path: "./img/nft/1.jpg", name: "cat"},
-        { path: "./img/nft/2.jpg", name: "djinn"},
-        { path: "./img/nft/3.jpg", name: "cyborg"},
-        { path: "./img/nft/4.jpg", name: "robot"},
-        { path: "./img/nft/5.jpg", name: "ruskov"},
-        { path: "./img/nft/6.jpg", name: "akira"},
-        { path: "./img/nft/7.jpg", name: "hunter"},
-        { path: "./img/nft/8.jpg", name: "punk"},
-        { path: "./img/nft/9.jpg", name: "cat"},
-        { path: "./img/nft/10.jpg", name: "djinn"},
-        { path: "./img/nft/11.jpg", name: "cyborg"},
-        { path: "./img/nft/12.jpg", name: "arobot"},
-        { path: "./img/nft/13.jpg", name: "akira"},
-        { path: "./img/nft/14.jpg", name: "hunter"},
-        { path: "./img/nft/15.jpg", name: "cyborg"},
-        { path: "./img/nft/16.jpg", name: "akira"},
+        { path: "./img/nft/1.jpg", name: "Cat"},
+        { path: "./img/nft/2.jpg", name: "Djinn"},
+        { path: "./img/nft/3.jpg", name: "Cyborg"},
+        { path: "./img/nft/4.jpg", name: "Robot"},
+        { path: "./img/nft/5.jpg", name: "Ruskov"},
+        { path: "./img/nft/6.jpg", name: "Akira"},
+        { path: "./img/nft/7.jpg", name: "Hunter"},
+        { path: "./img/nft/8.jpg", name: "Punk"},
+        { path: "./img/nft/9.jpg", name: "Cat"},
+        { path: "./img/nft/10.jpg", name: "Djinn"},
+        { path: "./img/nft/11.jpg", name: "Cyborg"},
+        { path: "./img/nft/12.jpg", name: "Robot"},
+        { path: "./img/nft/13.jpg", name: "Akira"},
+        { path: "./img/nft/14.jpg", name: "Hunter"},
+        { path: "./img/nft/15.jpg", name: "Cyborg"},
+        { path: "./img/nft/16.jpg", name: "Akira"},
     ];
     const glideSlides = document.querySelector(".showcase-glide-container .glide__slides");
 
     assets.map((asset) => { 
         glideSlides.innerHTML += `
             <li class="glide__slide">
-                <h2 class="nft-title-container">${asset.name}</h2>
+
                 <img src="${asset.path}" alt="${asset.name}">
             </li>
         `;
@@ -112,16 +112,11 @@ const buildScrollAnimations = () => {
 
 const openPaymentWindow = () => {
     const paymentUrl = "https://payment-testnet.nft-maker.io/?p=e164718a34ae48f196626d49a76adfd1&c=1";
-
     const popupWidth = 500;
     const popupHeight = 700;
-
     const left = window.top.outerWidth / 2 + window.top.screenX - ( popupWidth / 2);
     const top = window.top.outerHeight / 2 + window.top.screenY - ( popupHeight / 2);
-
-    const popup =  window.open(paymentUrl, "your-window-title",  `popup=1, location=1, width=${popupWidth}, height=${popupHeight}, left=${left}, top=${top}`);
-
-    document.body.style = "background: rgba(0, 0, 0, 0.5)";
+    const popup = window.open(paymentUrl, "your-window-title",  `popup=1, location=1, width=${popupWidth}, height=${popupHeight}, left=${left}, top=${top}`);
 
     const backgroundCheck = setInterval(() => {
         if(popup.closed) {

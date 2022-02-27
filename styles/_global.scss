@@ -50,6 +50,7 @@ a {
   // background-size: 200% 100%;
   // background-position: 100%;
   // transition: background-position 275ms ease;
+  transition: color 0.5s ease;
 
   // &:hover {
   //   background-position: 0 100%;
@@ -67,16 +68,24 @@ li {
 button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 section {
-  position: relative;
+  display: block;
 
   .title-container {
-    padding-top: 10vh;
-    font-size: 4rem;
-    position: absolute;
-    top: 0;
+    padding-top: 7vh;
+    padding-inline: 5%;
+    font-size: 3.4rem;
+    width: 100%;
     right: 3%;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 995px) {
+  .title-container {
+    text-align: center !important;
   }
 }

@@ -39,7 +39,7 @@
       }
 
       .text-navigation-container {
-        background: url("./../img/assets/frise1.png");
+        background: url("./../img/assets/frise.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -59,12 +59,12 @@
             width: 100%;
             height: 100%;
             background: center / contain no-repeat
-              url("./../img/assets/button.png");
+              url("./../img/assets/about-button.png");
             transition: 0.2s linear;
 
             &.active {
               background: center / contain no-repeat
-                url("./../img/assets/button_clicked.png");
+                url("./../img/assets/about-button-clicked.png");
             }
           }
         }
