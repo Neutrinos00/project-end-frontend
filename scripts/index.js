@@ -6,7 +6,15 @@ const init = () => {
     buildScrollAnimations();
 };
 
-const toggleLinks = () => document.querySelector(".nav-links").classList.toggle("active");
+const toggleLinks = (isButton) => {
+    document.querySelector("nav").classList.toggle("active");
+    document.querySelector(".nav-links").classList.toggle("active");
+    if (isButton) {
+        document.querySelector("body").classList.toggle("stop-scrolling");
+    } else {
+        document.querySelector("body").classList.remove("stop-scrolling");
+    }
+};
 
 const buildNFTGlide = () => {
     const assets = [
@@ -32,7 +40,6 @@ const buildNFTGlide = () => {
     assets.map((asset) => { 
         glideSlides.innerHTML += `
             <li class="glide__slide">
-
                 <img src="${asset.path}" alt="${asset.name}">
             </li>
         `;

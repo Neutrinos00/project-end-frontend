@@ -1,61 +1,64 @@
 .team {
-  height: 100vh;
   background: linear-gradient(
     0deg,
     rgba(255, 0, 0, 1) 0%,
     rgba(255, 255, 255, 0.01) 80%
   );
-  position: relative;
-
-  // display: none;
 
   .team-container {
-    position: absolute;
-    bottom: 40%;
-    transform: translateY(50%);
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    height: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin: auto;
 
-    .team-unit {
-      display: flex;
-      flex-direction: column;
+    ul {
+      display: grid;
       align-items: center;
-      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
-      .team-card {
-        position: relative;
+      .team-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding: 10px;
 
-        img {
-          padding: 2%;
-          // min-width: 50px;
-          background: black;
-          border-radius: 3px;
+        .team-card {
+          position: relative;
+
+          img {
+            padding: 2%;
+            height: 100%;
+            width: auto;
+            background: black;
+            border-radius: 3px;
+          }
+
+          h3 {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-40%);
+            letter-spacing: 2px;
+            font-family: $font-main;
+            text-align: center;
+          }
         }
 
-        h3 {
-          position: absolute;
-          bottom: 5%;
-          left: 50%;
-          transform: translate(-40%);
-          letter-spacing: 2px;
-          font-family: $font-main;
-          text-align: center;
+        p {
+          padding: 4%;
+          width: 80%;
+          font-family: $font-second;
+          text-align: justify;
         }
-      }
-
-      p {
-        padding: 4%;
-        width: 80%;
-        font-family: $font-second;
-        text-align: justify;
       }
     }
   }
 }
 
-@media only screen and (max-width: 995px) {
-  // .team-container {
-  //   grid-template-columns: repeat(2, 1fr);
-  // }
+@media only screen and (max-width: 1024px) {
+  .team {
+    height: auto;
+  }
 }

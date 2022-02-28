@@ -34,6 +34,11 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
+
+  &.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 a {
@@ -51,6 +56,7 @@ a {
   // background-position: 100%;
   // transition: background-position 275ms ease;
   transition: color 0.5s ease;
+  z-index: 3;
 
   // &:hover {
   //   background-position: 0 100%;
@@ -66,13 +72,16 @@ li {
 }
 
 button {
-  background: transparent;
+  background: none;
   border: none;
   cursor: pointer;
 }
 
 section {
-  display: block;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  height: 100vh;
 
   .title-container {
     padding-top: 7vh;

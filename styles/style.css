@@ -26,6 +26,10 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+body.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 
 a {
   text-decoration: none;
@@ -34,6 +38,7 @@ a {
 
 .anchor-text-effect {
   transition: color 0.5s ease;
+  z-index: 3;
 }
 .anchor-text-effect:hover {
   color: gray;
@@ -45,13 +50,16 @@ li {
 }
 
 button {
-  background: transparent;
+  background: none;
   border: none;
   cursor: pointer;
 }
 
 section {
-  display: block;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  height: 100vh;
 }
 section .title-container {
   padding-top: 7vh;
@@ -107,6 +115,7 @@ nav .nav-toggle-button {
 nav .nav-mint-button {
   height: 50px;
   width: 90px;
+  display: none;
 }
 nav .nav-mint-button .img {
   width: 100%;
@@ -135,6 +144,9 @@ nav .nav-logos-container #logo-twitter {
   nav {
     flex-direction: column;
     align-items: flex-start;
+  }
+  nav.active {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.9) 0%, black 100%);
   }
   nav .nav-toggle-button {
     display: flex !important;
@@ -260,16 +272,14 @@ header .header-container .header-title-container #logo-light {
 }
 @media only screen and (max-width: 768px) {
   header {
-    height: 50vh;
+    height: 100vw;
   }
 }
 .showcase {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
   position: relative;
   background: linear-gradient(180deg, black 0%, rgba(148, 148, 148, 0) 20%), url("./../img/assets/showcase-background.jpg") center/cover;
   background-position: 95% 5%;
+  display: block;
 }
 .showcase .showcase-glide-container {
   display: flex;
@@ -302,12 +312,13 @@ header .header-container .header-title-container #logo-light {
   font-family: "Roboto Mono", monospace;
 }
 .showcase .showcase-glide-container .glide .glide__track .glide__slide img {
-  max-height: 90%;
-  max-width: 90%;
+  max-height: 70vh;
+  max-width: 80%;
   border-radius: 3px;
   padding: 10px;
   background: black;
   display: block;
+  overflow: hidden;
 }
 .showcase .crowd {
   background: url("./../img/assets/crowd.png") center/cover;
@@ -319,18 +330,19 @@ header .header-container .header-title-container #logo-light {
   pointer-events: none;
 }
 
-.about {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media only screen and (max-width: 768px) {
+  .showcase {
+    height: auto;
+  }
+  .showcase .crowd {
+    display: none;
+  }
 }
 .about .about-glide-container {
-  width: 80%;
-  margin-top: 20vh;
+  padding: 3%;
 }
 .about .about-glide-container .chapter {
-  display: flex;
+  margin-top: 10%;
   justify-content: center;
   display: block;
 }
@@ -365,10 +377,7 @@ header .header-container .header-title-container #logo-light {
   height: 10vh;
 }
 .about .about-glide-container .chapter .text-navigation-container button {
-  background: none;
-  border: none;
   transition: opacity 0.4s ease;
-  cursor: pointer;
   width: 100%;
 }
 .about .about-glide-container .chapter .text-navigation-container button .img {
@@ -381,34 +390,47 @@ header .header-container .header-title-container #logo-light {
   background: center/contain no-repeat url("./../img/assets/about-button-clicked.png");
 }
 
+@media only screen and (max-width: 1440px) {
+  .about {
+    height: auto;
+  }
+  .about .text-navigation-container {
+    display: none !important;
+  }
+}
 .team {
-  height: 100vh;
   background: linear-gradient(0deg, red 0%, rgba(255, 255, 255, 0.01) 80%);
-  position: relative;
 }
 .team .team-container {
-  position: absolute;
-  bottom: 40%;
-  transform: translateY(50%);
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  height: auto;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin: auto;
 }
-.team .team-container .team-unit {
+.team .team-container ul {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.team .team-container ul .team-unit {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  height: 100%;
+  padding: 10px;
 }
-.team .team-container .team-unit .team-card {
+.team .team-container ul .team-unit .team-card {
   position: relative;
 }
-.team .team-container .team-unit .team-card img {
+.team .team-container ul .team-unit .team-card img {
   padding: 2%;
+  height: 100%;
+  width: auto;
   background: black;
   border-radius: 3px;
 }
-.team .team-container .team-unit .team-card h3 {
+.team .team-container ul .team-unit .team-card h3 {
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -417,16 +439,19 @@ header .header-container .header-title-container #logo-light {
   font-family: "mainFont", sans-serif;
   text-align: center;
 }
-.team .team-container .team-unit p {
+.team .team-container ul .team-unit p {
   padding: 4%;
   width: 80%;
   font-family: "Roboto Mono", monospace;
   text-align: justify;
 }
 
+@media only screen and (max-width: 1024px) {
+  .team {
+    height: auto;
+  }
+}
 footer {
-  position: absolute;
-  bottom: 0;
   height: 5%;
   width: 100%;
   padding-bottom: 10px;
@@ -434,6 +459,8 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  text-align: center;
+  padding: 10px;
 }
 footer h3 {
   font-family: "Roboto Mono", monospace;

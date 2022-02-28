@@ -1,7 +1,4 @@
 .showcase {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
   position: relative;
   background: linear-gradient(
       180deg,
@@ -10,6 +7,7 @@
     ),
     url("./../img/assets/showcase-background.jpg") center/cover;
   background-position: 95% 5%;
+  display: block;
 
   .showcase-glide-container {
     display: flex;
@@ -43,12 +41,13 @@
           }
 
           img {
-            max-height: 90%;
-            max-width: 90%;
+            max-height: 70vh;
+            max-width: 80%;
             border-radius: 3px;
             padding: 10px;
             background: black;
             display: block;
+            overflow: hidden;
           }
         }
       }
@@ -63,5 +62,14 @@
     height: 60vh;
     width: 100%;
     pointer-events: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .showcase {
+    height: auto;
+    .crowd {
+      display: none;
+    }
   }
 }
