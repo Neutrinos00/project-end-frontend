@@ -21,7 +21,7 @@ nav {
   }
 
   img {
-    height: 50px;
+    height: 45px;
     transition: opacity 0.3s ease-in-out;
 
     &:hover {
@@ -43,13 +43,14 @@ nav {
   }
 
   .nav-toggle-button {
-    padding: inherit;
+    padding-top: inherit;
+    padding-bottom: inherit;
     display: none;
   }
 
   .nav-mint-button {
-    height: 50px;
-    width: 90px;
+    height: 45px;
+    width: 80px;
 
     display: none;
 
@@ -78,7 +79,7 @@ nav {
     }
 
     #logo-twitter {
-      height: 45px;
+      height: 40px;
     }
   }
 }

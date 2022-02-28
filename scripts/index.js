@@ -27,13 +27,6 @@ const buildNFTGlide = () => {
         { path: "./img/nft/7.jpg", name: "Hunter"},
         { path: "./img/nft/8.jpg", name: "Punk"},
         { path: "./img/nft/9.jpg", name: "Cat"},
-        { path: "./img/nft/10.jpg", name: "Djinn"},
-        { path: "./img/nft/11.jpg", name: "Cyborg"},
-        { path: "./img/nft/12.jpg", name: "Robot"},
-        { path: "./img/nft/13.jpg", name: "Akira"},
-        { path: "./img/nft/14.jpg", name: "Hunter"},
-        { path: "./img/nft/15.jpg", name: "Cyborg"},
-        { path: "./img/nft/16.jpg", name: "Akira"},
     ];
     const glideSlides = document.querySelector(".showcase-glide-container .glide__slides");
 

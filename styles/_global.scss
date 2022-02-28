@@ -47,20 +47,9 @@ a {
 }
 
 .anchor-text-effect {
-  // color: white;
-  // background: linear-gradient(to right, gray, gray 50%, white 50%);
-  // background-clip: text;
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // background-size: 200% 100%;
-  // background-position: 100%;
-  // transition: background-position 275ms ease;
   transition: color 0.5s ease;
   z-index: 3;
 
-  // &:hover {
-  //   background-position: 0 100%;
-  // }
   &:hover {
     color: gray;
   }
@@ -81,10 +70,10 @@ section {
   display: flex;
   justify-content: end;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 
   .title-container {
-    padding-top: 7vh;
+    padding-top: 10vh;
     padding-inline: 5%;
     font-size: 3.4rem;
     width: 100%;

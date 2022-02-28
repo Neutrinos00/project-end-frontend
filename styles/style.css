@@ -59,10 +59,10 @@ section {
   display: flex;
   justify-content: end;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 section .title-container {
-  padding-top: 7vh;
+  padding-top: 10vh;
   padding-inline: 5%;
   font-size: 3.4rem;
   width: 100%;
@@ -93,7 +93,7 @@ nav.hidden {
   transform: translateY(-100%);
 }
 nav img {
-  height: 50px;
+  height: 45px;
   transition: opacity 0.3s ease-in-out;
 }
 nav img:hover {
@@ -109,12 +109,13 @@ nav .nav-links ul li {
   align-items: center;
 }
 nav .nav-toggle-button {
-  padding: inherit;
+  padding-top: inherit;
+  padding-bottom: inherit;
   display: none;
 }
 nav .nav-mint-button {
-  height: 50px;
-  width: 90px;
+  height: 45px;
+  width: 80px;
   display: none;
 }
 nav .nav-mint-button .img {
@@ -137,7 +138,7 @@ nav .nav-logos-container a {
   display: flex;
 }
 nav .nav-logos-container #logo-twitter {
-  height: 45px;
+  height: 40px;
 }
 
 @media only screen and (max-width: 995px) {
@@ -394,7 +395,8 @@ header .header-container .header-title-container #logo-light {
   .about {
     height: auto;
   }
-  .about .text-navigation-container {
+
+  .text-navigation-container {
     display: none !important;
   }
 }
