@@ -9,7 +9,7 @@ header {
     justify-content: center;
 
     .header-img-container {
-      height: 100%;
+      height: auto;
       width: 50%;
       position: relative;
 
@@ -65,20 +65,27 @@ header {
     }
 
     .header-title-container {
-      height: 100%;
+      height: auto;
       width: 50%;
       position: relative;
+      margin: 4%;
 
-      img {
-        width: 95%;
-        height: auto;
+      .img {
+        width: 100%;
+        height: 100%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
 
-      #logo-light {
+      #title {
+        background: center / contain no-repeat url("./../img/assets/title.png");
+      }
+
+      #title-light {
+        background: center / contain no-repeat
+          url("./../img/assets/title-glimmer.png");
         opacity: 0;
         animation: 5s linear glimmer infinite;
       }
@@ -100,14 +107,13 @@ header {
 
 @media only screen and (max-width: 1760px) {
   header {
-    height: 60vw;
+    // height: 60vw;
 
     .header-img-container {
       display: none;
     }
     .header-title-container {
-      margin-top: 3%;
-      width: 70% !important;
+      width: 100% !important;
 
       img {
         max-height: 70%;
@@ -118,7 +124,7 @@ header {
 }
 
 @media only screen and (max-width: 768px) {
-  header {
-    height: 100vw;
-  }
+  // header {
+  //   height: 100vw;
+  // }
 }

@@ -112,6 +112,7 @@ nav .nav-toggle-button {
   padding-top: inherit;
   padding-bottom: inherit;
   display: none;
+  height: 43px;
 }
 nav .nav-mint-button {
   height: 45px;
@@ -178,7 +179,7 @@ header .header-container {
   justify-content: center;
 }
 header .header-container .header-img-container {
-  height: 100%;
+  height: auto;
   width: 50%;
   position: relative;
 }
@@ -227,19 +228,24 @@ header .header-container .header-img-container div:nth-child(4) {
   left: 51%;
 }
 header .header-container .header-title-container {
-  height: 100%;
+  height: auto;
   width: 50%;
   position: relative;
+  margin: 4%;
 }
-header .header-container .header-title-container img {
-  width: 95%;
-  height: auto;
+header .header-container .header-title-container .img {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-header .header-container .header-title-container #logo-light {
+header .header-container .header-title-container #title {
+  background: center/contain no-repeat url("./../img/assets/title.png");
+}
+header .header-container .header-title-container #title-light {
+  background: center/contain no-repeat url("./../img/assets/title-glimmer.png");
   opacity: 0;
   animation: 5s linear glimmer infinite;
 }
@@ -256,24 +262,15 @@ header .header-container .header-title-container #logo-light {
   }
 }
 @media only screen and (max-width: 1760px) {
-  header {
-    height: 60vw;
-  }
   header .header-img-container {
     display: none;
   }
   header .header-title-container {
-    margin-top: 3%;
-    width: 70% !important;
+    width: 100% !important;
   }
   header .header-title-container img {
     max-height: 70%;
     min-width: 80%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  header {
-    height: 100vw;
   }
 }
 .showcase {
