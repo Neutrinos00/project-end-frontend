@@ -64,12 +64,3 @@
     pointer-events: none;
   }
 }
-
-@media only screen and (max-width: 768px) {
-  .showcase {
-    height: auto;
-    .crowd {
-      display: none;
-    }
-  }
-}

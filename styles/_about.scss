@@ -1,9 +1,10 @@
 .about {
+  justify-content: flex-start;
+
   .about-glide-container {
     padding: 3%;
 
     .chapter {
-      margin-top: 10%;
       justify-content: center;
       display: block;
 
@@ -21,12 +22,13 @@
         }
 
         p {
-          padding: 30px;
-          text-align: justify;
+          padding: 20px;
+          text-align: left;
           display: flex;
           align-items: center;
           justify-content: center;
           font-family: $font-second;
+          max-width: 1440px;
         }
       }
 
@@ -59,14 +61,27 @@
         }
       }
     }
+
+    .swipe-text {
+      padding-top: 20px;
+      font-family: $font-second;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      display: none;
+      justify-content: center;
+    }
   }
 }
 
 @media only screen and (max-width: 1440px) {
   .about {
     height: auto;
-  }
-  .text-navigation-container {
-    display: none !important;
+
+    .text-navigation-container {
+      display: none !important;
+    }
+    .swipe-text {
+      display: flex !important;
+    }
   }
 }

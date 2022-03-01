@@ -50,6 +50,14 @@ const buildAboutGlide = () => {
         type: 'carousel',
         perView: 1,
     });
+
+    // let widthQuery = window.matchMedia('(max-width: 600px)');
+    // widthQuery.addEventListener("start", console.log("hello"))
+
+    // force only when run after max-width < 1440px
+    glideMulti.on('run.after', () => {
+        document.getElementById("a-about").scrollIntoView();
+    });
     glideMulti.mount();
 
     const buildAboutGlideToggleButton = () => {

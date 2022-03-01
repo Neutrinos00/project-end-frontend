@@ -331,19 +331,13 @@ header .header-container .header-title-container #logo-light {
   pointer-events: none;
 }
 
-@media only screen and (max-width: 768px) {
-  .showcase {
-    height: auto;
-  }
-  .showcase .crowd {
-    display: none;
-  }
+.about {
+  justify-content: flex-start;
 }
 .about .about-glide-container {
   padding: 3%;
 }
 .about .about-glide-container .chapter {
-  margin-top: 10%;
   justify-content: center;
   display: block;
 }
@@ -360,12 +354,13 @@ header .header-container .header-title-container #logo-light {
   font-family: "Roboto Mono", monospace;
 }
 .about .about-glide-container .chapter .chapter-container p {
-  padding: 30px;
-  text-align: justify;
+  padding: 20px;
+  text-align: left;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Roboto Mono", monospace;
+  max-width: 1440px;
 }
 .about .about-glide-container .chapter .text-navigation-container {
   background: url("./../img/assets/frise.png");
@@ -390,14 +385,24 @@ header .header-container .header-title-container #logo-light {
 .about .about-glide-container .chapter .text-navigation-container button .img.active {
   background: center/contain no-repeat url("./../img/assets/about-button-clicked.png");
 }
+.about .about-glide-container .swipe-text {
+  padding-top: 20px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: none;
+  justify-content: center;
+}
 
 @media only screen and (max-width: 1440px) {
   .about {
     height: auto;
   }
-
-  .text-navigation-container {
+  .about .text-navigation-container {
     display: none !important;
+  }
+  .about .swipe-text {
+    display: flex !important;
   }
 }
 .team {
@@ -438,8 +443,9 @@ header .header-container .header-title-container #logo-light {
   left: 50%;
   transform: translate(-40%);
   letter-spacing: 2px;
-  font-family: "mainFont", sans-serif;
+  font-family: "Roboto Mono", monospace;
   text-align: center;
+  text-transform: uppercase;
 }
 .team .team-container ul .team-unit p {
   padding: 4%;
