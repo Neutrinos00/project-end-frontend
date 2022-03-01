@@ -15,16 +15,50 @@ header {
 
       .perso {
         position: absolute;
-        bottom: 4vh;
-        transform: translateY(5px);
-        height: 80%;
+        height: 100%;
+        width: 70%;
+        bottom: 3.5vh;
 
-        img {
+        &.cyborg {
+          left: -5%;
+        }
+        &.djinn {
+          left: 12%;
+        }
+        &.hunter {
+          left: 29%;
+        }
+        &.cat {
+          left: 46%;
+        }
+
+        .img {
           height: 100%;
-          width: auto;
+          width: 100%;
+          background-position: bottom;
           position: absolute;
-          bottom: 0;
-          transition: transform 2s;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          padding: inherit;
+
+          &.cyborg-img {
+            background: bottom / contain no-repeat
+              url("./../img/assets/cyborg.png");
+          }
+          &.djinn-img {
+            background: bottom / contain no-repeat
+              url("./../img/assets/djinn.png");
+          }
+          &.hunter-img {
+            background: bottom / contain no-repeat
+              url("./../img/assets/hunter.png");
+          }
+          &.cat-img {
+            background: bottom / contain no-repeat
+              url("./../img/assets/cat.png");
+          }
 
           &.shadow {
             opacity: 1;
@@ -35,32 +69,27 @@ header {
             }
 
             &.cyborg-shadow {
+              background: bottom / contain no-repeat
+                url("./../img/assets/cyborg-shadow.png");
               transition-delay: 100ms;
             }
             &.djinn-shadow {
+              background: bottom / contain no-repeat
+                url("./../img/assets/djinn-shadow.png");
               transition-delay: 300ms;
             }
             &.hunter-shadow {
+              background: bottom / contain no-repeat
+                url("./../img/assets/hunter-shadow.png");
               transition-delay: 500ms;
             }
             &.cat-shadow {
+              background: bottom / contain no-repeat
+                url("./../img/assets/cat-shadow.png");
               transition-delay: 700ms;
             }
           }
         }
-      }
-
-      div:nth-child(1) {
-        left: 0%;
-      }
-      div:nth-child(2) {
-        left: 17%;
-      }
-      div:nth-child(3) {
-        left: 34%;
-      }
-      div:nth-child(4) {
-        left: 51%;
       }
     }
 
@@ -68,7 +97,8 @@ header {
       height: auto;
       width: 50%;
       position: relative;
-      margin: 4%;
+      margin-top: 50px;
+      margin-bottom: 4%;
 
       .img {
         width: 100%;
@@ -107,8 +137,6 @@ header {
 
 @media only screen and (max-width: 1760px) {
   header {
-    // height: 60vw;
-
     .header-img-container {
       display: none;
     }
@@ -124,7 +152,23 @@ header {
 }
 
 @media only screen and (max-width: 768px) {
-  // header {
-  //   height: 100vw;
-  // }
+  header {
+    .header-container {
+      flex-direction: column-reverse;
+    }
+
+    .header-img-container {
+      display: flex;
+      width: 100% !important;
+      height: 50% !important;
+
+      .cat {
+        display: none;
+      }
+    }
+    .header-title-container {
+      width: 100% !important;
+      height: 50% !important;
+    }
+  }
 }

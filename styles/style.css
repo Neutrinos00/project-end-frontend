@@ -185,53 +185,73 @@ header .header-container .header-img-container {
 }
 header .header-container .header-img-container .perso {
   position: absolute;
-  bottom: 4vh;
-  transform: translateY(5px);
-  height: 80%;
-}
-header .header-container .header-img-container .perso img {
   height: 100%;
-  width: auto;
-  position: absolute;
-  bottom: 0;
-  transition: transform 2s;
+  width: 70%;
+  bottom: 3.5vh;
 }
-header .header-container .header-img-container .perso img.shadow {
+header .header-container .header-img-container .perso.cyborg {
+  left: -5%;
+}
+header .header-container .header-img-container .perso.djinn {
+  left: 12%;
+}
+header .header-container .header-img-container .perso.hunter {
+  left: 29%;
+}
+header .header-container .header-img-container .perso.cat {
+  left: 46%;
+}
+header .header-container .header-img-container .perso .img {
+  height: 100%;
+  width: 100%;
+  background-position: bottom;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: inherit;
+}
+header .header-container .header-img-container .perso .img.cyborg-img {
+  background: bottom/contain no-repeat url("./../img/assets/cyborg.png");
+}
+header .header-container .header-img-container .perso .img.djinn-img {
+  background: bottom/contain no-repeat url("./../img/assets/djinn.png");
+}
+header .header-container .header-img-container .perso .img.hunter-img {
+  background: bottom/contain no-repeat url("./../img/assets/hunter.png");
+}
+header .header-container .header-img-container .perso .img.cat-img {
+  background: bottom/contain no-repeat url("./../img/assets/cat.png");
+}
+header .header-container .header-img-container .perso .img.shadow {
   opacity: 1;
   transition: opacity 1.5s ease;
 }
-header .header-container .header-img-container .perso img.shadow.hidden {
+header .header-container .header-img-container .perso .img.shadow.hidden {
   opacity: 0;
 }
-header .header-container .header-img-container .perso img.shadow.cyborg-shadow {
+header .header-container .header-img-container .perso .img.shadow.cyborg-shadow {
+  background: bottom/contain no-repeat url("./../img/assets/cyborg-shadow.png");
   transition-delay: 100ms;
 }
-header .header-container .header-img-container .perso img.shadow.djinn-shadow {
+header .header-container .header-img-container .perso .img.shadow.djinn-shadow {
+  background: bottom/contain no-repeat url("./../img/assets/djinn-shadow.png");
   transition-delay: 300ms;
 }
-header .header-container .header-img-container .perso img.shadow.hunter-shadow {
+header .header-container .header-img-container .perso .img.shadow.hunter-shadow {
+  background: bottom/contain no-repeat url("./../img/assets/hunter-shadow.png");
   transition-delay: 500ms;
 }
-header .header-container .header-img-container .perso img.shadow.cat-shadow {
+header .header-container .header-img-container .perso .img.shadow.cat-shadow {
+  background: bottom/contain no-repeat url("./../img/assets/cat-shadow.png");
   transition-delay: 700ms;
-}
-header .header-container .header-img-container div:nth-child(1) {
-  left: 0%;
-}
-header .header-container .header-img-container div:nth-child(2) {
-  left: 17%;
-}
-header .header-container .header-img-container div:nth-child(3) {
-  left: 34%;
-}
-header .header-container .header-img-container div:nth-child(4) {
-  left: 51%;
 }
 header .header-container .header-title-container {
   height: auto;
   width: 50%;
   position: relative;
-  margin: 4%;
+  margin-top: 50px;
+  margin-bottom: 4%;
 }
 header .header-container .header-title-container .img {
   width: 100%;
@@ -271,6 +291,23 @@ header .header-container .header-title-container #title-light {
   header .header-title-container img {
     max-height: 70%;
     min-width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header .header-container {
+    flex-direction: column-reverse;
+  }
+  header .header-img-container {
+    display: flex;
+    width: 100% !important;
+    height: 50% !important;
+  }
+  header .header-img-container .cat {
+    display: none;
+  }
+  header .header-title-container {
+    width: 100% !important;
+    height: 50% !important;
   }
 }
 .showcase {
