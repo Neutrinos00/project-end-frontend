@@ -259,12 +259,15 @@ header .header-container .header-title-container .img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 10px;
 }
 header .header-container .header-title-container #title {
   background: center/contain no-repeat url("./../img/assets/title.png");
+  background-origin: content-box;
 }
 header .header-container .header-title-container #title-light {
   background: center/contain no-repeat url("./../img/assets/title-glimmer.png");
+  background-origin: content-box;
   opacity: 0;
   animation: 5s linear glimmer infinite;
 }

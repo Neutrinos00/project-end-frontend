@@ -105,15 +105,18 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        padding: 10px;
       }
 
       #title {
         background: center / contain no-repeat url("./../img/assets/title.png");
+        background-origin: content-box;
       }
 
       #title-light {
         background: center / contain no-repeat
           url("./../img/assets/title-glimmer.png");
+        background-origin: content-box;
         opacity: 0;
         animation: 5s linear glimmer infinite;
       }
