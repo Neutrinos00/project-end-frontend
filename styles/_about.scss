@@ -41,6 +41,8 @@
         justify-content: space-around;
         padding: 20px;
         height: 10vh;
+        max-width: 1440px;
+        margin: auto;
 
         button {
           transition: opacity 0.4s ease;
@@ -62,13 +64,20 @@
       }
     }
 
-    .swipe-text {
+    .arrow-navigation-container {
       padding-top: 20px;
-      font-family: $font-second;
-      font-size: 1.5rem;
-      text-transform: uppercase;
       display: none;
-      justify-content: center;
+      justify-content: space-evenly;
+
+      button {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-family: $font-second;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
     }
   }
 }
@@ -80,7 +89,7 @@
     .text-navigation-container {
       display: none !important;
     }
-    .swipe-text {
+    .arrow-navigation-container {
       display: flex !important;
     }
   }

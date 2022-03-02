@@ -53,6 +53,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  color: white;
 }
 
 section {
@@ -345,7 +346,7 @@ header .header-container .header-title-container #title-light {
   font-family: "Roboto Mono", monospace;
 }
 .showcase .showcase-glide-container .glide .glide__track .glide__slide img {
-  max-height: 60vh;
+  max-height: 70vh;
   max-width: 80%;
   border-radius: 3px;
   padding: 10px;
@@ -355,12 +356,12 @@ header .header-container .header-title-container #title-light {
 }
 .showcase .crowd {
   background: url("./../img/assets/crowd.png");
-  background-position: 0 0;
+  background-position: center;
   background-size: cover;
   position: absolute;
   bottom: 0;
   z-index: 5;
-  height: 100%;
+  height: 50%;
   width: 100%;
   pointer-events: none;
 }
@@ -405,6 +406,8 @@ header .header-container .header-title-container #title-light {
   justify-content: space-around;
   padding: 20px;
   height: 10vh;
+  max-width: 1440px;
+  margin: auto;
 }
 .about .about-glide-container .chapter .text-navigation-container button {
   transition: opacity 0.4s ease;
@@ -419,13 +422,18 @@ header .header-container .header-title-container #title-light {
 .about .about-glide-container .chapter .text-navigation-container button .img.active {
   background: center/contain no-repeat url("./../img/assets/about-button-clicked.png");
 }
-.about .about-glide-container .swipe-text {
+.about .about-glide-container .arrow-navigation-container {
   padding-top: 20px;
+  display: none;
+  justify-content: space-evenly;
+}
+.about .about-glide-container .arrow-navigation-container button {
+  font-size: 2rem;
+}
+.about .about-glide-container .arrow-navigation-container h3 {
   font-family: "Roboto Mono", monospace;
   font-size: 1.5rem;
   text-transform: uppercase;
-  display: none;
-  justify-content: center;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -435,7 +443,7 @@ header .header-container .header-title-container #title-light {
   .about .text-navigation-container {
     display: none !important;
   }
-  .about .swipe-text {
+  .about .arrow-navigation-container {
     display: flex !important;
   }
 }
