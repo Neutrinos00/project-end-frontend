@@ -345,7 +345,7 @@ header .header-container .header-title-container #title-light {
   font-family: "Roboto Mono", monospace;
 }
 .showcase .showcase-glide-container .glide .glide__track .glide__slide img {
-  max-height: 70vh;
+  max-height: 60vh;
   max-width: 80%;
   border-radius: 3px;
   padding: 10px;
@@ -354,11 +354,13 @@ header .header-container .header-title-container #title-light {
   overflow: hidden;
 }
 .showcase .crowd {
-  background: url("./../img/assets/crowd.png") center/cover;
+  background: url("./../img/assets/crowd.png");
+  background-position: 0 0;
+  background-size: cover;
   position: absolute;
   bottom: 0;
   z-index: 5;
-  height: 60vh;
+  height: 100%;
   width: 100%;
   pointer-events: none;
 }
