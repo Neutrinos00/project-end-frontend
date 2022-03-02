@@ -1,5 +1,5 @@
 header {
-  height: 80vh;
+  height: 70vh;
   width: 100%;
   background: url("../img/assets/header-background.jpg") center/cover;
   display: grid;
@@ -7,6 +7,8 @@ header {
   .header-container {
     display: flex;
     justify-content: center;
+    padding-bottom: 3.2vh;
+    margin-top: 65px;
 
     .header-img-container {
       height: auto;
@@ -17,7 +19,6 @@ header {
         position: absolute;
         height: 100%;
         width: 70%;
-        bottom: 3.5vh;
 
         &.cyborg {
           left: -5%;
@@ -35,7 +36,6 @@ header {
         .img {
           height: 100%;
           width: 100%;
-          background-position: bottom;
           position: absolute;
           top: 50%;
           left: 50%;
@@ -97,8 +97,6 @@ header {
       height: auto;
       width: 50%;
       position: relative;
-      margin-top: 50px;
-      margin-bottom: 4%;
 
       .img {
         width: 100%;

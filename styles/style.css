@@ -169,7 +169,7 @@ nav .nav-logos-container #logo-twitter {
   }
 }
 header {
-  height: 80vh;
+  height: 70vh;
   width: 100%;
   background: url("../img/assets/header-background.jpg") center/cover;
   display: grid;
@@ -177,6 +177,8 @@ header {
 header .header-container {
   display: flex;
   justify-content: center;
+  padding-bottom: 3.2vh;
+  margin-top: 65px;
 }
 header .header-container .header-img-container {
   height: auto;
@@ -187,7 +189,6 @@ header .header-container .header-img-container .perso {
   position: absolute;
   height: 100%;
   width: 70%;
-  bottom: 3.5vh;
 }
 header .header-container .header-img-container .perso.cyborg {
   left: -5%;
@@ -204,7 +205,6 @@ header .header-container .header-img-container .perso.cat {
 header .header-container .header-img-container .perso .img {
   height: 100%;
   width: 100%;
-  background-position: bottom;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -250,8 +250,6 @@ header .header-container .header-title-container {
   height: auto;
   width: 50%;
   position: relative;
-  margin-top: 50px;
-  margin-bottom: 4%;
 }
 header .header-container .header-title-container .img {
   width: 100%;
