@@ -3,3 +3,4 @@ TODO.txt
 *.log
 .firebaserc
 firebase.json
+.firebase

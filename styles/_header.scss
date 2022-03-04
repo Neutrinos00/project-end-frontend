@@ -117,6 +117,10 @@ header {
         background-origin: content-box;
         opacity: 0;
         animation: 5s linear glimmer infinite;
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }
