@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Poiret+One&family=Roboto+Mono:wght@200&display=swap");
 @font-face {
   font-family: "mainFont";
-  src: url("../fonts/NauSea-yeMm.ttf") format("woff");
+  src: url("./fonts/NauSea-yeMm.ttf") format("woff");
 }
 *,
 *::after,
@@ -123,10 +123,10 @@ nav .nav-mint-button {
 nav .nav-mint-button .img {
   width: 100%;
   height: 100%;
-  background: center/cover url("./../img/assets/mint-button.png");
+  background: center/cover url("./img/assets/mint-button.png");
 }
 nav .nav-mint-button .img.active {
-  background: center/cover url("./../img/assets/mint-button-clicked.png");
+  background: center/cover url("./img/assets/mint-button-clicked.png");
 }
 nav .nav-logos-container {
   position: absolute;
@@ -172,7 +172,7 @@ nav .nav-logos-container #logo-twitter {
 header {
   height: 70vh;
   width: 100%;
-  background: url("../img/assets/header-background.jpg") center/cover;
+  background: url("./img/assets/header-background.jpg") center/cover;
   display: grid;
 }
 header .header-container {
@@ -213,16 +213,16 @@ header .header-container .header-img-container .perso .img {
   padding: inherit;
 }
 header .header-container .header-img-container .perso .img.cyborg-img {
-  background: bottom/contain no-repeat url("./../img/assets/cyborg.png");
+  background: bottom/contain no-repeat url("./img/assets/cyborg.png");
 }
 header .header-container .header-img-container .perso .img.djinn-img {
-  background: bottom/contain no-repeat url("./../img/assets/djinn.png");
+  background: bottom/contain no-repeat url("./img/assets/djinn.png");
 }
 header .header-container .header-img-container .perso .img.hunter-img {
-  background: bottom/contain no-repeat url("./../img/assets/hunter.png");
+  background: bottom/contain no-repeat url("./img/assets/hunter.png");
 }
 header .header-container .header-img-container .perso .img.cat-img {
-  background: bottom/contain no-repeat url("./../img/assets/cat.png");
+  background: bottom/contain no-repeat url("./img/assets/cat.png");
 }
 header .header-container .header-img-container .perso .img.shadow {
   opacity: 1;
@@ -232,19 +232,19 @@ header .header-container .header-img-container .perso .img.shadow.hidden {
   opacity: 0;
 }
 header .header-container .header-img-container .perso .img.shadow.cyborg-shadow {
-  background: bottom/contain no-repeat url("./../img/assets/cyborg-shadow.png");
+  background: bottom/contain no-repeat url("./img/assets/cyborg-shadow.png");
   transition-delay: 100ms;
 }
 header .header-container .header-img-container .perso .img.shadow.djinn-shadow {
-  background: bottom/contain no-repeat url("./../img/assets/djinn-shadow.png");
+  background: bottom/contain no-repeat url("./img/assets/djinn-shadow.png");
   transition-delay: 300ms;
 }
 header .header-container .header-img-container .perso .img.shadow.hunter-shadow {
-  background: bottom/contain no-repeat url("./../img/assets/hunter-shadow.png");
+  background: bottom/contain no-repeat url("./img/assets/hunter-shadow.png");
   transition-delay: 500ms;
 }
 header .header-container .header-img-container .perso .img.shadow.cat-shadow {
-  background: bottom/contain no-repeat url("./../img/assets/cat-shadow.png");
+  background: bottom/contain no-repeat url("./img/assets/cat-shadow.png");
   transition-delay: 700ms;
 }
 header .header-container .header-title-container {
@@ -262,11 +262,11 @@ header .header-container .header-title-container .img {
   padding: 10px;
 }
 header .header-container .header-title-container #title {
-  background: center/contain no-repeat url("./../img/assets/title.png");
+  background: center/contain no-repeat url("./img/assets/title.png");
   background-origin: content-box;
 }
 header .header-container .header-title-container #title-light {
-  background: center/contain no-repeat url("./../img/assets/title-glimmer.png");
+  background: center/contain no-repeat url("./img/assets/title-glimmer.png");
   background-origin: content-box;
   opacity: 0;
   animation: 5s linear glimmer infinite;
@@ -314,7 +314,7 @@ header .header-container .header-title-container #title-light {
 }
 .showcase {
   position: relative;
-  background: linear-gradient(180deg, black 0%, rgba(148, 148, 148, 0) 20%), url("./../img/assets/showcase-background.jpg") center/cover;
+  background: linear-gradient(180deg, black 0%, rgba(148, 148, 148, 0) 20%), url("./img/assets/showcase-background.jpg") center/cover;
   background-position: 95% 5%;
   display: block;
 }
@@ -322,7 +322,9 @@ header .header-container .header-title-container #title-light {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5vh;
+  padding-top: 3vh;
+  max-width: 80%;
+  margin: auto;
 }
 .showcase .showcase-glide-container .glide {
   height: 100%;
@@ -350,7 +352,6 @@ header .header-container .header-title-container #title-light {
 }
 .showcase .showcase-glide-container .glide .glide__track .glide__slide img {
   max-height: 70vh;
-  max-width: 80%;
   border-radius: 3px;
   padding: 10px;
   background: black;
@@ -358,7 +359,7 @@ header .header-container .header-title-container #title-light {
   overflow: hidden;
 }
 .showcase .crowd {
-  background: url("./../img/assets/crowd.png");
+  background: url("./img/assets/crowd.png");
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -401,7 +402,7 @@ header .header-container .header-title-container #title-light {
   max-width: 1440px;
 }
 .about .about-glide-container .chapter .text-navigation-container {
-  background: url("./../img/assets/frise.png");
+  background: url("./img/assets/frise.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -419,11 +420,11 @@ header .header-container .header-title-container #title-light {
 .about .about-glide-container .chapter .text-navigation-container button .img {
   width: 100%;
   height: 100%;
-  background: center/contain no-repeat url("./../img/assets/about-button.png");
+  background: center/contain no-repeat url("./img/assets/about-button.png");
   transition: 0.2s linear;
 }
 .about .about-glide-container .chapter .text-navigation-container button .img.active {
-  background: center/contain no-repeat url("./../img/assets/about-button-clicked.png");
+  background: center/contain no-repeat url("./img/assets/about-button-clicked.png");
 }
 .about .about-glide-container .arrow-navigation-container {
   padding-top: 20px;

@@ -5,7 +5,7 @@
       rgb(0, 0, 0) 0%,
       rgba(148, 148, 148, 0) 20%
     ),
-    url("./../img/assets/showcase-background.jpg") center/cover;
+    url("./img/assets/showcase-background.jpg") center/cover;
   background-position: 95% 5%;
   display: block;
 
@@ -13,7 +13,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
+    padding-top: 3vh;
+    //-test bug
+    max-width: 80%;
+    margin: auto;
 
     .glide {
       height: 100%;
@@ -42,7 +45,8 @@
 
           img {
             max-height: 70vh;
-            max-width: 80%;
+            //-test bug
+            // max-width: 80%;
             border-radius: 3px;
             padding: 10px;
             background: black;
@@ -55,7 +59,7 @@
   }
 
   .crowd {
-    background: url("./../img/assets/crowd.png");
+    background: url("./img/assets/crowd.png");
     background-position: center;
     background-size: cover;
     position: absolute;

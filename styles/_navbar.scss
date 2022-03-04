@@ -58,10 +58,10 @@ nav {
     .img {
       width: 100%;
       height: 100%;
-      background: center/cover url("./../img/assets/mint-button.png");
+      background: center/cover url("./img/assets/mint-button.png");
 
       &.active {
-        background: center/cover url("./../img/assets/mint-button-clicked.png");
+        background: center/cover url("./img/assets/mint-button-clicked.png");
       }
     }
   }

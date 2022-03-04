@@ -1,7 +1,7 @@
 header {
   height: 70vh;
   width: 100%;
-  background: url("../img/assets/header-background.jpg") center/cover;
+  background: url("./img/assets/header-background.jpg") center/cover;
   display: grid;
 
   .header-container {
@@ -45,19 +45,17 @@ header {
 
           &.cyborg-img {
             background: bottom / contain no-repeat
-              url("./../img/assets/cyborg.png");
+              url("./img/assets/cyborg.png");
           }
           &.djinn-img {
-            background: bottom / contain no-repeat
-              url("./../img/assets/djinn.png");
+            background: bottom / contain no-repeat url("./img/assets/djinn.png");
           }
           &.hunter-img {
             background: bottom / contain no-repeat
-              url("./../img/assets/hunter.png");
+              url("./img/assets/hunter.png");
           }
           &.cat-img {
-            background: bottom / contain no-repeat
-              url("./../img/assets/cat.png");
+            background: bottom / contain no-repeat url("./img/assets/cat.png");
           }
 
           &.shadow {
@@ -70,22 +68,22 @@ header {
 
             &.cyborg-shadow {
               background: bottom / contain no-repeat
-                url("./../img/assets/cyborg-shadow.png");
+                url("./img/assets/cyborg-shadow.png");
               transition-delay: 100ms;
             }
             &.djinn-shadow {
               background: bottom / contain no-repeat
-                url("./../img/assets/djinn-shadow.png");
+                url("./img/assets/djinn-shadow.png");
               transition-delay: 300ms;
             }
             &.hunter-shadow {
               background: bottom / contain no-repeat
-                url("./../img/assets/hunter-shadow.png");
+                url("./img/assets/hunter-shadow.png");
               transition-delay: 500ms;
             }
             &.cat-shadow {
               background: bottom / contain no-repeat
-                url("./../img/assets/cat-shadow.png");
+                url("./img/assets/cat-shadow.png");
               transition-delay: 700ms;
             }
           }
@@ -109,13 +107,13 @@ header {
       }
 
       #title {
-        background: center / contain no-repeat url("./../img/assets/title.png");
+        background: center / contain no-repeat url("./img/assets/title.png");
         background-origin: content-box;
       }
 
       #title-light {
         background: center / contain no-repeat
-          url("./../img/assets/title-glimmer.png");
+          url("./img/assets/title-glimmer.png");
         background-origin: content-box;
         opacity: 0;
         animation: 5s linear glimmer infinite;

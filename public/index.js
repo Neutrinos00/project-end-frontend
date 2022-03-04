@@ -43,6 +43,8 @@ const buildNFTGlide = () => {
         perView: 1,
     });
     glideMulti.mount();
+
+    
 };
 
 const buildAboutGlide = () => {
