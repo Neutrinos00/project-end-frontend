@@ -53,10 +53,8 @@ const buildAboutGlide = () => {
     perView: 1,
   });
   const chapterCounter = document.querySelector("#chapter-counter")
-  let index = 1;
-  glideMulti.on("run.after", (e) => {
-
-    chapterCounter.innerHTML = `${index} / 7`
+  glideMulti.on("run.after", () => {
+    chapterCounter.innerHTML = `${glideMulti.index + 1} / 7`;
     document.getElementById("a-about").scrollIntoView();
   });
   glideMulti.mount();
