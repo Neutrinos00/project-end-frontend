@@ -18,27 +18,6 @@ const toggleLinks = (isButton) => {
 };
 
 const buildNFTGlide = () => {
-  const assets = [
-    "./img/nft/1.jpg",
-    "./img/nft/2.jpg",
-    "./img/nft/3.jpg",
-    "./img/nft/4.jpg",
-    "./img/nft/5.jpg",
-    "./img/nft/6.jpg",
-    "./img/nft/7.jpg",
-    "./img/nft/8.jpg",
-  ];
-  const glideSlides = document.querySelector(
-    ".showcase-glide-container .glide__slides"
-  );
-
-  assets.map((asset) => {
-    glideSlides.innerHTML += `
-            <li class="glide__slide">
-                <img src="${asset}" alt="NFT">
-            </li>
-        `;
-  });
   const glideMulti = new Glide(".nft", {
     type: "carousel",
     autoplay: 3500,
