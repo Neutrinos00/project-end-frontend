@@ -1,14 +1,12 @@
 "use strict";
 
 const init = () => {
-  buildNFTGlide();
-  buildAboutGlide();
-  buildScrollAnimations();
-
-  const loader = document.querySelector(".loader");
-  const body = document.querySelector("body");
-  loader.style.display = "none";
-  body.style.overflow = "scroll";
+  setTimeout(() => {
+    const loader = document.querySelector(".loader");
+    // const body = document.querySelector("body");
+    loader.style.display = "none";
+    // body.style.overflow = "scroll";
+  }, 2000)
 };
 
 const toggleLinks = (isButton) => {
@@ -23,14 +21,14 @@ const toggleLinks = (isButton) => {
 
 const buildNFTGlide = () => {
   const assets = [
-    { path: "./img/nft/1.jpg", name: "Cat" },
-    { path: "./img/nft/2.jpg", name: "Djinn" },
-    { path: "./img/nft/3.jpg", name: "Cyborg" },
-    { path: "./img/nft/4.jpg", name: "Robot" },
-    { path: "./img/nft/5.jpg", name: "Ruskov" },
-    { path: "./img/nft/6.jpg", name: "Akira" },
-    { path: "./img/nft/7.jpg", name: "Hunter" },
-    { path: "./img/nft/8.jpg", name: "Punk" },
+    "./img/nft/1.jpg",
+    "./img/nft/2.jpg",
+    "./img/nft/3.jpg",
+    "./img/nft/4.jpg",
+    "./img/nft/5.jpg",
+    "./img/nft/6.jpg",
+    "./img/nft/7.jpg",
+    "./img/nft/8.jpg",
   ];
   const glideSlides = document.querySelector(
     ".showcase-glide-container .glide__slides"
@@ -39,7 +37,7 @@ const buildNFTGlide = () => {
   assets.map((asset) => {
     glideSlides.innerHTML += `
             <li class="glide__slide">
-                <img src="${asset.path}" alt="${asset.name}">
+                <img src="${asset}" alt="NFT">
             </li>
         `;
   });
@@ -141,5 +139,9 @@ const openPaymentWindow = () => {
     }
   }, 1000);
 };
+
+buildNFTGlide();
+buildAboutGlide();
+buildScrollAnimations();
 
 window.onload = init();

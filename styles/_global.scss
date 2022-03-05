@@ -29,8 +29,6 @@ body {
   background: $background-color;
   color: $font-color;
 
-  overflow: hidden;
-
   &::-webkit-scrollbar {
     display: none;
   }
@@ -84,19 +82,16 @@ section {
 }
 
 .loader {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
   height: 100%;
   width: 100%;
   background: black;
   z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     height: 50px;
   }
 }
