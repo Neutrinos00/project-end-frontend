@@ -3,9 +3,7 @@
 const init = () => {
   setTimeout(() => {
     const loader = document.querySelector(".loader");
-    // const body = document.querySelector("body");
     loader.style.display = "none";
-    // body.style.overflow = "scroll";
   }, 2000)
 };
 
@@ -54,7 +52,11 @@ const buildAboutGlide = () => {
     type: "carousel",
     perView: 1,
   });
-  glideMulti.on("run.after", () => {
+  const chapterCounter = document.querySelector("#chapter-counter")
+  let index = 1;
+  glideMulti.on("run.after", (e) => {
+
+    chapterCounter.innerHTML = `${index} / 7`
     document.getElementById("a-about").scrollIntoView();
   });
   glideMulti.mount();

@@ -1,10 +1,23 @@
 .about {
+  display: block;
+
   .about-glide-container {
-    padding: 3%;
+    padding-top: 3vh;
+    padding-inline: 10px;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    #chapter-counter {
+      text-align: center;
+      font-size: 1.2rem;
+      font-family: $font-second;
+      display: none;
+    }
 
     .chapter {
+      display: grid;
       justify-content: center;
-      display: block;
+      padding-top: 2vh;
 
       .chapter-container {
         display: flex;
@@ -22,16 +35,12 @@
         p {
           padding: 20px;
           text-align: left;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           font-family: $font-second;
-          max-width: 1440px;
         }
       }
 
       .text-navigation-container {
-        background: url("./img/assets/frise.png");
+        background: url("./img/assets/frise.webp");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -39,8 +48,7 @@
         justify-content: space-around;
         padding: 20px;
         height: 10vh;
-        max-width: 1440px;
-        margin: auto;
+        width: 100%;
 
         button {
           transition: opacity 0.4s ease;
@@ -50,12 +58,12 @@
             width: 100%;
             height: 100%;
             background: center / contain no-repeat
-              url("./img/assets/about-button.png");
+              url("./img/assets/about-button.webp");
             transition: 0.2s linear;
 
             &.active {
               background: center / contain no-repeat
-                url("./img/assets/about-button-clicked.png");
+                url("./img/assets/about-button-clicked.webp");
             }
           }
         }
@@ -89,6 +97,9 @@
     }
     .arrow-navigation-container {
       display: flex !important;
+    }
+    #chapter-counter {
+      display: block !important;
     }
   }
 }

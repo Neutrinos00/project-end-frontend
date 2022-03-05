@@ -4,13 +4,16 @@
     rgba(255, 0, 0, 1) 0%,
     rgba(255, 255, 255, 0.01) 80%
   );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .team-container {
     width: 100%;
     height: auto;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    margin: auto;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    margin: auto 0;
 
     ul {
       display: grid;

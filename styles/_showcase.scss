@@ -5,45 +5,25 @@
       rgb(0, 0, 0) 0%,
       rgba(148, 148, 148, 0) 20%
     ),
-    url("./img/assets/showcase-background.jpg") center/cover;
+    url("./img/assets/showcase-background.webp") center/cover;
   background-position: 95% 5%;
   display: block;
 
   .showcase-glide-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding-top: 3vh;
-    max-width: 80%;
-    margin: auto;
+    max-width: 90%;
+    margin: 0 auto;
 
     .glide {
-      height: 100%;
-      min-width: 40%;
-
       .glide__track {
-        transition: 1s ease;
-        &:hover {
-          transform: scale(1.02);
-        }
-
         .glide__slide {
-          display: flex;
+          max-height: 70vh;
+          margin: 0;
+          display: grid;
           justify-content: center;
-          position: relative;
-
-          .nft-title-container {
-            position: absolute;
-            margin-top: 1%;
-            font-size: 1.2em;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: $font-second;
-          }
 
           img {
-            max-height: 70vh;
+            max-width: 100%;
             border-radius: 3px;
             padding: 10px;
             background: black;
@@ -56,7 +36,7 @@
   }
 
   .crowd {
-    background: url("./img/assets/crowd.png");
+    background: url("./img/assets/crowd.webp");
     background-position: center;
     background-size: cover;
     position: absolute;
