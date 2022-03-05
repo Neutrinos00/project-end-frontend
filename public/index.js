@@ -4,7 +4,7 @@ const init = () => {
   setTimeout(() => {
     const loader = document.querySelector(".loader");
     loader.style.display = "none";
-  }, 2000)
+  }, 2200)
 };
 
 const toggleLinks = (isButton) => {

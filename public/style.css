@@ -530,4 +530,8 @@ footer img {
   filter: grayscale(0%);
 }
 
+.roadmap {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
