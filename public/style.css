@@ -1,5 +1,4 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css");
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Poiret+One&family=Roboto+Mono:wght@200&display=swap");
 @font-face {
   font-family: "mainFont";
@@ -340,6 +339,7 @@ header .header-container .header-title-container #title-light:hover {
 }
 .showcase .showcase-glide-container .glide .glide__track .glide__slide {
   max-height: 70vh;
+  width: 100%;
   margin: 0;
   display: grid;
   justify-content: center;
@@ -423,7 +423,7 @@ header .header-container .header-title-container #title-light:hover {
   transition: 0.2s linear;
 }
 .about .about-glide-container .chapter .text-navigation-container button .img.active {
-  background: center/contain no-repeat url("./img/assets/about-button-clicked.webp");
+  background: center/contain no-repeat url("./img/assets/button-clicked.png");
 }
 .about .about-glide-container .arrow-navigation-container {
   padding-top: 20px;
