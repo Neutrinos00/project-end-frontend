@@ -3,7 +3,7 @@
 const init = () => {
   setTimeout(() => {
     const loader = document.querySelector(".loader");
-    loader.style.display = "none";
+    // loader.style.display = "none";
   }, 2200)
 };
 

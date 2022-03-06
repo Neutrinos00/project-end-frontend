@@ -74,6 +74,8 @@ section .title-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+  flex-direction: column;
 }
 .loader img {
   height: 50px;
@@ -131,10 +133,10 @@ nav .nav-mint-button {
 nav .nav-mint-button .img {
   width: 100%;
   height: 100%;
-  background: center/cover url("./img/assets/mint-button.png");
+  background: center/cover url("./img/assets/mint-button.webp");
 }
 nav .nav-mint-button .img.active {
-  background: center/cover url("./img/assets/mint-button-clicked.png");
+  background: center/cover url("./img/assets/mint-button-clicked.webp");
 }
 nav .nav-logos-container {
   position: absolute;
@@ -183,9 +185,6 @@ header {
   background: url("./img/assets/header-background.webp") center/cover;
   display: grid;
   transition: transform 1.5s ease;
-}
-header.mint {
-  transform: translateY(-100%);
 }
 header .header-container {
   display: flex;
