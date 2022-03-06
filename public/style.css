@@ -242,7 +242,11 @@ header .header-container .header-img-container .perso .img.shadow {
 header .header-container .header-img-container .perso .img.shadow.hidden {
   opacity: 0;
 }
-header .header-container .header-img-container .perso .img.shadow.cyborg-shadow {
+header
+  .header-container
+  .header-img-container
+  .perso
+  .img.shadow.cyborg-shadow {
   background: bottom/contain no-repeat url("./img/assets/cyborg-shadow.webp");
   transition-delay: 100ms;
 }
@@ -250,7 +254,11 @@ header .header-container .header-img-container .perso .img.shadow.djinn-shadow {
   background: bottom/contain no-repeat url("./img/assets/djinn-shadow.webp");
   transition-delay: 300ms;
 }
-header .header-container .header-img-container .perso .img.shadow.hunter-shadow {
+header
+  .header-container
+  .header-img-container
+  .perso
+  .img.shadow.hunter-shadow {
   background: bottom/contain no-repeat url("./img/assets/hunter-shadow.webp");
   transition-delay: 500ms;
 }
@@ -328,7 +336,8 @@ header .header-container .header-title-container #title-light:hover {
 }
 .showcase {
   position: relative;
-  background: linear-gradient(180deg, black 0%, rgba(148, 148, 148, 0) 20%), url("./img/assets/showcase-background.webp") center/cover;
+  background: linear-gradient(180deg, black 0%, rgba(148, 148, 148, 0) 20%),
+    url("./img/assets/showcase-background.webp") center/cover;
   background-position: 95% 5%;
   display: block;
 }
@@ -422,8 +431,14 @@ header .header-container .header-title-container #title-light:hover {
   background: center/contain no-repeat url("./img/assets/about-button.webp");
   transition: 0.2s linear;
 }
-.about .about-glide-container .chapter .text-navigation-container button .img.active {
-  background: center/contain no-repeat url("./img/assets/button-clicked.png");
+.about
+  .about-glide-container
+  .chapter
+  .text-navigation-container
+  button
+  .img.active {
+  background: center/contain no-repeat
+    url("./img/assets/about-button-clicked.webp");
 }
 .about .about-glide-container .arrow-navigation-container {
   padding-top: 20px;
