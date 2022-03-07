@@ -133,10 +133,10 @@ nav .nav-mint-button {
 nav .nav-mint-button .img {
   width: 100%;
   height: 100%;
-  background: center/cover url("./img/assets/mint-button.webp");
+  background: center/cover url("./img/assets/mint-button.png");
 }
 nav .nav-mint-button .img.active {
-  background: center/cover url("./img/assets/mint-button-clicked.webp");
+  background: center/cover url("./img/assets/mint-button-clicked.png");
 }
 nav .nav-logos-container {
   position: absolute;
@@ -342,7 +342,8 @@ header .header-container .header-title-container #title-light:hover {
   justify-content: center;
 }
 .showcase .showcase-glide-container .glide .glide__track .glide__slide img {
-  max-height: 60vh;
+  max-width: 100%;
+  max-height: 65vh;
   border-radius: 3px;
   padding: 10px;
   background: black;
@@ -529,6 +530,28 @@ footer img {
 
 .roadmap {
   display: none;
+}
+
+.mint-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.mint-overlay .mint-overlay-container {
+  height: 80%;
+  width: 80%;
+  background: black;
+  border-radius: 3px;
+  padding: 20px;
+}
+.mint-overlay .mint-overlay-container .close-mint-ovelay-button {
+  font-size: 2rem;
+  float: right;
 }
 
 /*# sourceMappingURL=style.css.map */

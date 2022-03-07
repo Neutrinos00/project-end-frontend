@@ -17,6 +17,12 @@
         <img src="./img/icon/icon-loader.webp" alt="END">
         <img src="./img/icon/Ellipsis-1s-200px.svg" alt="loading...">
     </div>
+    <div class="mint-overlay">
+        <div class="mint-overlay-container">
+            <button onclick="closeMintOverlay()" class="close-mint-ovelay-button">&#128473;</button>
+            <button class="nav-mint-button"></button>
+        </div>
+    </div>
     <nav>
         <button onclick="toggleLinks(true)" class="nav-toggle-button">
             <img src="./img/icon/hamberger.svg" alt="menu-button" loading="lazy">
@@ -24,7 +30,7 @@
         <div class="nav-links">
             <ul>
                 <li>
-                    <button onclick="openPaymentWindow()" class="nav-mint-button">
+                    <button onclick="openMintOverlay()" class="nav-mint-button">
                         <div class="img"></div>
                     </button>
                 </li>

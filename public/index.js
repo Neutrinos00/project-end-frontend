@@ -28,8 +28,9 @@ const buildNFTGlide = () => {
 
 const buildAboutGlide = () => {
   const glideMulti = new Glide(".chapter", {
-    type: "carousel",
+    type: "slider",
     perView: 1,
+    rewind: false,
   });
   const chapterCounter = document.querySelector("#chapter-counter")
   glideMulti.on("run.after", () => {
@@ -97,6 +98,9 @@ const buildScrollAnimations = () => {
 
   hideShadows();
 };
+
+const openMintOverlay = () => document.querySelector(".mint-overlay").style.display = "flex";
+const closeMintOverlay = () => document.querySelector(".mint-overlay").style.display = "none";
 
 const openPaymentWindow = () => {
   const paymentUrl =

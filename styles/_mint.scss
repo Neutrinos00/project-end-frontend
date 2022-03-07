@@ -1,0 +1,23 @@
+.mint-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  .mint-overlay-container {
+    height: 80%;
+    width: 80%;
+    background: black;
+    border-radius: 3px;
+    padding: 20px;
+
+    .close-mint-ovelay-button {
+      font-size: 2rem;
+      float: right;
+    }
+  }
+}
