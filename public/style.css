@@ -98,7 +98,7 @@ nav {
   align-items: center;
   transition: transform 1s ease;
   transform: translateY(0%);
-  font-size: 2.8rem;
+  font-size: 2.3rem;
 }
 nav.hidden {
   transform: translateY(-100%);
@@ -113,11 +113,11 @@ nav img:hover {
 nav .nav-links ul {
   display: flex;
   align-items: center;
-  gap: 3vw;
 }
 nav .nav-links ul li {
   display: flex;
   align-items: center;
+  padding-right: 2vw;
 }
 nav .nav-toggle-button {
   padding-top: inherit;
@@ -362,9 +362,6 @@ header .header-container .header-title-container #title-light:hover {
   pointer-events: none;
 }
 
-.about {
-  display: block;
-}
 .about .about-glide-container {
   padding-top: 3vh;
   padding-inline: 10px;
@@ -530,6 +527,39 @@ footer img {
 
 .roadmap {
   display: none;
+  display: flex;
+  flex-flow: column;
+  background: url("./../public/img/assets/1.1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.roadmap .title-container {
+  z-index: 5;
+}
+.roadmap .background-gradient {
+  background: linear-gradient(180deg, black 10%, rgba(0, 0, 0, 0.3) 50%), linear-gradient(0deg, black 10%, rgba(0, 0, 0, 0.3) 50%);
+  position: absolute;
+  height: 101%;
+  width: 100%;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+.roadmap .roadmap-container {
+  width: 100%;
+  position: relative;
+}
+.roadmap .roadmap-container .line {
+  height: 80vh;
+  width: 10px;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
 }
 
 .mint-overlay {
@@ -541,6 +571,7 @@ footer img {
   display: none;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 .mint-overlay .mint-overlay-container {
   height: 80%;
@@ -548,10 +579,14 @@ footer img {
   background: black;
   border-radius: 3px;
   padding: 20px;
+  position: relative;
 }
 .mint-overlay .mint-overlay-container .close-mint-ovelay-button {
-  font-size: 2rem;
+  font-size: 1.8rem;
   float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

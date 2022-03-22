@@ -100,6 +100,8 @@ const buildScrollAnimations = () => {
 };
 
 const openMintOverlay = () => document.querySelector(".mint-overlay").style.display = "flex";
+//const openMintOverlay = () => document.querySelector("header").style.transform = "translateY(-100%)";
+
 const closeMintOverlay = () => document.querySelector(".mint-overlay").style.display = "none";
 
 const openPaymentWindow = () => {

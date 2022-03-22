@@ -8,16 +8,22 @@
   justify-content: center;
   align-items: center;
 
+  display: none;
+
   .mint-overlay-container {
     height: 80%;
     width: 80%;
     background: black;
     border-radius: 3px;
     padding: 20px;
+    position: relative;
 
     .close-mint-ovelay-button {
-      font-size: 2rem;
+      font-size: 1.8rem;
       float: right;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
