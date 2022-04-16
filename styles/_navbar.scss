@@ -33,7 +33,6 @@ nav {
     ul {
       display: flex;
       align-items: center;
-      // gap: 3vw;
 
       li {
         display: flex;
@@ -48,23 +47,6 @@ nav {
     padding-bottom: inherit;
     display: none;
     height: 40px;
-  }
-
-  .nav-mint-button {
-    height: 45px;
-    width: 80px;
-
-    display: none;
-
-    .img {
-      width: 100%;
-      height: 100%;
-      background: center/cover url("./img/assets/mint-button.png");
-
-      &.active {
-        background: center/cover url("./img/assets/mint-button-clicked.png");
-      }
-    }
   }
 
   .nav-logos-container {
@@ -86,7 +68,7 @@ nav {
   }
 }
 
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 1024px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -120,7 +102,4 @@ nav {
       }
     }
   }
-}
-
-@media only screen and (max-width: 425px) {
 }

@@ -4,26 +4,185 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 40;
-  display: none;
+  display: flex;
+  z-index: -10;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 
-  display: none;
+  &.active {
+    z-index: 20;
+    opacity: 1;
+  }
 
   .mint-overlay-container {
-    height: 80%;
-    width: 80%;
+    height: 85%;
+    width: 85%;
+    max-width: 1024px;
     background: black;
     border-radius: 3px;
     padding: 20px;
+    padding-top: 40px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 15px #eb3136 inset;
+    overflow: clip;
 
     .close-mint-ovelay-button {
-      font-size: 1.8rem;
+      // font-size: 1.8rem;
       float: right;
       position: absolute;
+      margin: 2vh;
+      width: 3vh;
+      height: 3vh;
       top: 0;
       right: 0;
+      transition: 0.3s ease-in-out;
+      // background: url("./../public/img/assets/about-button.webp") no-repeat center/contain;
+
+      // &:hover {
+      //   color: gray;
+      // }
+
+      &:hover {
+        opacity: 1;
+      }
+      &:before, &:after {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        content: ' ';
+        height: 100%;
+        width: 2px;
+        background-color: rgb(255, 255, 255);
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    h2 {
+      font-family: $font-second;
+      font-size: 2.3rem;
+      text-align: center;
+    }
+
+    .amount-quantity-container {
+      display: grid;      
+      grid-template-columns: 50% 50%;
+      width: 100%;
+      padding-top: 10px;
+      padding-inline: 20%;
+
+      li {
+        text-align: center;
+        font-family: $font-second;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding-bottom: 15px;
+        height: 100%;
+      }
+    }  
+  
+    .ul-instruction {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      
+      li {
+        font-family: $font-second;
+        padding: 2%;
+        
+
+        &.public-adress {
+          padding-top: 15px;
+          padding-bottom: 15px;
+          margin-inline: 10%;
+          font-weight: bold;
+          font-size: 1.2rem;
+          cursor: pointer;
+          transition: color 0.3s ease-in-out;
+          position: relative;
+          word-break: break-all;
+          
+
+          &:hover {
+            color: gray;
+          }
+
+          &::selection {
+            color: black;
+            background: #eb3136;
+          }
+
+          .tooltip {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(100%, -50%);
+            display: none;
+            color: white;
+          }
+        }
+
+        &#policy_ID {
+          // position: absolute;
+          // bottom: 20px;
+          font-family: $font-second;
+          font-size: 0.9rem;
+          text-align: center;
+          word-break: break-all;
+        }
+      }
     }
   }
 }
+
+@media screen and (max-width: 425px) {
+  .mint-overlay {
+    .mint-overlay-container {
+      // .close-mint-ovelay-button {
+      //   font-size: 2.5vh;
+      // }
+
+      h2 {
+        font-size: 3vh;
+      }
+
+      .amount-quantity-container {
+        padding-inline: 0% !important;
+    
+        li {
+          font-size: 1.8vh;
+        }
+      }
+
+      .ul-instruction {
+        li {
+          font-size: 1.7vh;
+
+          &.public-adress {
+            font-size: 2vh;
+          }
+
+          &#policy_ID {
+            font-size: 1vh;
+          }
+        }
+      }
+
+      
+    }
+  }
+}
+

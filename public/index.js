@@ -4,16 +4,39 @@ const init = () => {
   setTimeout(() => {
     const loader = document.querySelector(".loader");
     loader.style.display = "none";
-  }, 2200)
+  }, 2200);
 };
 
-const toggleLinks = (isButton) => {
+const toggleLinks = () => {
   document.querySelector("nav").classList.toggle("active");
   document.querySelector(".nav-links").classList.toggle("active");
-  if (isButton) {
-    document.querySelector("body").classList.toggle("stop-scrolling");
+};
+
+const humbergerButtonLinks = () => {
+  const nav = document.querySelector("nav");
+  const links = document.querySelector(".nav-links");
+  const body = document.querySelector("body");
+
+  if (nav.classList.contains("active")) {
+    nav.classList.remove("active");
+    links.classList.remove("active");
+    body.classList.remove("stop-scrolling");
   } else {
-    document.querySelector("body").classList.remove("stop-scrolling");
+    nav.classList.add("active");
+    links.classList.add("active");
+    body.classList.add("stop-scrolling");
+  }
+};
+
+const buttonLinks = () => {
+  const nav = document.querySelector("nav");
+  const links = document.querySelector(".nav-links");
+  const body = document.querySelector("body");
+
+  if (links.classList.contains("active")) {
+    nav.classList.remove("active");
+    links.classList.remove("active");
+    body.classList.remove("stop-scrolling");
   }
 };
 
@@ -99,30 +122,41 @@ const buildScrollAnimations = () => {
   hideShadows();
 };
 
-const openMintOverlay = () => document.querySelector(".mint-overlay").style.display = "flex";
-//const openMintOverlay = () => document.querySelector("header").style.transform = "translateY(-100%)";
+const openMintOverlay = () => {
+  const overlay = document.querySelector(".mint-overlay");
+  const container = document.querySelector(".mint-overlay-container");
+  const nav = document.querySelector("nav");
+  const navLinks = document.querySelector(".nav-links");
+  const body = document.querySelector("body");
 
-const closeMintOverlay = () => document.querySelector(".mint-overlay").style.display = "none";
-
-const openPaymentWindow = () => {
-  const paymentUrl =
-    "https://payment-testnet.nft-maker.io/?p=e164718a34ae48f196626d49a76adfd1&c=1";
-  const popupWidth = 500;
-  const popupHeight = 700;
-  const left = window.top.outerWidth / 2 + window.top.screenX - popupWidth / 2;
-  const top = window.top.outerHeight / 2 + window.top.screenY - popupHeight / 2;
-  const popup = window.open(
-    paymentUrl,
-    "your-window-title",
-    `popup=1, location=1, width=${popupWidth}, height=${popupHeight}, left=${left}, top=${top}`
-  );
-
-  const backgroundCheck = setInterval(() => {
-    if (popup.closed) {
-      clearInterval(backgroundCheck);
-      document.body.style = "";
+  overlay.classList.add("active");
+  overlay.addEventListener("click", (e) => {
+    if (!e.path.includes(container)) {
+      closeMintOverlay();
     }
-  }, 1000);
+  });
+  nav.classList.remove("active");
+  navLinks.classList.remove("active");
+  body.classList.add("stop-scrolling");
+};
+
+const closeMintOverlay = () => {
+  const mintOverlay = document.querySelector(".mint-overlay")
+  const checkMark = document.querySelector(".tooltip");
+  const body = document.querySelector("body");
+
+  mintOverlay.classList.remove("active");
+  body.classList.remove("stop-scrolling");
+  checkMark.style.display = "none";
+};
+
+const copyPublicAdress = async () => {
+  const adress = document.querySelector(".public-adress");
+  const checkMark = document.querySelector(".tooltip");
+  const adress_text = "addr1vyw9xuh3uryf7s66y7qgmscvtaucjq3we4rgngx76yfwyug2sqd7k";
+
+  await navigator.clipboard.writeText(adress_text)
+    .then(() => checkMark.style.display = "block");
 };
 
 buildNFTGlide();

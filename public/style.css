@@ -125,19 +125,6 @@ nav .nav-toggle-button {
   display: none;
   height: 40px;
 }
-nav .nav-mint-button {
-  height: 45px;
-  width: 80px;
-  display: none;
-}
-nav .nav-mint-button .img {
-  width: 100%;
-  height: 100%;
-  background: center/cover url("./img/assets/mint-button.png");
-}
-nav .nav-mint-button .img.active {
-  background: center/cover url("./img/assets/mint-button-clicked.png");
-}
 nav .nav-logos-container {
   position: absolute;
   right: 0px;
@@ -153,7 +140,7 @@ nav .nav-logos-container #logo-twitter {
   height: 40px;
 }
 
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 1024px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -258,6 +245,33 @@ header .header-container .header-img-container .perso .img.shadow.cat-shadow {
   background: bottom/contain no-repeat url("./img/assets/cat-shadow.webp");
   transition-delay: 700ms;
 }
+header .header-container .header-img-container .mint-button-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-container .header-img-container .mint-button-container .mint-button {
+  transform: translateY(75%);
+  width: 55%;
+  height: 40%;
+  cursor: pointer;
+}
+header .header-container .header-img-container .mint-button-container .mint-button:active {
+  outline: none;
+}
+header .header-container .header-img-container .mint-button-container .mint-button .img {
+  width: 100%;
+  height: 100%;
+  background: url("./img/assets/mint-button.webp") center/contain no-repeat;
+  transition: 0.5s;
+  animation: light 2s infinite;
+}
+header .header-container .header-img-container .mint-button-container .mint-button .img:hover {
+  filter: brightness(0.5);
+}
 header .header-container .header-title-container {
   height: auto;
   width: 50%;
@@ -297,19 +311,18 @@ header .header-container .header-title-container #title-light:hover {
     opacity: 0;
   }
 }
-@media only screen and (max-width: 1760px) {
-  header .header-img-container {
-    display: none;
+@keyframes light {
+  0% {
+    filter: brightness(0.3);
   }
-  header .header-title-container {
-    width: 100% !important;
+  50% {
+    filter: brightness(1);
   }
-  header .header-title-container img {
-    max-height: 70%;
-    min-width: 80%;
+  100% {
+    filter: brightness(0.3);
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1440px) {
   header .header-container {
     flex-direction: column-reverse;
   }
@@ -525,68 +538,151 @@ footer img {
   filter: grayscale(0%);
 }
 
-.roadmap {
-  display: none;
-  display: flex;
-  flex-flow: column;
-  background: url("./../public/img/assets/1.1.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-}
-.roadmap .title-container {
-  z-index: 5;
-}
-.roadmap .background-gradient {
-  background: linear-gradient(180deg, black 10%, rgba(0, 0, 0, 0.3) 50%), linear-gradient(0deg, black 10%, rgba(0, 0, 0, 0.3) 50%);
-  position: absolute;
-  height: 101%;
-  width: 100%;
-  margin-top: -3px;
-  margin-bottom: -3px;
-}
-.roadmap .roadmap-container {
-  width: 100%;
-  position: relative;
-}
-.roadmap .roadmap-container .line {
-  height: 80vh;
-  width: 10px;
-  background: white;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px;
-}
-
 .mint-overlay {
   position: fixed;
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 40;
-  display: none;
+  display: flex;
+  z-index: -10;
   justify-content: center;
   align-items: center;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.mint-overlay.active {
+  z-index: 20;
+  opacity: 1;
 }
 .mint-overlay .mint-overlay-container {
-  height: 80%;
-  width: 80%;
+  height: 85%;
+  width: 85%;
+  max-width: 1024px;
   background: black;
   border-radius: 3px;
   padding: 20px;
+  padding-top: 40px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 0px 15px #eb3136 inset;
+  overflow: clip;
 }
 .mint-overlay .mint-overlay-container .close-mint-ovelay-button {
-  font-size: 1.8rem;
   float: right;
   position: absolute;
+  margin: 2vh;
+  width: 3vh;
+  height: 3vh;
   top: 0;
   right: 0;
+  transition: 0.3s ease-in-out;
+}
+.mint-overlay .mint-overlay-container .close-mint-ovelay-button:hover {
+  opacity: 1;
+}
+.mint-overlay .mint-overlay-container .close-mint-ovelay-button:before, .mint-overlay .mint-overlay-container .close-mint-ovelay-button:after {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: " ";
+  height: 100%;
+  width: 2px;
+  background-color: white;
+}
+.mint-overlay .mint-overlay-container .close-mint-ovelay-button:before {
+  transform: rotate(45deg);
+}
+.mint-overlay .mint-overlay-container .close-mint-ovelay-button:after {
+  transform: rotate(-45deg);
+}
+.mint-overlay .mint-overlay-container h2 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.3rem;
+  text-align: center;
+}
+.mint-overlay .mint-overlay-container .amount-quantity-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  padding-top: 10px;
+  padding-inline: 20%;
+}
+.mint-overlay .mint-overlay-container .amount-quantity-container li {
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 15px;
+  height: 100%;
+}
+.mint-overlay .mint-overlay-container .ul-instruction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.mint-overlay .mint-overlay-container .ul-instruction li {
+  font-family: "Roboto Mono", monospace;
+  padding: 2%;
+}
+.mint-overlay .mint-overlay-container .ul-instruction li.public-adress {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-inline: 10%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  word-break: break-all;
+}
+.mint-overlay .mint-overlay-container .ul-instruction li.public-adress:hover {
+  color: gray;
+}
+.mint-overlay .mint-overlay-container .ul-instruction li.public-adress::selection {
+  color: black;
+  background: #eb3136;
+}
+.mint-overlay .mint-overlay-container .ul-instruction li.public-adress .tooltip {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(100%, -50%);
+  display: none;
+  color: white;
+}
+.mint-overlay .mint-overlay-container .ul-instruction li#policy_ID {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9rem;
+  text-align: center;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 425px) {
+  .mint-overlay .mint-overlay-container h2 {
+    font-size: 3vh;
+  }
+  .mint-overlay .mint-overlay-container .amount-quantity-container {
+    padding-inline: 0% !important;
+  }
+  .mint-overlay .mint-overlay-container .amount-quantity-container li {
+    font-size: 1.8vh;
+  }
+  .mint-overlay .mint-overlay-container .ul-instruction li {
+    font-size: 1.7vh;
+  }
+  .mint-overlay .mint-overlay-container .ul-instruction li.public-adress {
+    font-size: 2vh;
+  }
+  .mint-overlay .mint-overlay-container .ul-instruction li#policy_ID {
+    font-size: 1vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

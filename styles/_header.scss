@@ -91,6 +91,38 @@ header {
           }
         }
       }
+
+      .mint-button-container {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .mint-button {
+          transform: translateY(75%);
+          width: 55%;
+          height: 40%;
+          cursor: pointer;
+
+          &:active {
+            outline: none;
+          }
+          
+          .img {
+            width: 100%;
+            height: 100%;
+            background: url("./img/assets/mint-button.webp") center / contain no-repeat;
+            transition: 0.5s;
+            animation: light 2s infinite;
+
+            &:hover {
+              filter: brightness(0.5);
+            }
+          }
+        }
+      }
     }
 
     .header-title-container {
@@ -140,23 +172,19 @@ header {
   }
 }
 
-@media only screen and (max-width: 1760px) {
-  header {
-    .header-img-container {
-      display: none;
-    }
-    .header-title-container {
-      width: 100% !important;
-
-      img {
-        max-height: 70%;
-        min-width: 80%;
-      }
-    }
+@keyframes light {
+  0% {
+    filter: brightness(0.3);
+  }
+  50% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0.3);
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1440px) {
   header {
     .header-container {
       flex-direction: column-reverse;
